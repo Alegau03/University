@@ -1,3 +1,22 @@
+# AZIENDA 1
+
+## PUNTO 1
+Il seguente programma deve implementare la gestione degli utenti in un'azienda, implementano nel seguente modo:
+
+- Ogni dipendente ha un nome,cognome,data di nascita e stipendio.
+- Ogni dipendente ha iniziato a lavorare in un dipartimento in una specifica data
+- Ogni dipartimento ha un ome e un numero di centralino
+- Ogni dipendente lavora in uno o più progetti
+- Ogni progetto ha un nome e un budget  
+
+Deve essere possibile creare un istanza di un dipendente e in una certa data assegnarlo ad un dipartimento specifico, ad ogni dipendente è associato uno e un unico dipartimento nel quale può lavorare.
+
+Ogni dipartimento ha un Capo Dipartimento che è uno tra i dipendenti
+
+Ogni dipendente può lavorare su uno o più progetti indipendenti dal dipartimento
+
+
+## PUNTO 2
 ```mermaid
 
 ---
@@ -23,11 +42,14 @@ class `PROGETTO AZIENDALE`{
     Nome:stringa
     Budget: float
 }
+class PARTECIPA
+
 
 `INIZIO CONTRATTO` "1..1"<-- "1..1" `IMPIEGATO`  :   Lavora Da
 `DIPARTIMENTO` "1..1"<-- "1..1" `INIZIO CONTRATTO`  :   Nel Dipartimento
 `IMPIEGATO` "1..1"<-- "0..*" `DIPARTIMENTO`  :   Diretto da
-`PROGETTO AZIENDALE` "0..*"<-- "0..*" `IMPIEGATO`  :   Partecipa
+`PARTECIPA` "1..1"<-- "0..*" `IMPIEGATO` 
+`PROGETTO AZIENDALE` "0..*"<-- "1..1" `PARTECIPA` 
 
 ```
 ```mermaid
