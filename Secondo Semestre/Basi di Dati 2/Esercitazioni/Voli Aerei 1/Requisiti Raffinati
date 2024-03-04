@@ -1,0 +1,21 @@
+---------------------
+RAFFINAMENTO REQUISITI
+---------------------
+1 Voli
+	1.1 Codice: int
+	1.2 Durata: Ora
+	1.3 Compagnia Aerea: Compagnia Aerea
+	1.4 Aereoporti (arrivo e partenza): Aereoporto
+
+2 Aereoporti
+	2.1 Codice: int
+	2.2 Nome: Stringa
+	2.3 Città (Ci interessa nome e numero di abitanti): Città
+	2.4 Nazione: Stringa
+
+3 Compagnia Aerea
+	3.1 Nome: Stringa
+	3.2 Anno di fondazione: Data
+	3.3 Città: Città
+
+-------------------------
