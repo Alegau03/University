@@ -1,0 +1,44 @@
+
+------------REQUISITI RAFFINATI------------
+
+1. Persona
+	1.1 Nome: String
+	1.2 Cognome: String
+	1.3 Codice Fiscale: codicefiscale (v. spec. tipi di dato)
+	1.4 Data di Nascita: Data
+
+2. Uomo - Sottoclasse di Persona
+	Posizione Militare: PosizioneMilitare (v. req. 3)
+
+
+3. Posizione Militare
+	3.1 Posizione: String	
+
+4. Donna - Sottoclasse di Persona
+	4.1 N° Maternità : Int>=0?
+
+5. Impiegato - Sottoclasse di Persona
+	5.1 Ruolo: Uno tra Segretario, Direttore, Progettista. Sottoclassi di Impiegato
+
+6. Segretario - Sottoclasse di Impiegato
+
+7. Direttore - Sottoclasse di Impiegato
+
+8. Progetista - Sottoclasse di Impiegato
+	8.1 Ruolo: Si divie in Progettista Semplice e Progettista Responsabile. Sottoclassi di Progettista
+
+9. Progettista Semplice - Sottoclasse di Progettista
+
+10. Progettista Responsabile - Sottoclasse di Progettista
+	10.1 Progetti Attivi: Date Progetto (v. req 11)
+	10.2 Nome Progetto: Progetto (v. req 12)
+
+11. Date Progetto:
+	11.1 Data Inizio: Data
+	11.2 Data Fine: Data
+
+12. Progetto
+	12.1 Nome: String
+	
+13. Studenti
+	13.1 n° Matricola: int>0
