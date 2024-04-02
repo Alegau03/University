@@ -1,0 +1,19 @@
+Specifica dei tipi di dato
+
+
+TipoDestinazione = {romantica, divertente}
+
+
+DeltaDataOra = (
+	giorno: Intero > 0,
+	orario: Ora	
+)
+	Operazioni del tipo di dato DeltaDataOra:
+
+		< (x:DeltaDataOra, y:DeltaDataOra) : Boolano
+			pre: nessuna
+			postcondizioni:
+				result = true se e solo se:
+					(x.giorno < y.giorno)
+					oppure
+					(x.giorno = y.giorno e x.orario < y.orario)

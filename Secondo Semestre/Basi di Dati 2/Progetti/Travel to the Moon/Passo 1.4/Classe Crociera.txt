@@ -1,0 +1,32 @@
+Specifica classe Crociera
+
+Operazioni
+
+
+-fine() : Data
+	pre: nessuna
+	post: 
+		Sia i:Itinerario tale che (this, i):croc_itin.
+
+		Sia x:DeltaDataOra il valore dell'attributo 'istante' dell'unico link di assoc. arrivo_itin in cui 'i' è coinvolto.
+
+		result = this.inizio + x.giorno "giorni".
+
+
+-CalcolaPostiRimanenti() : int>0:
+	pre: Esiste almeno un collegamento (this,Ufficio_Prenotazioni):Effettua_Prenotazione
+
+	post:
+		No side-effect.
+		Sia NumPostiOccupatiPrenotazioni un contatore =0
+		Sia InsiemePrenotazioni l'insieme dei collegamenti (this,Ufficio_Prenotazione):Effettua_Prenotazione
+		Per ogni prenotazione i  InsiemePrenotazioni:
+			NumPostiOccupatiPrenotazioni= prenotazione.NumPosti
+
+		Ritorna NumPostiOccupatiPrenotazioni
+
+
+Vincoli esterni
+
+[V.Crociera.date]
+	Per ogni oggetto c:Crociera deve essere: c.inizio <= c.fine

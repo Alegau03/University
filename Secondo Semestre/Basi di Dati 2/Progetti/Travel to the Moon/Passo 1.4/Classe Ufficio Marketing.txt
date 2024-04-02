@@ -1,0 +1,52 @@
+Specifica classe Ufficio Marketing
+
+
+Operazioni
+
+- calcolaEtaMedia(DataInizio:Data, DataFine:Data): Float
+	pre:
+		Esiste almeno una crociera c coinvolta nel link (this,c): mark_croc
+		Esiste almeno un link (c,UfficioPrenotazione):Effettua_Prenotazione
+
+	post:
+		No side-effect.
+		Sia InsiemePrenotazioni l'insieme dei link (c,UfficioPrenotazione):Effettua_Prenotazione tali che :
+			- c.Itinerario.Destubazione.Continente !="Europa"
+			- DataInizio<c.inizio<fine<DataFine
+
+		Sia n= |InsiemePrenotazioni|
+		Per prenotazione in InsiemePrenotazioni:
+			sia cl=prenotazione.Cliente
+			SommaEta+= cl.Eta
+
+		Return SommaEta/n
+
+
+- calcolaDestinazioniGettonate(DataInizio:Data, DataFine:Data): Float	
+	pre:
+		Esiste almeno un link (this,Crociera): mark_croc
+
+	post:
+		No side-effect.
+		Sia InsiemeCrociere l'insieme dei link (this,Crociera): mark_croc
+		Sia InsiemeLunaDIMiele l'insieme formato dai link tali che Crociera è del tipo LunaDiMiele
+		Sia InsiemeFamiglie l'insieme formato dai link tali che Crociera è del tipo PerFamiglie
+		Sia InsiemeDestinazioni l'insieme delle Crociera.Itinerario.Destinazione
+		Sia Gettonate un insieme Vuoto
+
+		Per ogni dest in InsiemeDestinazioni:
+			cc1=0
+			cc2=0
+			Per ogni lunMiel in InsiemeLunaDiMiele:
+				se lunMiel.Itinerario.Destinazione=dest:
+					cc1+=1
+			Per ogni fam in InsiemeFamiglie:
+				se fam.Itinerario.Destinazuione=dest:
+					cc2+=1
+			se cc1>=10 || cc2>=15:
+				Gettonate.add(dest)
+		
+		|Gettonate|: |InsiemeDestinazioni|= x:100
+
+		Ritorna x
+

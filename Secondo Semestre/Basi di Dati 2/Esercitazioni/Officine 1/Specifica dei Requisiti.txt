@@ -1,0 +1,36 @@
+1. Officina
+	1.1 Nome: Stringa id
+	1.2 Indirizzo: Indirizzo (v. sec tipi di Dato) id
+	1.3 Numero Dipendenti: Int>0
+	1.4 Dipendenti 
+	1.5 Direttore
+
+2. Dipendenti Officina - Sottoclasse di Persona
+	2.1 Anni di servizio: int>0
+	
+
+3. Direttore - Sottoclasse di Dipendente
+	3.1 Data di Nascita
+
+4. Riparazioni
+	4.1 Codice: Id
+	4.2 Veicolo
+	4.3 Data Accettazione
+	4.4 Ora accettazione
+	4.5 Data Ricosnegna
+	4.6 Ora Riconsenga
+
+5. Veicolo
+	5.1 Modello
+	5.2 Tipo
+	5.3 Targa: Targa(v. sec tipi di Dato)
+	5.4 Anno di Immatricolazione
+	5.5 Propretario 
+
+6. Persona
+	6.1 Nome
+	6.2 CF: Id (v. sec tipi di Dato)
+	6.3 Indirizzo
+	6.4 N° di Telefono
+
+7. Propetario - Sottoclasse di Persona
