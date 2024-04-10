@@ -1,0 +1,9 @@
+Specifica Tipi di Dato 
+
+1 PagamentoAccettato={"Bonifico","Carta di Credito","Bonifico-Carta di Credito"}
+
+2 StatoOggetto={"Nuovo","Usato"}
+
+3 DataIstante={"Data":Data; "Istante":Time}
+
+4 CondizioniOggetto= {"ottimo", "buono", "discreto", "da sistemare"}

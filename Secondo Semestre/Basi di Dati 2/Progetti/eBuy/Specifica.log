@@ -1,0 +1,241 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.4.10)  10 APR 2024 11:21
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**"c:/Users/aless/OneDrive/Desktop/University/Secondo Semestre/Basi di Dati 2/Progetti/eBuy/Specifica.tex"
+(c:/Users/aless/OneDrive/Desktop/University/Secondo Semestre/Basi di Dati 2/Progetti/eBuy/Specifica.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-03-14>
+(C:\Users\aless\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(C:\Users\aless\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
+File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count188
+\c@section=\count189
+\c@subsection=\count190
+\c@subsubsection=\count191
+\c@paragraph=\count192
+\c@subparagraph=\count193
+\c@figure=\count194
+\c@table=\count195
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+) (C:\Users\aless\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (C:\Users\aless\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+) (C:\Users\aless\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+ (C:\Users\aless\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (C:\Users\aless\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+ (C:\Users\aless\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen141
+\Gin@req@width=\dimen142
+) (C:\Users\aless\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-03-14 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count196
+\l__pdf_internal_box=\box51
+) (Specifica.aux)
+\openout1 = `Specifica.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+ (C:\Users\aless\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count197
+\scratchdimen=\dimen143
+\scratchbox=\box52
+\nofMPsegments=\count198
+\nofMParguments=\count199
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count266
+\MPscratchDim=\dimen144
+\MPnumerator=\count267
+\makeMPintoPDFobject=\count268
+\everyMPtoPDFconversion=\toks19
+) (C:\Users\aless\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (C:\Users\aless\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 7.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 7.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 7.
+
+
+LaTeX Warning: No \author given.
+
+
+Overfull \hbox (83.8743pt too wide) in paragraph at lines 21--22
+[]\OT1/cmr/m/n/10 Sia \OT1/cmtt/m/n/10 scad this.IstanteScadenza\OT1/cmr/m/n/10 , sia \OT1/cmtt/m/n/10 now \OT1/cmr/m/n/10 mo-mento at-tuale (Giorno:Ora:Minuti:Secondi)
+ []
+
+
+Overfull \hbox (47.60913pt too wide) in paragraph at lines 25--26
+[]\OT1/cmr/m/n/10 Sia \OT1/cmtt/m/n/10 pf this.UltimaOfferta\OT1/cmr/m/n/10 , viene im-postato \OT1/cmtt/m/n/10 AstaConclusa.PrezzoFinale=pf 
+ []
+
+
+Overfull \hbox (41.7782pt too wide) in paragraph at lines 27--28
+[]\OT1/cmr/m/n/10 Viene Cre-ato un link (\OT1/cmtt/m/n/10 AstaConclusa\OT1/cmr/m/n/10 , \OT1/cmtt/m/n/10 UtenteRegistrato\OT1/cmr/m/n/10 ): \OT1/cmtt/m/n/10 utente[]vincitore
+ []
+
+
+Overfull \hbox (24.77725pt too wide) in paragraph at lines 27--28
+\OT1/cmr/m/n/10 l'utente reg-is-trato ^^Re l'UtenteRegistrato del link (\OT1/cmtt/m/n/10 this\OT1/cmr/m/n/10 , \OT1/cmtt/m/n/10 UtenteRegistrato\OT1/cmr/m/n/10 ):
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--41
+
+ []
+
+
+Overfull \hbox (85.55377pt too wide) in paragraph at lines 44--45
+\OT1/cmr/m/n/10 ogni volta che un \OT1/cmtt/m/n/10 UtenteRegistrato \OT1/cmr/m/n/10 usa l'operazione \OT1/cmtt/m/n/10 UtenteRegistrato.ProponiBid()
+ []
+
+
+Overfull \hbox (14.1927pt too wide) in paragraph at lines 46--47
+\OT1/cmr/m/n/10 l'oggetto \OT1/cmtt/m/n/10 UtenteRegistrato \OT1/cmr/m/n/10 per il quale \OT1/cmtt/m/n/10 AstaInCorso.IstanteOfferta
+ []
+
+
+c:/Users/aless/OneDrive/Desktop/University/Secondo Semestre/Basi di Dati 2/Progetti/eBuy/Specifica.tex:51: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.51 
+     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[1
+
+{C:/Users/aless/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
+
+ []
+
+
+Overfull \hbox (89.2475pt too wide) in paragraph at lines 82--83
+[]\OT1/cmr/m/n/10 Viene im-postato \OT1/cmtt/m/n/10 AstaInCorso.OffertaAttuale \OT1/cmr/m/n/10 come \OT1/cmtt/m/n/10 p.UltimaOfferta+p.AmmontareRialzi 
+ []
+
+
+c:/Users/aless/OneDrive/Desktop/University/Secondo Semestre/Basi di Dati 2/Progetti/eBuy/Specifica.tex:96: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.96 \begin
+           {enumerate}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (14.55351pt too wide) in paragraph at lines 99--101
+\OT1/cmr/m/n/10 Se \OT1/cmtt/m/n/10 UtenteRegistrato \OT1/cmr/m/n/10 usa la fun-zione \OT1/cmtt/m/n/10 UtenteRegistrato.CreaNuovoPost()\OT1/cmr/m/n/10 ,
+ []
+
+
+Overfull \hbox (0.47125pt too wide) in paragraph at lines 99--101
+\OT1/cmr/m/n/10 non pu^^Ro us-are l'operazione \OT1/cmtt/m/n/10 UtenteRegistrato.ProponiBid() \OT1/cmr/m/n/10 sull'oggetto
+ []
+
+
+Overfull \hbox (13.08218pt too wide) in paragraph at lines 99--101
+\OT1/cmr/m/n/10 cre-ato con \OT1/cmtt/m/n/10 UtenteRegistrato.CreaNuovoPost()\OT1/cmr/m/n/10 , non pu^^Ro us-are l'operazione
+ []
+
+
+Overfull \hbox (116.63615pt too wide) in paragraph at lines 99--101
+\OT1/cmtt/m/n/10 UtenteRegistrato.ComoraOggetto() \OT1/cmr/m/n/10 sull'oggetto cre-ato con \OT1/cmtt/m/n/10 UtenteRegistrato.CreaNuovoPost() 
+ []
+
+[2] [3]
+LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 112.
+LaTeX Font Info:    No file OMScmtt.fd. on input line 112.
+
+
+LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbraceleft' on input line 112.
+
+
+Overfull \hbox (20.99712pt too wide) in paragraph at lines 112--113
+[]\OT1/cmtt/m/n/10 PagamentoAccettato=\OMS/cmtt/m/n/10 f\OT1/cmtt/m/n/10 "Bonifico","Carta di Credito","Bonifico-Carta
+ []
+
+
+Overfull \hbox (20.74718pt too wide) in paragraph at lines 124--125
+[]\OT1/cmtt/m/n/10 CondizioniOggetto=\OMS/cmtt/m/n/10 f\OT1/cmtt/m/n/10 "ottimo", "buono", "discreto", "da sistemare"\OMS/cmtt/m/n/10 g 
+ []
+
+[4]
+<UML.jpg, id=22, 1406.25375pt x 587.19376pt>
+File: UML.jpg Graphic file (type jpg)
+<use UML.jpg>
+Package pdftex.def Info: UML.jpg  used on input line 128.
+(pdftex.def)             Requested size: 345.0pt x 144.05637pt.
+ [5 <./UML.jpg>] (Specifica.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-03-14>
+ ***********
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 1322 strings out of 474424
+ 22455 string characters out of 5741739
+ 1932496 words of memory out of 5000000
+ 23703 multiletter control sequences out of 15000+600000
+ 562827 words of font info for 52 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 57i,6n,65p,496b,211s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\aless\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on Specifica.pdf (5 pages, 167237 bytes).
+PDF statistics:
+ 59 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -1,0 +1,27 @@
+Specifica Classi progetto eBuy
+
+1. Utenti Registrati
+	1.1 Nome: Stringa
+	1.2 Data Registrazione: Data
+
+2. Post (Annunci)
+	2.1 Descrizione: Stringa
+	2.2 Categoria: String
+	2.3 Pagamenti Accettati: PagamentoAccettato
+	2.4 Stato oggetto: StatoOggetto
+	2.5 Tipolgia
+
+3. PostAsta - Sottoclasse di Post
+	3.1 Prezzo iniziale: Float>0
+	3.2 AmmontareRialzi: int>0
+	3.3 IstanteScadenza: DataIstante
+	3.4 UltimoBidder: Utente
+
+4. PostCompraSubito - Sottoclasse di Post
+	4.1 Prezzo di vendita: float>0
+
+5. Bid
+	5.1 Istante: Time
+	5.2 Bideer- Utente
+
+6. AstaConclusa

@@ -1,0 +1,59 @@
+Classe Post
+
+Specifica:
+	2. Post (Annunci)
+		2.1 Descrizione: Stringa
+		2.2 Categoria: String
+		2.3 Pagamenti Accettati: PagamentoAccettato
+		2.4 Stato oggetto: StatoOggetto
+		2.5 Tipolgia
+		2.6 Garanzia: Intero
+		2.7 Condizioni: CondizioniOggetto
+
+	3. PostAsta - Sottoclasse di Post
+		3.1 Prezzo iniziale: Float>0
+		3.2 AmmontareRialzi: int>0
+		3.3 IstanteScadenza: DataIstante
+		3.4 UltimoBidder: Utente
+
+	4. PostCompraSubito - Sottoclasse di Post
+		4.1 Prezzo di vendita: float>0
+
+
+
+Operazioni:
+	1. ChiudiAsta()
+		pre: nessuna
+		post: 
+			Se this è un'istanza PostAsta:
+				Sia scad this.IstanteScadenza, sia now momento attuale (Giorno:Ora:Minuti:Secondi) attuale, non appena scad=now il post viene chiuso.
+
+					Dato il link (this, AstaConclusa): asta_finita
+						Sia pf this.UltimaOfferta, viene impostato AstaConclusa.PrezzoFinale=pf
+						Viene Creato un link (AstaConclusa,UtenteRegistrato): utente_vincitore l'utente registrato è l'UtenteRegistrato 
+						del link (this,UtenteRegistrato): ultimo_bidder
+
+
+			Se this è un istanta PostCompraSubito
+
+				 Quando un UtenteRegistrato invoca CompraOggetto() viene creato un link (this, UtenteRegistrato): utente_compratore 
+
+
+Operazione PostAsta:
+	
+	1. AggiornaUltimoBidder()
+		pre: 
+			Ci sia almeno un link (this,UtenteRegistrato):AstaInCorso e this.IstanteScadenza<now.
+
+		post:
+
+			Sia Aste l'insieme dei link (this,UtenteRegistrato): AstaInCorso, ogni volta che un UtenteRegistrato usa l'operazione UtenteRegistrato.ProponiBid()
+			viene aggiornato tale insieme.
+			
+			Viene creato un link (this,UtenteRegistrato): ultimo_bidder con l'oggetto UtenteRegistrato per il quale AsteInCorso.IstanteOfferta sia maggiore di tutti
+
+
+Vincoli Esterni:
+	
+	[V.PostAsta.IstanteScadenza]
+		Quando viene creato un nuovo oggetto di tipo PostAsta e viene specificato l'istante della scadenza questo deve essere maggiore del tempo in cui il post viene creato
