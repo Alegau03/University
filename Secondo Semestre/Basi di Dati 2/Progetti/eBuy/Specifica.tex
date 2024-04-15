@@ -1,6 +1,6 @@
 \documentclass{article}
 \usepackage{graphicx} % Required for inserting images
-
+\usepackage[paper=a4paper,left=20mm,right=20mm,bottom=25mm,top=25mm]{geometry}
 \begin{document}
 
 \title{eBuy}
@@ -59,15 +59,15 @@
 \subsection{Operazioni:}
 
 \begin{enumerate}
-    \item \texttt{CreaNuovoPost(an: Intero):}
+    \item \texttt{CreaNuovoPost(d:String,p:PagamentiAccettati,a:Int,co= CondizioniOggetto):}
     
     \textbf{pre:}\\ \texttt{this.DataRegistrazione<now} \\
     
     \textbf{post:} 
     
-    Viene Creato un nuovo oggetto di tipo \texttt{Post},
+    Viene Creato un nuovo oggetto di tipo \texttt{Post}, con Descrizione = d;
     
-    Viene Creata un nuovo oggetto di tipo \texttt{Oggetto} ed il link (\texttt{Post},\texttt{Oggetto}): \texttt{post\_ogg}
+    Viene Creata un nuovo oggetto di tipo \texttt{Oggetto} con PagamentiAccettati=p, Anni Garanzia= a, Condizioni= co; ed il link (\texttt{Post},\texttt{Oggetto}): \texttt{post\_ogg}
     
     \item \texttt{ProponiBid(p:PostAsta):}
     
