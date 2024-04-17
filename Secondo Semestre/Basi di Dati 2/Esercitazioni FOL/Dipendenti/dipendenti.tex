@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage[paper=a4paper,left=20mm,right=20mm,bottom=25mm,top=25mm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb} % Added package
+\begin{document}
+
+\title{Fol, Dipendenti}
+\maketitle
+
+\section {Simboli di predicato e funzione}
+\begin{itemize}
+    \item F := \{\}
+    \item P := \{Dipendente/1, NumTelefono/1, dipNum/2, Persona/1, Nome/1, persNome/2, Dipartimento/1, lavDip/2, Direttore/1, dipDir/2\}
+    \item V := \{X,Y,Z\}
+\end{itemize}
+
+
+\section{Vincoli}
+\begin{itemize}
+    \item Tutte le persone hanno almeno un numero di telefono
+    \subitem $\forall X, \exists Y \text{ Dipedente}(X) \land \text{NumTelefono}(Y) \rightarrow \text{dipNum}(X,Y)$  
+    \item Ogni persona ha esattamente un nome
+    \subitem $\forall X, \exists ! Y \text{ Persona}(X) \land \text{Nome}(Y) \rightarrow \text{persNome}(X,Y)$
+    \item Non ci sono dipendenti che lavorano in più di due dipartimenti  
+    \subitem  $\forall X, \not\exists Y,Z  (Y = Z) \land \text{Dipendente}(X) \land \text{Dipartimento}(Y) \land \text{Dipartimento}(Z) \land \text{lavDip}(X,Y) \land \text{lavDip}(X,Z)$
+    \item Ogni dipartimento ha esattamente un direttore che è una persona
+    \subitem $\forall X$  Dipartimento(X) $ \rightarrow  \exists Y$ Persona(Y) $\land Direttore(Persona(Y)) \land$ dipDir(X,Y)
+\end{itemize}
+\end{document}
