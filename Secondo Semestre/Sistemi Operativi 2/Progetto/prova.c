@@ -139,7 +139,7 @@ void rimuoviVirgole(const char *filename) {
 
     fclose(file);
 
-    printf("Le virgole sono state rimosse da %s\n", filename);
+    //printf("Le virgole sono state rimosse da %s\n", filename);
 }
 void modificaFile(const char *nomeFile) {
     rimuoviVirgole(nomeFile);
@@ -197,7 +197,7 @@ void modificaFile(const char *nomeFile) {
     }
     free(array);
 
-    printf("Il file è stato modificato con successo!\n");
+    //printf("Il file è stato modificato con successo!\n");
 }
 
 // FINE FUNZIONE MODIFICA FILE
@@ -205,25 +205,29 @@ void modificaFile(const char *nomeFile) {
 
 // Funzione per aggiungere una coppia chiave-valore al dizionario
 void addFreqToDictionary(Dictionary *dict, const char *key, int value) {
-    printf("Entro in addFreqToDictionary\n");
-    // Controlla se c'è spazio sufficiente nel dizionario
+    //printf("DEBUG: Inizio addFreqToDictionary\n");
+    
+    // Controlla se il dizionario è stato inizializzato correttamente
     if (dict == NULL) {
         fprintf(stderr, "Dizionario non inizializzato\n");
         exit(EXIT_FAILURE);
     }
-    printf("Dimensione del dizionario: %d\n", dict->size);
-    if (dict->size == 0) {
-        fprintf(stderr, "Dizionario vuoto\n");
+
+    // Check if the key is not null
+    if (key == NULL) {
+        fprintf(stderr, "Chiave non valida\n");
         exit(EXIT_FAILURE);
     }
 
+    //printf("DEBUG: Dimensione del dizionario: %d\n", dict->size);
+
     // Cerca la chiave nel dizionario e aggiorna il valore se esiste già
     for (int i = 0; i < dict->size; i++) {
-        printf("Entro nel ciclo for\n");
-        printf("Chiave corrente: %s\n", dict->entries[i].key); // Debug
+        //printf("DEBUG: Iterazione %d\n", i);
+        //printf("DEBUG: Chiave: %s\n", dict->entries[i].key);
         if (dict->entries[i].key != NULL && strcasecmp(dict->entries[i].key, key) == 0) {
-            printf("Valore chiave trovato: %s\n", key); // Debug
             dict->entries[i].value++;
+            //printf("DEBUG: Valore aggiornato per la chiave %s\n", key);
             return; // Chiave trovata e valore aggiornato
         }
     }
@@ -231,22 +235,23 @@ void addFreqToDictionary(Dictionary *dict, const char *key, int value) {
     // Se la chiave non è stata trovata, cerca una posizione vuota nel dizionario
     for (int i = 0; i < dict->size; i++) {
         if (dict->entries[i].key == NULL) {
-            printf("Chiave da aggiungere: %s\n", key);
             dict->entries[i].key = strdup(key);
             dict->entries[i].value = 1;
             if (dict->entries[i].key == NULL) {
                 fprintf(stderr, "Errore durante l'allocazione della memoria per la chiave\n");
                 exit(EXIT_FAILURE);
             }
+            //printf("DEBUG: Chiave e valore aggiunti con successo\n");
             return; // Chiave e valore aggiunti con successo
         }
     }
 
     // Se non ci sono posizioni vuote, espandi il dizionario
+    //printf("DEBUG: Espansione del dizionario\n");
     dict->size *= 2;
-    printf("Espansione del dizionario. Nuova dimensione: %d\n", dict->size);
     dict->entries = realloc(dict->entries, dict->size * sizeof(KeyValuePair));
-    
+    //printf("DEBUG: Nuova dimensione del dizionario dopo l'espansione: %d\n", dict->size);
+
     if (dict->entries == NULL) {
         fprintf(stderr, "Errore durante l'espansione del dizionario\n");
         exit(EXIT_FAILURE);
@@ -259,8 +264,8 @@ void addFreqToDictionary(Dictionary *dict, const char *key, int value) {
         fprintf(stderr, "Errore durante l'allocazione della memoria per la chiave\n");
         exit(EXIT_FAILURE);
     }
+    //printf("DEBUG: Nuova coppia chiave-valore aggiunta al dizionario\n");
 }
-
 
 
 // Funzione per liberare la memoria allocata per il dizionario
@@ -297,34 +302,26 @@ void toLowerCase(char *str) {
         str[i] = tolower(str[i]);
     }
 }
-
 Dictionary aggiornaFrequenza(FILE *file, Dictionary *dict) {
     
-    if (file == NULL) {
-        fprintf(stderr, "Errore: file non valido\n");
-        exit(EXIT_FAILURE);
-    }
-    if (dict == NULL) {
-        fprintf(stderr, "Errore: dizionario non valido\n");
-        exit(EXIT_FAILURE);
-    }
     
     addFreqToDictionary(dict, ".", 1);
-    printf("Aggiorno la frequenza delle parole nel dizionario\n");
     // Lettura del file di testo e conteggio delle occorrenze delle parole
-    char word[MAX_WORD_LENGTH];
-
+    
+    char word[100];
+    
     while (fscanf(file, "%s", word) == 1) {
-        printf("Parola letta: %s\n", word); // Stampiamo la parola letta per debug
+
         char *ptr = word;
+        
         while (*ptr != '\0') {
-            printf("Carattere corrente: %c\n", *ptr); // Stampiamo il carattere corrente per debug
-            if (*ptr == '.' || *ptr == '!' || *ptr == '?') {
-                printf("Carattere di punteggiatura trovato: %c\n", *ptr); // Debug
+            if(*ptr == '.' || *ptr == '!' || *ptr == '?') {
                 addFreqToDictionary(dict, ptr, 1);
-            }
+                
+                 
+                 }
+            
             if (!(isalpha(*ptr) || *ptr == '\'' || *ptr == ',')) {
-                printf("Carattere non valido trovato: %c\n", *ptr); // Debug
                 *ptr = ' ';
             }
             ptr++;
@@ -332,14 +329,17 @@ Dictionary aggiornaFrequenza(FILE *file, Dictionary *dict) {
         ptr = strtok(word, " ");
         while (ptr != NULL) {
             toLowerCase(ptr); // Converti la parola in minuscolo
-            printf("Parola convertita in minuscolo: %s\n", ptr); // Debug
             addFreqToDictionary(dict, ptr, 1);
             ptr = strtok(NULL, " ");
         }
     }
 
+    
+
+
     return *dict;
 }
+
 char* searchWord(const char* filename, const char* targetWord) {
     //printf("Cerco la parola %s nel file %s\n", targetWord, filename);
     FILE *file = fopen(filename, "r");
@@ -385,7 +385,7 @@ void scorriDizionario(const char *filename,Dictionary *dict) {
     
     char stringa[100];
     int fine= dict->size;
-    printf("Fine: %d\n",fine);
+    //printf("Fine: %d\n",fine);
     for (int i = 0; i < fine; i++) {
         if( i== fine-2) {
                 
@@ -402,45 +402,57 @@ void scorriDizionario(const char *filename,Dictionary *dict) {
             if (strcmp(stringa, "") == 0) {
                 continue;
             }
-            //printf("%s: %s\n", dict->entries[i].key,stringa);
+            
         }
     }
     
 }
-
-
-int main(int argc, char *argv[]) {
-    if (argc != 2) {
-        fprintf(stderr, "Utilizzo: %s <file_di_testo>\n", argv[0]);
-        return EXIT_FAILURE;
-    }
-
-    const char *filename = argv[1];
-    
-    printf("ci sono1\n");
-    // Apertura del file di testo in lettura
+void compitoUno(const char *filename) {
     FILE *file = fopen(filename, "r");
     
     if (file == NULL) {
         fprintf(stderr, "Impossibile aprire il file %s\n", filename);
-        return EXIT_FAILURE;
+        return;
     }
-    
-    // Creazione del dizionario
-    Dictionary *dizionarioFrequenze = createDictionary(20);
-    printf("ci sono2\n");
+   
+
+    Dictionary *dizionarioFrequenze = createDictionary(10);
+   
     *dizionarioFrequenze = aggiornaFrequenza(file,dizionarioFrequenze);
-    printf("ci sono3\n");
-    // Chiusura del file
+   
+   
     fclose(file);
-    modificaFile(filename);
-    // Stampa il contenuto del dizionario
+    
+    //modificaFile(filename); //NON PROVOCA CORE DUMP ma funziona solo alla seconda chiamata
+    
     //printDictionary(dizionarioFrequenze);
     scorriDizionario(filename,dizionarioFrequenze);
-    // Libera la memoria allocata per il dizionario
+    
     freeDictionary(dizionarioFrequenze);
     
-    
+}
 
+int main(int argc, char *argv[]) {
+    if (argc != 3) {
+        fprintf(stderr, "Utilizzo: %s <file_di_testo> <numeroCompito>\n", argv[0]);
+        return EXIT_FAILURE;
+    }
+
+    const char *filename = argv[1];
+    int compito = atoi(argv[2]);
+    if (compito==1) {
+        //modificaFile(filename);
+        printf("Compito 1\n");
+
+        compitoUno(filename);
+    }
+    else {
+        printf("Compito 2\n");
+    }
+    //modificaFile(filename); //Provoca coredump
+    
+    // Apertura del file di testo in lettura
+    
     return EXIT_SUCCESS;
+    
 }
