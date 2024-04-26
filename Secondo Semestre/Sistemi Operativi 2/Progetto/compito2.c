@@ -1,207 +1,172 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <ctype.h>
 #include <time.h>
+#include <ctype.h>
 
-#define MAX_WORD_LENGTH 30
-#define MAX_LINE_LENGTH 1024
+#define MAX_WORD_LEN 30
 
-typedef struct {
-    char word[MAX_WORD_LENGTH + 1];
-    double probability;
-} Successor;
-
+// Definizione della struttura per il nodo della parola
 typedef struct WordNode {
-    char word[MAX_WORD_LENGTH + 1];
-    Successor *successors;
-    int num_successors;
-    struct WordNode *next;
+    char word[MAX_WORD_LEN + 1];
+    double probability;
+    struct WordNode* next;
 } WordNode;
 
-char *trim_whitespace(char *str) {
-    char *end;
+// Definizione della struttura per la mappa delle parole
+typedef struct {
+    char key[MAX_WORD_LEN + 1];
+    WordNode* nextWords;
+} WordMap;
 
-    while (isspace((unsigned char)*str)) str++;
-    if (*str == 0) return str;
-    end = str + strlen(str) - 1;
-    while (end > str && isspace((unsigned char)*end)) end--;
-    *(end + 1) = 0;
-    return str;
+// Funzione per liberare la memoria allocata per i nodi delle parole
+void free_word_nodes(WordNode* node) {
+    while (node) {
+        WordNode* next = node->next;
+        free(node);
+        node = next;
+    }
 }
 
-WordNode *load_csv(const char *filename) {
-    FILE *file = fopen(filename, "r");
+// Funzione per liberare la memoria allocata per la mappa delle parole
+void free_word_map(WordMap* map, int size) {
+    for (int i = 0; i < size; i++) {
+        free_word_nodes(map[i].nextWords);
+    }
+    free(map);
+}
+
+// Funzione per caricare i dati dal file CSV nella mappa delle parole
+WordMap* load_csv(const char* filename, int* map_size) {
+    FILE* file = fopen(filename, "r");
     if (!file) {
-        perror("Error opening file");
+        perror("Failed to open file");
         return NULL;
     }
 
-    char line[MAX_LINE_LENGTH];
-    WordNode *head = NULL, *current = NULL;
+    WordMap* map = malloc(sizeof(WordMap) * 100); // Allocazione della memoria per la mappa delle parole
+    char line[1024];
+    int index = 0;
 
-    while (fgets(line, MAX_LINE_LENGTH, file) != NULL) {
-        trim_whitespace(line);
-        if (strlen(line) == 0) continue;
-        
-        printf("Processing line: '%s'\n", line);
+    // Lettura del file CSV e caricamento dei dati nella mappa delle parole
+    while (fgets(line, sizeof(line), file) && index < 100) {
+        char* token = strtok(line, ",");
+        strcpy(map[index].key, token); // Copia la chiave nella mappa
 
-        char *token = strtok(line, ",");
-        if (!token) continue;
+        WordNode* head = NULL;
+        WordNode* current = NULL;
 
-        char *word = token;
-        WordNode *node = (WordNode *)malloc(sizeof(WordNode));
-        if (!node) {
-            fprintf(stderr, "Memory allocation failed\n");
-            continue;
-        }
-        strcpy(node->word, word);
-        node->num_successors = 0;
-        node->successors = NULL;
-        node->next = NULL;
-
-        int count = 0;
-        while ((token = strtok(NULL, ",")) != NULL) {
-            token = trim_whitespace(token);
-            if (*token == '\0') continue;
-            count++;
-        }
-
-        fseek(file, -(strlen(line) + 2), SEEK_CUR);
-        fgets(line, MAX_LINE_LENGTH, file);
-        strtok(line, ",");
-
-        node->num_successors = count / 2;
-        node->successors = (Successor *)malloc(sizeof(Successor) * node->num_successors);
-        if (!node->successors) {
-            fprintf(stderr, "Memory allocation failed for successors\n");
-            free(node);
-            continue;
-        }
-        
-        for (int i = 0; i < node->num_successors; i++) {
-            token = strtok(NULL, ",");
-            if (token == NULL) {
-                fprintf(stderr, "Unexpected end of line after word '%s'\n", node->word);
-                free(node->successors);
-                free(node);
-                continue;
+        while ((token = strtok(NULL, ","))) {
+            WordNode* new_node = malloc(sizeof(WordNode));
+            // Assume che ogni parola sia seguita direttamente dalla sua probabilità
+            char* comma_pos = strchr(token, ',');
+            if (comma_pos) {
+                *comma_pos = '\0'; // Termina la stringa alla virgola
+                sscanf(comma_pos + 1, "%lf", &new_node->probability); // Leggi la probabilità
+            } else {
+                new_node->probability = 1; // Se non c'è una probabilità, usa 1 come default
             }
-            token = trim_whitespace(token);
-            strcpy(node->successors[i].word, token);
-            token = strtok(NULL, ",");
-            if (token == NULL) {
-                fprintf(stderr, "Missing probability after word '%s'\n", node->successors[i].word);
-                free(node->successors);
-                free(node);
-                continue;
+            strcpy(new_node->word, token); // Copia la parola nel nodo
+            new_node->next = NULL;
+
+            if (head == NULL) {
+                head = new_node;
+            } else {
+                current->next = new_node;
             }
-            token = trim_whitespace(token);
-            node->successors[i].probability = atof(token);
-            printf("Word: '%s', Probability: '%s'\n", node->successors[i].word, token);
+            current = new_node;
         }
 
-        if (!head) {
-            head = node;
-            current = node;
-        } else {
-            current->next = node;
-            current = node;
-        }
+        map[index++].nextWords = head; // Assegna la lista di parole al nodo della mappa
     }
 
+    *map_size = index; // Imposta il numero effettivo di parole caricate
     fclose(file);
-    return head;
+    printf("Caricate %d parole dal CSV.\n", *map_size); // Stampa il numero di parole caricate
+    return map;
 }
 
+// Funzione per scegliere la prossima parola in base alla probabilità
+char* choose_next_word(WordNode* node) {
+    double rand_val = (double)rand() / RAND_MAX;
+    double cumulative = 0.0;
 
-void generate_text(WordNode *head, int num_words, const char *start_word) {
-    srand(time(NULL));  // Seed for random number generation
-    FILE *file = fopen("output.txt", "w");
-    if (!file) {
-        perror("Error opening output file");
-        return;
+    while (node) {
+        cumulative += node->probability;
+        if (rand_val <= cumulative) {
+            return node->word;
+        }
+        node = node->next;
     }
 
-    WordNode *current = head;
-    char current_word[MAX_WORD_LENGTH + 1];
+    return NULL; // Se nessuna parola viene trovata, ritorna NULL
+}
 
-    // Find the starting word or use a random punctuation
-    if (start_word == NULL) {
-        const char *punctuations[] = {".", "?", "!"};
-        strcpy(current_word, punctuations[rand() % 3]);
-    } else {
-        strcpy(current_word, start_word);
-    }
+// Funzione per generare il testo basato sulla mappa delle parole
+void generate_text(WordMap* map, int map_size, int num_words, const char* start_word, FILE* out) {
+    char current_word[MAX_WORD_LEN + 1];
+    strcpy(current_word, start_word ? start_word : ".");
+    int capitalize = 1; // Flag per capitalizzare la parola successiva
 
-    fprintf(file, "%s ", current_word);
+    // Generazione del testo
+    for (int i = 0; i < num_words; i++) {
+        int found = 0; // Indica se una parola successiva è stata trovata
+        for (int j = 0; j < map_size; j++) {
+            if (strcmp(map[j].key, current_word) == 0) {
+                char* next_word = choose_next_word(map[j].nextWords);
+                if (next_word) {
+                    found = 1; // Parola trovata, quindi interrompe la ricerca
+                    char display_word[MAX_WORD_LEN + 1];
+                    strcpy(display_word, next_word); // Copia la parola per manipolarla se necessario
 
-    for (int i = 1; i < num_words; i++) {
-        while (current != NULL && strcmp(current->word, current_word) != 0) {
-            current = current->next;
-        }
-        if (current == NULL) {
-            current = head; // Reset to start if no successors
-            continue;
-        }
+                    if (capitalize && isalpha(display_word[0])) {
+                        display_word[0] = toupper(display_word[0]); // Capitalizza la prima lettera della parola
+                    }
 
-        // Select a random successor based on probability
-        double roll = (double)rand() / RAND_MAX;
-        double cumulative = 0.0;
-        int selected_index = 0;
+                    fprintf(out, "%s ", display_word); // Stampa la parola nel file di output
+                    strcpy(current_word, next_word); // Usa la parola originale per mantenere la coerenza dei dati
 
-        for (int j = 0; j < current->num_successors; j++) {
-            cumulative += current->successors[j].probability;
-            if (roll <= cumulative) {
-                selected_index = j;
-                break;
+                    if (strchr(".?!", display_word[strlen(display_word) - 1])) {
+                        capitalize = 1; // Imposta il flag se la parola finisce con un segno di punteggiatura
+                    } else {
+                        capitalize = 0; // Resetta il flag di capitalizzazione
+                    }
+                    printf("Parola corrente: %s, Parola successiva: %s\n", current_word, next_word); // Stampa di debug
+                    break;
+                }
             }
         }
-
-        strcpy(current_word, current->successors[selected_index].word);
-        // Capitalize if it starts a sentence
-        if (strchr(".?!", current_word[strlen(current_word) - 1]) != NULL) {
-            i++;
-            if (i < num_words) {
-                current_word[0] = toupper(current_word[0]);
-                fprintf(file, "\n%s ", current_word);
-            }
-        } else {
-            fprintf(file, "%s ", current_word);
+        if (!found) {
+            fprintf(out, "\nNessuna parola valida trovata per %s. Generazione interrotta.\n", current_word);
+            break; // Interrompe la generazione se non viene trovata nessuna parola valida
         }
-        current = head; // Reset for next word
-    }
-
-    fclose(file);
-}
-
-void free_memory(WordNode *head) {
-    while (head != NULL) {
-        WordNode *temp = head;
-        head = head->next;
-        free(temp->successors);
-        free(temp);
     }
 }
 
-int main(int argc, char *argv[]) {
-    if (argc < 4) {
-        printf("Usage: %s <csv_file> <num_words> [start_word]\n", argv[0]);
+// Funzione principale del programma
+int main(int argc, char* argv[]) {
+    if (argc < 4) { // Assicurati di avere abbastanza argomenti
+        fprintf(stderr, "Utilizzo: %s <file CSV> <numero parole> <file output> [parola di partenza]\n", argv[0]);
         return 1;
     }
 
-    const char *csv_file = argv[1];
-    int num_words = atoi(argv[2]);
-    const char *start_word = argc > 3 ? argv[3] : NULL;
+    int map_size;
+    WordMap* map = load_csv(argv[1], &map_size); // Carica i dati dal file CSV nella mappa delle parole
+    if (!map) return 1;
+    
+    srand(time(NULL)); // Inizializza il seme per la generazione di numeri casuali
 
-    WordNode *word_list = load_csv(csv_file);
-    if (!word_list) {
+    FILE* out = fopen(argv[3], "w"); // Apri il file di output
+    if (!out) {
+        perror("Impossibile aprire il file di output");
         return 1;
     }
 
-    generate_text(word_list, num_words, start_word);
-    free_memory(word_list);
+    // Genera il testo basato sulla mappa delle parole
+    generate_text(map, map_size, atoi(argv[2]), argc > 4 ? argv[4] : NULL, out);
 
-    printf("Text generation completed. Check 'output.txt' for the result.\n");
+    free_word_map(map, map_size); // Libera la memoria
+    fclose(out); // Chiudi il file di output
+
     return 0;
 }
