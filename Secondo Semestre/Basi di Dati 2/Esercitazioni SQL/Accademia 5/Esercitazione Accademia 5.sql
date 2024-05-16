@@ -28,7 +28,7 @@ from persona, progetto, attivitaprogetto as at1, attivitaprogetto as at2
 where at1.persona = persona.id 
 and at1.progetto=progetto.id and progetto.nome = 'Pegasus'
 and at1.persona = persona.id and at2.persona = persona.id
-and at1 <>at2
+and at1 <> at2
 order by persona.cognome desc
 #######################################################################################*/
 
