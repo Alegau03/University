@@ -1,0 +1,26 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Requisiti}{1}{section.1}%
+\contentsline {section}{\numberline {2}Diagramma UML delle classi}{2}{section.2}%
+\contentsline {section}{\numberline {3}Tipi di Dato}{2}{section.3}%
+\contentsline {section}{\numberline {4}Vincoli Esterni}{3}{section.4}%
+\contentsline {section}{\numberline {5}Operazioni di Classe}{4}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Classe Stanza}{4}{subsection.5.1}%
+\contentsline {section}{\numberline {6}Diagramma UseCase}{4}{section.6}%
+\contentsline {section}{\numberline {7}Segnatura UseCase}{5}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Itinerario Visite}{5}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Registra ricovero}{5}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Richieste Prestazioni}{5}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Gestione Pazienti Esterni}{5}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Registra Dimissione}{5}{subsection.7.5}%
+\contentsline {section}{\numberline {8}Specifica UseCase}{6}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Itinerario Visite}{6}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Gestione Esterni}{6}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Registra Ricovero}{6}{subsection.8.3}%
+\contentsline {section}{\numberline {9}Ristrutturazione}{7}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Diagramma UML ristrutturato}{7}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Tipi e Domini}{8}{subsection.9.2}%
+\contentsline {subsubsection}{\numberline {9.2.1}Tipi}{8}{subsubsection.9.2.1}%
+\contentsline {subsubsection}{\numberline {9.2.2}Domini}{8}{subsubsection.9.2.2}%
+\contentsline {subsection}{\numberline {9.3}Vincoli Esterni}{8}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Use Case}{8}{subsection.9.4}%
+\contentsline {subsection}{\numberline {9.5}Traduzione diretta del diagramma UML delle classi ristrutturato}{9}{subsection.9.5}%
