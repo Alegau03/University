@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.4.10)  21 MAY 2024 19:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.4.10)  22 MAY 2024 17:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -410,7 +410,8 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layouthoffset=\dimen183
 \Gm@layoutvoffset=\dimen184
 \Gm@dimlist=\toks27
- (C:\Users\aless\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (c:\Users\aless\OneDrive\Desktop\University\Secondo Semestre\Basi di Dati 2\Progetti\QuickHospital\outLatex\QuickHospital.aux)
+ (C:\Users\aless\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+No file QuickHospital.aux.
 \openout1 = `QuickHospital.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
@@ -431,7 +432,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
 LaTeX Font Info:    ... okay on input line 29.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 29.
 LaTeX Font Info:    ... okay on input line 29.
- (C:\Users\aless\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+(C:\Users\aless\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count307
 \scratchdimen=\dimen185
@@ -523,23 +524,6 @@ File: images/UML-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: images/UML-eps-converted-to.pdf  used on input line 68.
 (pdftex.def)             Requested size: 483.69687pt x 348.92342pt.
  [2 <./images/UML-eps-converted-to.pdf>]
-c:/Users/aless/OneDrive/Desktop/University/Secondo Semestre/Basi di Dati 2/Progetti/QuickHospital/QuickHospital.tex:81: Missing $ inserted.
-<inserted text> 
-                $
-l.81 ... $ DataRicoveroTerminato(drt)$ \rightarrow
-                                                   $DataRicoveroTerminato \g...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-c:/Users/aless/OneDrive/Desktop/University/Secondo Semestre/Basi di Dati 2/Progetti/QuickHospital/QuickHospital.tex:81: Missing $ inserted.
-<inserted text> 
-                $
-l.81 ...t)$ \rightarrow $DataRicoveroTerminato \ge
-                                                   DataRicovero$
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 80--83
 
  []
@@ -550,64 +534,69 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--86
  []
 
 
-c:/Users/aless/OneDrive/Desktop/University/Secondo Semestre/Basi di Dati 2/Progetti/QuickHospital/QuickHospital.tex:91: LaTeX Error: There's no line here to end.
+Overfull \hbox (39.47508pt too wide) in paragraph at lines 86--88
+\OMS/cmsy/m/n/12 8\OML/cmm/m/it/12 p; r; dr; dn\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 Paziente\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^ \OML/cmm/m/it/12 pazienteRicoverato\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p; r\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^ \OML/cmm/m/it/12 DataRicovero\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 r; dr\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^ \OML/cmm/m/it/12 DataNacita\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p; dn\OT1/cmr/m/n/12 )] \OMS/cmsy/m/n/12 !
+ []
+
+
+c:/Users/aless/OneDrive/Desktop/University/Secondo Semestre/Basi di Dati 2/Progetti/QuickHospital/QuickHospital.tex:90: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.91 \acc
+l.90 \acc
          
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
 
  []
 
 
-Overfull \hbox (41.54802pt too wide) in paragraph at lines 92--95
-[]\OT1/cmr/m/n/12 Un paziente Non pu^^Ro fare richi-esta di preno-tazione prima della sua nascita $\OMS/cmsy/m/n/12 8\OML/cmm/m/it/12 p; n; r; drPaziente\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^
+Overfull \hbox (51.19307pt too wide) in paragraph at lines 91--93
+[]\OT1/cmr/m/n/12 Un paziente Non pu^^Ro fare richi-esta di preno-tazione prima della sua nascita $\OMS/cmsy/m/n/12 8\OML/cmm/m/it/12 p; r; dp; dn\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 Paziente\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^
  []
 
 
-c:/Users/aless/OneDrive/Desktop/University/Secondo Semestre/Basi di Dati 2/Progetti/QuickHospital/QuickHospital.tex:96: LaTeX Error: There's no line here to end.
+c:/Users/aless/OneDrive/Desktop/University/Secondo Semestre/Basi di Dati 2/Progetti/QuickHospital/QuickHospital.tex:94: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.96     \acc
+l.94     \acc
              
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
 
  []
 
-c:/Users/aless/OneDrive/Desktop/University/Secondo Semestre/Basi di Dati 2/Progetti/QuickHospital/QuickHospital.tex:97: Missing $ inserted.
+c:/Users/aless/OneDrive/Desktop/University/Secondo Semestre/Basi di Dati 2/Progetti/QuickHospital/QuickHospital.tex:95: Missing $ inserted.
 <inserted text> 
                 $
-l.97 ...nza): ric\_stanza rispetto a Stanza.posti_
+l.95 ...nza): ric\_stanza rispetto a Stanza.posti_
                                                   letto \acc
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-c:/Users/aless/OneDrive/Desktop/University/Secondo Semestre/Basi di Dati 2/Progetti/QuickHospital/QuickHospital.tex:98: Missing $ inserted.
+c:/Users/aless/OneDrive/Desktop/University/Secondo Semestre/Basi di Dati 2/Progetti/QuickHospital/QuickHospital.tex:96: Missing $ inserted.
 <inserted text> 
                 $
-l.98     $\forall
+l.96     $\forall
                   s,r,rs,p Stanza(s) \and PostiLettoStanza(s,p)\land Ricover...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 108--111
+Underfull \hbox (badness 10000) in paragraph at lines 106--109
 
  []
 
@@ -618,46 +607,46 @@ Package epstopdf Info: Source file: <images/UseCase.eps>
 (epstopdf)                    date: 2024-05-20 15:35:17
 (epstopdf)                    size: 7362 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=images/UseCase-eps-converted-to.pdf images/UseCase.eps>
-(epstopdf)             \includegraphics on input line 114.
+(epstopdf)             \includegraphics on input line 112.
 Package epstopdf Info: Output file is already uptodate.
 <images/UseCase-eps-converted-to.pdf, id=37, 277.035pt x 238.8925pt>
 File: images/UseCase-eps-converted-to.pdf Graphic file (type pdf)
 <use images/UseCase-eps-converted-to.pdf>
-Package pdftex.def Info: images/UseCase-eps-converted-to.pdf  used on input line 114.
+Package pdftex.def Info: images/UseCase-eps-converted-to.pdf  used on input line 112.
 (pdftex.def)             Requested size: 483.69687pt x 417.10214pt.
 [4 <./images/UseCase-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 117--118
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
 
  []
 
 [5]
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 166.
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 164.
  (C:\Users\aless\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
 File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 166.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 164.
 
-c:/Users/aless/OneDrive/Desktop/University/Secondo Semestre/Basi di Dati 2/Progetti/QuickHospital/QuickHospital.tex:167: Missing $ inserted.
+c:/Users/aless/OneDrive/Desktop/University/Secondo Semestre/Basi di Dati 2/Progetti/QuickHospital/QuickHospital.tex:165: Missing $ inserted.
 <inserted text> 
                 $
-l.167             Result\ = \sum
+l.165             Result\ = \sum
                                 _{(s,posti)\in P}posti
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-c:/Users/aless/OneDrive/Desktop/University/Secondo Semestre/Basi di Dati 2/Progetti/QuickHospital/QuickHospital.tex:168: Missing $ inserted.
+c:/Users/aless/OneDrive/Desktop/University/Secondo Semestre/Basi di Dati 2/Progetti/QuickHospital/QuickHospital.tex:166: Missing $ inserted.
 <inserted text> 
                 $
-l.168 
+l.166 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-c:/Users/aless/OneDrive/Desktop/University/Secondo Semestre/Basi di Dati 2/Progetti/QuickHospital/QuickHospital.tex:168: Missing } inserted.
+c:/Users/aless/OneDrive/Desktop/University/Secondo Semestre/Basi di Dati 2/Progetti/QuickHospital/QuickHospital.tex:166: Missing } inserted.
 <inserted text> 
                 }
-l.168 
+l.166 
       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -665,10 +654,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-c:/Users/aless/OneDrive/Desktop/University/Secondo Semestre/Basi di Dati 2/Progetti/QuickHospital/QuickHospital.tex:168: Extra }, or forgotten \endgroup.
+c:/Users/aless/OneDrive/Desktop/University/Secondo Semestre/Basi di Dati 2/Progetti/QuickHospital/QuickHospital.tex:166: Extra }, or forgotten \endgroup.
 \par ...m \@noitemerr {\@@par }\fi \else {\@@par }
                                                   \fi 
-l.168 
+l.166 
       
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -680,65 +669,65 @@ deleted material, e.g., by typing `I$}'.
 <images/Ristrutturato.jpg, id=70, 908.39375pt x 589.20125pt>
 File: images/Ristrutturato.jpg Graphic file (type jpg)
 <use images/Ristrutturato.jpg>
-Package pdftex.def Info: images/Ristrutturato.jpg  used on input line 176.
+Package pdftex.def Info: images/Ristrutturato.jpg  used on input line 174.
 (pdftex.def)             Requested size: 483.69687pt x 313.73163pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--187
+Underfull \hbox (badness 10000) in paragraph at lines 183--185
 
  []
 
 [7 <./images/Ristrutturato.jpg>] [8]
-Overfull \hbox (1.82082pt too wide) in paragraph at lines 217--217
+Overfull \hbox (1.82082pt too wide) in paragraph at lines 215--215
 []\OT1/cmr/bx/n/14.4 Traduzione di-retta del di-a-gramma UML delle classi ristrut-turato 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 222--225
+Underfull \hbox (badness 10000) in paragraph at lines 220--223
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--230
+Underfull \hbox (badness 10000) in paragraph at lines 225--228
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 233--236
+Underfull \hbox (badness 10000) in paragraph at lines 231--234
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 237--240
+Underfull \hbox (badness 10000) in paragraph at lines 235--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 243--246
+Underfull \hbox (badness 10000) in paragraph at lines 241--244
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 249--252
+Underfull \hbox (badness 10000) in paragraph at lines 247--250
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 253--256
+Underfull \hbox (badness 10000) in paragraph at lines 251--254
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 260--263
+Underfull \hbox (badness 10000) in paragraph at lines 258--261
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--266
+Underfull \hbox (badness 10000) in paragraph at lines 261--264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 266--269
+Underfull \hbox (badness 10000) in paragraph at lines 264--267
 
  []
 
@@ -758,15 +747,15 @@ Package rerunfilecheck Info: Checksums for `QuickHospital.out':
 (rerunfilecheck)             After:  23D6763127F95CC580D57C8AD5283AC4;3672.
  ) 
 Here is how much of TeX's memory you used:
- 14530 strings out of 474424
- 236221 string characters out of 5741739
+ 14527 strings out of 474424
+ 235943 string characters out of 5741739
  1935496 words of memory out of 5000000
- 36648 multiletter control sequences out of 15000+600000
+ 36647 multiletter control sequences out of 15000+600000
  567476 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  86i,6n,99p,360b,580s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\aless\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on "c:\Users\aless\OneDrive\Desktop\University\Secondo Semestre\Basi di Dati 2\Progetti\QuickHospital\outLatex\QuickHospital.pdf" (10 pages, 292459 bytes).
+Output written on "c:\Users\aless\OneDrive\Desktop\University\Secondo Semestre\Basi di Dati 2\Progetti\QuickHospital\outLatex\QuickHospital.pdf" (10 pages, 292667 bytes).
 PDF statistics:
  145 PDF objects out of 1000 (max. 8388607)
  37 named destinations out of 1000 (max. 500000)

@@ -78,20 +78,18 @@
 \section{Vincoli Esterni}
 \begin{itemize}
     \item  Per ogni RicoveroTerminato e Ricovero, RicoveroTerminato.data $\ge$ Ricovero.data \acc
-        $\forall rt,r,dr,drt Ricovero(r) \land RicoveroTerminato(rt) \land DataRicovero(dr) \land$ \acc $ DataRicoveroTerminato(drt)$ \rightarrow $DataRicoveroTerminato \ge DataRicovero$
+        $\forall r,i,dr [ RicoveroTerminato(r) \land DataIngresso(i,r) \land DataDimissione(d,r)] \rightarrow d>i  $
     \acc
     \item Per Ogni PazienteEsterno, questo non può essere anche interno \acc
     $\forall p, dt, dp PazienteInterno(p) \land DataRicovero(dt) \land DataPrestazioneEsterna(dp)$ \acc $ \land PazienteInRicovero(c, p,dt) \rightarrow \lnot PazienteEsterno(p) \land PazienteInEsterna(p,dp)$ 
 \acc
     \item Un paziente Non può essere ricoverato prima della sua nascita \acc 
-         $\forall p,n,r,dr Paziente(p) \land nascita(p,n) \land Ricovero(r) \land dataR(dr,r)$ \acc 
-         $ \rightarrow n >= dr$
+         $ \forall p,r, dr, dn [Paziente(p) \land pazienteRicoverato(p,r) \land DataRicovero(r,dr) \land DataNacita(p,dn)] \rightarrow dr>dn $
 
 
 \acc 
     \item Un paziente Non può fare richiesta di prenotazione prima della sua nascita
-        $\forall p,n,r,dr Paziente(p) \land nascita(p,n) \land PrenotazioneRichiesta(r) \land dataR(dr,r)$ \acc 
-        $ \rightarrow n >= dr$
+    $ \forall p,r, dp, dn [Paziente(p) \land pazienteEsterno(p,r) \land DataPrestazione(r,dp) \land DataNacita(p,dn)] \rightarrow dp>dn $
 
     \acc
     \item Non possono esserci più link(Ricovero,Stanza): ric\_stanza rispetto a Stanza.posti_letto \acc 
@@ -107,7 +105,7 @@
     \item preCondizioni: nessuna
     \item postCondizioni:\\
             $R=\{ r | ricoveriStanza(r,this \land \lnot RicoveroTerminato(r))\}$\\         
-            sia\ $p= PostiLettoStanza(this,p)$\\ return\ p-|R|\\
+            sia\ $p= PostiLettoStanza(this,p)$\\ return\ p-$|R|$\\
 \end{itemize}
 \section{Diagramma UseCase}
 \begin{center}
