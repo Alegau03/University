@@ -31,7 +31,7 @@
 \maketitle
 
 \tableofcontents 
-
+\newpage
 \section{Requisiti}
 1. Paziente \\ 
 \id 1.1 nome \\
@@ -76,95 +76,134 @@
 \end{itemize}
 \newpage 
 \section{Vincoli Esterni}
-\begin{itemize}
-    \item  Per ogni RicoveroTerminato e Ricovero, RicoveroTerminato.data $\ge$ Ricovero.data \acc
-        $\forall r,i,dr [ RicoveroTerminato(r) \land DataIngresso(i,r) \land DataDimissione(d,r)] \rightarrow d>i  $
-    \acc
-    \item Per Ogni PazienteEsterno, questo non può essere anche interno \acc
-    $\forall p, dt, dp PazienteInterno(p) \land DataRicovero(dt) \land DataPrestazioneEsterna(dp)$ \acc $ \land PazienteInRicovero(c, p,dt) \rightarrow \lnot PazienteEsterno(p) \land PazienteInEsterna(p,dp)$ 
-\acc
-    \item Un paziente Non può essere ricoverato prima della sua nascita \acc 
-         $ \forall p,r, dr, dn [Paziente(p) \land pazienteRicoverato(p,r) \land DataRicovero(r,dr) \land DataNacita(p,dn)] \rightarrow dr>dn $
+\begin{quote}
+    [V.RicoveroTerminato.fineGinizio]
+    $$\forall r_t,t_i,t_f \quad RicoveroTerminato(r_t) \wedge DataInizio(r_t,t_i) \wedge DataFine(r_t,t_f)\Rightarrow t_f\ge t_i $$
 
+    [V.Stanza.num\_link]
 
-\acc 
-    \item Un paziente Non può fare richiesta di prenotazione prima della sua nascita
-    $ \forall p,r, dp, dn [Paziente(p) \land pazienteEsterno(p,r) \land DataPrestazione(r,dp) \land DataNacita(p,dn)] \rightarrow dp>dn $
+    Sia $R_s := \{ r | Ricovero(r) \land \lnot RicoveroTerminato(r) \land ric\_st(r,this)\}$\\
+    $$|R_s| \le 8$$
+    [V.Ricovero.nascita$<$ricovero]
+    $$ \forall d_n,d_r,r,p \quad dataNascita(d_n,p)\land DataInizio(d_r,r) \land Paziente(p) \land Ricovero(r)\Rightarrow d_n < d_r$$ 
+    
+    [V.Prestazione.nascita$<$prestazione]
+    $$ \forall d_n,d_p,pr,p \quad dataNascita(d_n,p)\land data(d_r,pr) \land Paziente(p) \land Prestazione(p)\Rightarrow d_n < d_p$$  
 
-    \acc
-    \item Non possono esserci più link(Ricovero,Stanza): ric\_stanza rispetto a Stanza.posti_letto \acc 
-    $\forall s,r,rs,p Stanza(s) \and PostiLettoStanza(s,p)\land Ricovero(r) $\acc $\land E=\{(s,r)| StanzaRicovero(s,r)\}$ 
-    $|E|<=p$
-\end{itemize} \newpage
-
-
-\section{Operazioni di Classe}
-\subsection{Classe Stanza}
-\textbf{calcola\_postiLiberi()}: 0..8
-\begin{itemize}
-    \item preCondizioni: nessuna
-    \item postCondizioni:\\
-            $R=\{ r | ricoveriStanza(r,this \land \lnot RicoveroTerminato(r))\}$\\         
-            sia\ $p= PostiLettoStanza(this,p)$\\ return\ p-$|R|$\\
-\end{itemize}
-\section{Diagramma UseCase}
+    [V.Paziente.ric\_ricterm]
+    $$ \not\exists p,r_1,r_2 \quad Paziente(p)\land paz\_ric(p,r_1)\land paz\_ric(p,r_2)\land r_1\neq r_2 \land \lnot RicoveroTerminato(r_1)\land \lnot RicoveroTerminato(r_2)$$
+\end{quote}
+\section{Operazioni di classe}
+\subsection{Operazioni di Stanza}
+    \begin{quote}
+        postiDisponibili() : Intero $\ge$ 0
+        \begin{itemize}
+            \item pre: Nessuna
+            \item post: Non modifica il livello estensionale dei dati (nessuna nuova ennupla o modifiche a $\mathcal{D}$) \\$M_{in}=M_{out}$.
+            \\
+            Sia $this,p\quad$ $postiLetto(this,p)$, $Stanza(this)$ e $R:=\{r| ric\_st(r,this) \wedge Ricovero(r)\wedge \lnot RicoveroTerminato(r)\}$.\\
+            $$result = p - |R|$$
+        \end{itemize}
+    \end{quote} \newpage
+\section{Specifica degli Use-Case}
+\subsection{Diagramma}
 \begin{center}
     \includegraphics[width=1\textwidth ]{images/UseCase.eps}
-\end{center}\newpage
-\section{Segnatura UseCase}
-Segnatura di \textbf{tutti} gli useCase\\
-\subsection{Itinerario Visite}
-\begin{itemize}
-    \item calcola\_itinerario (m:Medico): Itinerario (un insieme)
-\end{itemize}
+\end{center} \newpage
+\subsection{Registra Anagrafica}
+    \begin{quote}
+        registra\_paziente(n : Stringa, c: Stringa, nascita: Date, tel : $\mathcal{T}$ , email : Email , post: Indirizzo, est : Booleano ): Paziente
+        \begin{itemize}
+            \item pre: 
+            \item post: Modifica il livello estensionale quindi $M_{in} \neq M_{out}$.\\
+            Elementi di $\mathcal{D}$ aggiunti : $\rho$\\
+            Elementi di $\mathcal{D}$ rimossi : nessuno\\
+            Tuple aggiunte:
+            \begin{itemize}
+                \item $est = true \Rightarrow PazienteEsterno(\rho)$ , altrimenti $Paziente(\rho)\Rightarrow \lnot PazienteEsterno(\rho)$
+                \item $nome(\rho, n)$
+                \item $cognome(\rho,c)$
+                \item $dataNascita(\rho, nascita)$
+                \item $recapitoEmail(\rho,email)$
+                \item $recapitoPostale(\rho, post)$
+                \item $\forall t \in tel \quad recapitoTelefonico(\rho,t)$
+            \end{itemize}
+            Tuple rimosse : nessuna  \\
+            $result = \rho$
+        \end{itemize}
+    \end{quote}
+\subsection{Registra richiesta di prestazione}
+    \textbf{registra\_prestazione($\rho$: PazienteEsterno, $d$ : Stringa, $s$: Specializzazione, $\delta$ : Data) : Prestazione}
+    \begin{itemize}
+        \item pre : Sia $D :=\{ [d_i,d_f] \quad| Data(d_f)\land Data(d_i) \land paz\_ric(p,r)\land RicoveroTerminato(r) \land DataFine(r,d_f) \land DataInizio(r,d_i)\}$\\
+        $\delta \notin [d_i^j,d_f^j] \quad \forall d_i^j, d_f^j \in D$
+        \item post : $M_{in} \neq M_{out}$\\
+        Elementi di $\mathcal{D}$ aggiunti: $p$\\
+        Elementi di $\mathcal{D}$ rimossi: nessuno \\
+        Tuple aggiunte:
+        \begin{itemize}
+            \item $descrizione(d,p)$
+            \item $data(\delta,p)$
+            \item $paz\_prest(\rho,p)$
+            \item $prest\_spec(p,s)$
+        \end{itemize}
+        $result = p$
+    \end{itemize}
+
+ \textbf{lista\_medici($\pi$: Prestazione): Medico[0..*]}
+    \begin{itemize}
+        \item pre: nessuna
+        \item post : $M_{in} = M_{out}$\\
+        Sia $\mathcal{M} :=\{ m\quad | \exists s \quad Medico(m)\land Specializzazione(s)\land prest\_spec(\pi,s)\land primaria(s,m)\}$.\\
+        Sia $\mathcal{M}_s := \{ m\quad | \exists s \quad Medico(m)\land Specializzazione(s)\land prest\_spec(\pi,s)\land secondaria(s,m)\}$.\\
+        $|\mathcal{M}|> 0 \Rightarrow result = \mathcal{M}$ \\
+        $\land$\\
+        $|\mathcal{M}|=0 \rightarrow result = \mathcal{M}_s$
+    \end{itemize}
+
 \subsection{Registra ricovero}
-\begin{itemize}
-    \item calcola\_posti\_letto\_liberi()
-    \item ricovera\_paz(p:Paziente, s:Stanza, i:Data): Ricovero
-\end{itemize}
+    \textbf{registra\_ricorvero($\rho$: Paziente, $\mu$ : Medico, $d$ : Data): Ricovero}
+    \begin{itemize}
+        \item pre: Sia $S : =\{(s,p) | Stanza(s)\land postiDisponibili(s,p)\land p>0 \}$, $\displaystyle\sigma = \sum_{(s,p)\in S} p$\\
+        $$\sigma > 0$$
+        \item post: $M_{in} \neq M_{out}$\\
+        Elementi di $\mathcal{D}$ aggiunti: $\omega$\\
+        Elementi di $\mathcal{D}$ rimossi: nessuno \\
+        Tuple aggiunte:
+        \begin{itemize}
+            \item DataInizio($\omega$,$adesso$)
+            \item $med\_ric(\mu,\omega)$
+            \item $paz\_ric(\rho, \omega)$
+            \item Sia $S:=\{s | Stanza(s) \land postiDisponibili(s)>0\}$, scelta arbitraria di $s\in S$, $ric\_st(\omega, s)$.
+        \end{itemize}
+        $result = \omega$
+    \end{itemize}
 
-\subsection{Richieste Prestazioni}
-\begin{itemize}
-    \item accetta\_esterna(p:PazienteEsterno, i: Data, d: Stringa): Prestazione e PrestazioneRichiesta
-\end{itemize}
-\subsection{Gestione Pazienti Esterni}
-\begin{itemize}
-    \item calcola\_medici\_idonei(s:Specializzazione): Insieme di Medici
-\end{itemize}
-\subsection{Registra Dimissione}
-\begin{itemize}
-    \item dimetti(p:Paziente,r:Ricovero,d:Data): RicoveroTerminato
-\end{itemize}
-\newpage
-
-\section{Specifica UseCase}
-Veranno scritte le specifiche delle Operazioni di UseCase solo più importanti
-\subsection{Itinerario Visite}
-Il professore a lezione ha detto che ci avrebbe mostrato la soluzione.
-\subsection{Gestione Esterni}
-Questo UseCase utilizza l'operazione calcola\_medici\_idonei(s:Specializzazione) per ritornare un insieme di medici che possono svolgere la prenotazione.
-\begin{itemize}
-    \item preCondizioni: $\exists s Specializzazione(s)$
-    \item postCondizioni:\\
-             $Medici\_spec\_prim=\{ m | Medico(m) \land SpecializzazionePrimaria(m,s) \}$ \\
-             $Medici\_spec\_sec=\{ m | Medico(m) \land SpecializzazioneSecondaria(m,s) \}$\\
-             Result: \begin{itemize}
-                \item Medici\_spec\_prim se $|Medici\_spec\_prim|>0$
-                \item Medici\_spec\_sec se ($|Medici\_spec\_prim|=0 \land |Medici\_spec\_sec|>0 $)
-                \item Null se ($|Medici\_spec\_prim|=0 \land |Medici\_spec\_sec|=0 $)
-             \end{itemize}
-\end{itemize}
-
-
-\subsection{Registra Ricovero}
-Questo useCase usa l'operazione calcola\_posti\_letto\_liberi() per verificare i posti letto liberi 
-\begin{itemize}
-    \item preCondizioni: nessuna
-    \item postCondizioni:\\
-            Sia s Stanza(s), P=\{ (s,posti) $|$ calcola\_postiLiberi(s,posti) \}\\
-            Result\ = \sum_{(s,posti)\in P}posti
-
-\end{itemize}
+    \textbf{registra\_dimissione($r$: Ricovero, $\delta$: Data): RicoveroTerminato}
+    \begin{itemize}
+        \item pre:  Sia $d_i$, $DataInizio(r,d_i)\Rightarrow \delta>d_i$ $\land \lnot RicoveroTerminato(r)$
+        \item post: $M_{in}\neq M_{out}$\\
+        Elementi di $\mathcal{D}$ aggiunti: nessuno\\
+        Elementi di $\mathcal{D}$ rimossi: nessuno \\
+        Tuple aggiunte:
+        \begin{itemize}
+            \item $RicoveroTerminato(r)$
+            \item $datFine(r,\delta)$
+        \end{itemize}
+        $result = r$
+    \end{itemize}
+\subsection{Calcola itinerario}
+\begin{quote}
+    itinerario(m : Medico): $\mathcal{I}$
+    \begin{itemize}
+        \item pre : Sia $m$ l'istanza di Medico che rappresenta l'attore che invoca l'operazione
+        \item post: $M_{in} = M_{out}$\\
+        Sia $R := \{ r | Ricovero(r) \land \lnot RicoveroTerminato(r)\land  med\_ric(m,r)\}$\\
+        Sia $S := \{ s | \exists r\in R \land Stanza(s) \land ric\_st(r,s)\}$\\
+        Sia $T := \{(p,\sigma) | \exists s\in S \land piano(s,p) \land settore(s,\sigma)\}$\\
+        $result = \mathcal{I}_T$
+    \end{itemize}
+\end{quote}
 \newpage
 
 Arrivati a questo punto la fase di \textbf{Analisi} è \textbf{finita}.
@@ -203,67 +242,167 @@ Arrivati a questo punto la fase di \textbf{Analisi} è \textbf{finita}.
     \item create domain Email as varchar secondo regex ('[a..zA..Z]@[a..z].[a..z]') 
 \end{itemize}
 \subsection{Vincoli Esterni}
-I precedenti vincoli esterni non violano la nuova ristrutturazione.
-Nuovi vincoli esterni:
-\begin{itemize}
-    \item Data Una SpecializzazionePrimaria essa non può essere SpecializzazioneSecondaria per lo stesso medico.\\
-        $\forall m, s Medico(m) \land Specializzazione(s) \land SpecializzazionePrimaria(m,s)$\\ $\rightarrow \lnot SpecializzazioneSecondaria(m,s)$
-\end{itemize}
+I precedenti vincoli esterni non violano la nuova ristrutturazione.\\
+Nuovi vincoli esterni:\\
+\begin{quote}
+    [V.Medico.specializzazioni]\\
+        Data Una SpecializzazionePrimaria essa non può essere SpecializzazioneSecondaria per lo stesso medico.\\
+        $$\forall m, s Medico(m) \land Specializzazione(s) \land SpecializzazionePrimaria(m,s)$$\\ $$\rightarrow \lnot SpecializzazioneSecondaria(m,s)$$
+\end{quote}
 \subsection{Use Case}
 Gli use case non violano la nuova ristrutturazione.
 \newpage
 \subsection{Traduzione diretta del diagramma UML delle classi ristrutturato}
 Saranno scritte tutte le tabelle da creare.
 \begin{itemize}
-    \item Nazione(\underline{\textbf{nome}}:varchar)
-    \item Citta(\underline{\textbf{id}}:integer, nome:varchar)\\ v.inclusione: Città(Nome) occorre in $naz\_cit$(nazione)
-    \item $naz\_cit$(\underline{\textbf{Nazione}}:varchar,\underline{\textbf{Citta}}:integer)\\
-            foreign key: Nazione references Nazione(nome)\\
-            foreign key: Citta references Citta(id)\\
-    \item PazienteInterno(\underline{\textbf{id}}:integer, posta: Indirizzo, email: Email, numTel:Cell)\\
-           v.inclusione PazienteInterno(id) occorre in $cit\_paz$(Paziente)
-    \item $cit\_paz$(\underline{\textbf{Citta}}:varchar,\underline{\textbf{Paziente}}:integer)\\
-            foreign key: Nazione references Paziente(id)\\
-            foreign key: Citta references Citta(id)\\
-    \item Ricovero(\underline{\textbf{id}}: integer, ingresso: Date, terminato: Boolean: $data\_ricovero$:Date*)\\
-            v.inclusione Ricovero(id) occorre in $ric\_stanza$(Ricovero)
-            v.inclusione Ricovero(id) occorre in $cura$(Ricovero)
-    \item $paz\_ric$(\underline{\textbf{Paziente}}:integer,\underline{\textbf{Ricovero}}:integer)\\
-    foreign key: Nazione references Paziente(id)\\
-    foreign key: Citta references Ricovero(id)\\
-    \item Stanza(\underline{\textbf{id}}: integer, settore: intero$>$0,piano: intero$>=$0 $posti\_letto: 1..8$)
-    \item $ric\_stanza$(\underline{\textbf{Ricovero}}: intero,\underline{\textbf{Stanza}}:integer)\\
-    foreign key: Ricovero references Ricovero(id)\\
-    foreign key: Stanza references Stanza(id)\\
-    \item PazienteEsterno(\underline{\textbf{id}}:integer, posta: Indirizzo, email: Email, numTel:Cell)
-    \item PrenotazioneRichiesta(\underline{\textbf{id}}:integer, richiesta: Date)\\
-            v.inclusione PrenotazioneRichiesta(id) occorre in $pre\_spec$(Prenotazione)
-    \item $paz\_pren$(\underline{\textbf{Paziente}}:integer,\underline{\textbf{Prenotazione}}:integer)\\
-            foreign key: Paziente references PazienteEsterno(id)\\
-            foreign key: Prenotazione references PrenotazioneRichiesta(id)\\
-\newpage
-    \item Prenotazione(\underline{\textbf{id}}:integer, descrizione: varchar(100))\\
-    v.inclusione Prenotazione(id) occorre in $prest\_spec$(Prenotazione)
-    \item $pre\_spec$(\underline{\textbf{PrenotazioneRichiesta}}: integer,\underline{\textbf{Prenotazione}}: integer)\\
-    foreign key: Prenotazione references Prenotazione(id)\\
-    foreign key: PrenotazioneRichiesta references PrenotazioneRichiesta(id)\\
+    \item Nazione(\underline{\textbf{nome}}: Stringa)
+    \item Citta(\underline{\textbf{id}}: nome, nazione: Nazione)
+    \begin{itemize}
+        \item fk: nazione references Nazione(\underline{\textbf{nome}})
+    \end{itemize}
+    \item PazienteInterno(\underline{\textbf{id}}: intero>0, posta: Indirizzo, email: Email, numTel, citta\_residenza: Citta)
+    \begin{itemize}
+        \item fk: citta\_residenza references Citta(\underline{\textbf{id}})
+    \end{itemize}
+    \item Ricovero(\underline{\textbf{id}}: integer, ingresso: Date, terminato: Boolean: data\_ricovero*, stanza: Stanza, specialista: Medico)
+    \begin{itemize}
+        \item // UNISCO A STANZA PER AVERE UNA TABELLA CON LE INFORMAZIONI UNICHE DI UN RICOVERO
+        \item // UNISCO A MEDICO PER AVERE OGNI RICOVERO LE INFORMAZIONI DEL MEDICO
+        \item fk: stanza references Stanza(\underline{\textbf{id}})
+        \item fk: specialista references Medico(\underline{\textbf{id}})
+    \end{itemize}
+    \item paz\_ric(paz: Paziente, ric: Ricovero)
+    \begin{itemize}
+        \item //LO TENGO PERCHè VOGLIO UNA TABELLA CON LA LISTA DEI PAZIENTI ATTUALMENTE RICOVERATI
+        \item foreign key: paz references Paziente(\underline{\textbf{id}})
+        \item foreign key: ric references Ricovero(\underline{\textbf{id}})
+    \end{itemize}
+    \item Stanza(\underline{\textbf{id}}: integer, settore: intero>0, piano: intero>=0 posti\_letto: 1..8)
+    \item PazienteEsterno(\underline{\textbf{id}}: integer, posta: Indirizzo, email: Email, numTel, prenotazione: PrenotazioneRichiesta)
+    \begin{itemize}
+        \item fk: prenotazione references PrenotazioneRichiesta(\underline{\textbf{id}})
+        \item // UNISCO PER AVERE UNA TABELLA CON I PAZIENTI ESTERNI DIRETTAMENTE COLLEGATA ALLA PRENOTAZIONE
+    \end{itemize}
+    \item PrenotazioneRichiesta(\underline{\textbf{id}}, richiesta: Date, prestazione: Prestazione)
+    \begin{itemize}
+        \item fk: prestazione references Prestazione(\underline{\textbf{id}})
+        \item // UNISCO PER AVERE UNA TABELLA CON LE PRENOTAZIONI DIRETTAMENTE COLLEGATA ALLE PRESTAZIONI
+    \end{itemize}
+    \item Prestazione(\underline{\textbf{id}}: integer, descrizione: varchar(100), spec: Specializzazione)
+    \begin{itemize}
+        \item fk: spec references Specializzazione(\underline{\textbf{nome}})
+    \end{itemize}
     \item Specializzazione(\underline{\textbf{nome}}: varchar(100))
-    \item $prest_spec$(\underline{\textbf{Prenotazione}}: integer,\underline{\textbf{Specializzazione}}: varchar(100))\\
-    foreign key: Prenotazione references Prenotazione(id)\\
-    foreign key: Specializzazione references Specializzazione(varchar)\\
-    
-    \item Medico(\underline{\textbf{id}}: integer))\\
-    v.inclusione Medico(id) occorre in $spec\_prim$(Medico)\\
-    v.inclusione Medico(id) occorre in $spec\_sec$(Medico)
-    \item $spec\_prim$(\underline{\textbf{Medico}}: intero,\underline{\textbf{Specializzazione}}: varchar(100))\\
-    foreign key: Medico references Medico(id)\\
-    foreign key: Specializzazione references Specializzazione(nome)\\
-    \item $spec\_sec$(\underline{\textbf{Medico}}: intero,\underline{\textbf{Specializzazione}}: varchar(100))\\
-    foreign key: Medico references Medico(id)\\
-    foreign key: Specializzazione references Specializzazione(nome)\\
-    \item cura(\underline{\textbf{Ricovero}}: intero,\underline{\textbf{Medico}}:integer)\\
-    foreign key: Ricovero references Ricovero(id)\\
-    foreign key: Medico references Medico(id)\\
-    
+    \item Medico(\underline{\textbf{id}}: integer, spec\_prim: Specializzazione)
+    \begin{itemize}
+        \item fk: spec\_prim references Specializzazione(\underline{\textbf{nome}})
+        \item v.inclusione Medico(\underline{\textbf{id}}) occorre in spec\_sec(Medico)
+    \end{itemize}
+    \item spec\_sec(Medico: intero, Specializzazione: varchar(100))
+    \begin{itemize}
+        \item foreign key: Medico references Medico(\underline{\textbf{id}})
+        \item foreign key: Specializzazione references Specializzazione(\underline{\textbf{nome}})
+    \end{itemize}
+    \item // UNISCO MEDICO E SPECIALIZZAZIONE PRIMARIA, LASCIO UNA TABELLA SEPARATA PER LE SPECIALIZZAZIONI SECONDARIE
 \end{itemize}
+\newpage
+\subsection{Trigger}
+I vincoli esterni da controllare con i trigger sono:
+
+\subsubsection{V.Medico.specializzazioni}
+\begin{verbatim}
+Trigger per il vincolo V.Medico.specializzazioni:
+    Operazioni: inserimento o modifica in Medico o in spec_sec
+    Istante di invocazione: prima dell'operazione intercettata
+    Funzione:
+        Sia isError=FALSE;
+        Sia new l’ennupla che si sta inserendo oppure l’ennupla risultato della modifica;
+        Se si sta inserendo o modificando una ennupla in Medico:
+            isError:= exists(select * 
+                            from Medico m, spec_sec s 
+                            where m.id=new.id 
+                            and m.spec_prim=s.Specializzazione and s.Medico=new.id)
+        
+        Se si sta inserendo o modificando una ennupla in spec_sec:
+            isError:= exists(select * 
+                            from Medico m, spec_sec s 
+                            where m.id=new.Medico 
+                            and m.spec_prim=s.Specializzazione and s.Medico=new.Medico)
+        
+        Se isError = TRUE blocca l’operazione;
+        Altrimenti permetti l’operazione
+\end{verbatim}
+\subsubsection{V.Ricovero.fineGinizio}
+\begin{verbatim}
+Trigger per il vincolo V.Ricovero.fineGinizio:
+    Operazioni: inserimento o modifica in Ricovero
+    Istante di invocazione: prima dell'operazione intercettata
+    Funzione:
+        Sia isError=FALSE;
+        Sia new l’ennupla che si sta inserendo oppure l’ennupla risultato della modifica;
+        isError:= exists(select * 
+                        from Ricovero r
+                        where r.id=new.id 
+                        and r.igresso>new.data_ricovero)
+        
+        Se isError = TRUE blocca l’operazione;
+        Altrimenti permetti l’operazione
+\end{verbatim} \newpage
+\subsubsection{V.Stanza.num\_link}
+\begin{verbatim}
+Trigger per il vincolo V.Stanza.num_link:
+    Operazioni: inserimento o modifica in Stanza
+    Istante di invocazione: prima dell'operazione intercettata
+    Funzione:
+        Sia isError=FALSE;
+        Sia new l’ennupla che si sta inserendo oppure l’ennupla risultato della modifica;
+        isError:= exists(select count(r)
+                        from Stanza s, Ricovero r
+                        where s.id=new.id and r.stanza= s.id and r.terminato=false)
+        Se isError = TRUE blocca l’operazione;
+        Altrimenti permetti l’operazione
+\end{verbatim}
+\subsubsection{V.Ricovero.nascita$<$ricovero}
+\begin{verbatim}
+Trigger per il vincolo V.Ricovero.nascita$<$ricovero:
+    Operazioni: inserimento o modifica in Ricovero e PazienteInterno
+    Istante di invocazione: prima dell'operazione intercettata
+    Funzione:
+        Sia isError=FALSE;
+        Sia new l’ennupla che si sta inserendo oppure l’ennupla risultato della modifica;
+        isError:= exists(select * 
+                        from Ricovero r, Paziente p
+                        where r.id=new.id and r.paziente=p.id and p.nascita<new.data_ricovero)
+        Se isError = TRUE blocca l’operazione;
+        Altrimenti permetti l’operazione
+\end{verbatim}
+\subsubsection{V.PazienteEsterno.nascita$<$PrenotazioneRichiesta.richiesta}
+\begin{verbatim}
+Trigger per il vincolo V.PazienteEsterno.nascita$<$PrenotazioneRichiesta.richiesta:
+    Operazioni: inserimento o modifica in PazienteEsterno e PrenotazioneRichiesta
+    Istante di invocazione: prima dell'operazione intercettata
+    Funzione:
+        Sia isError=FALSE;
+        Sia new l’ennupla che si sta inserendo oppure l’ennupla risultato della modifica;
+        isError:= exists(select * 
+                        from PazienteEsterno p, PrenotazioneRichiesta pr
+                        where p.id=new.id and p.prenotazione=pr.id and p.nascita<pr.richiesta)
+        Se isError = TRUE blocca l’operazione;
+        Altrimenti permetti l’operazione
+\end{verbatim}\newpage
+\subsubsection{V.Paziente.ric\_ricterm}
+\begin{verbatim}
+Trigger per il vincolo V.Paziente.ric_ricterm:
+    Operazioni: inserimento o modifica in Paziente e Ricovero
+    Istante di invocazione: prima dell'operazione intercettata
+    Funzione:
+        Sia isError=FALSE;
+        Sia new l’ennupla che si sta inserendo oppure l’ennupla risultato della modifica;
+        isError:= exists(select * 
+                        from Paziente p, Ricovero r1, Ricovero r2
+                        where p.id=new.id and r1.paziente=p.id and r2.paziente=p.id 
+                        and r1.id!=r2.id and r1.terminato=false and r2.terminato=false)
+        Se isError = TRUE blocca l’operazione;
+        Altrimenti permetti l’operazione
+\end{verbatim}
 \end{document}

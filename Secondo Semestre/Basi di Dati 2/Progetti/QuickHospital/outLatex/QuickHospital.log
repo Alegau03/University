@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.4.10)  22 MAY 2024 17:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.4.10)  25 MAY 2024 18:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -410,8 +410,7 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layouthoffset=\dimen183
 \Gm@layoutvoffset=\dimen184
 \Gm@dimlist=\toks27
- (C:\Users\aless\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
-No file QuickHospital.aux.
+ (C:\Users\aless\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (c:\Users\aless\OneDrive\Desktop\University\Secondo Semestre\Basi di Dati 2\Progetti\QuickHospital\outLatex\QuickHospital.aux)
 \openout1 = `QuickHospital.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
@@ -432,7 +431,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
 LaTeX Font Info:    ... okay on input line 29.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 29.
 LaTeX Font Info:    ... okay on input line 29.
-(C:\Users\aless\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+ (C:\Users\aless\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count307
 \scratchdimen=\dimen185
@@ -452,6 +451,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package hyperref Info: Link coloring OFF on input line 29.
+ (c:\Users\aless\OneDrive\Desktop\University\Secondo Semestre\Basi di Dati 2\Progetti\QuickHospital\outLatex\QuickHospital.out) (c:\Users\aless\OneDrive\Desktop\University\Secondo Semestre\Basi di Dati 2\Progetti\QuickHospital\outLatex\QuickHospital.out)
 \@outlinefile=\write3
 \openout3 = `QuickHospital.out'.
 
@@ -502,13 +502,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 LaTeX Warning: No \author given.
 
-No file QuickHospital.toc.
+(c:\Users\aless\OneDrive\Desktop\University\Secondo Semestre\Basi di Dati 2\Progetti\QuickHospital\outLatex\QuickHospital.toc)
 \tf@toc=\write4
 \openout4 = `QuickHospital.toc'.
 
-[1
+ [1
 
-{C:/Users/aless/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+{C:/Users/aless/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
 Package epstopdf Info: Source file: <images/UML.eps>
 (epstopdf)                    date: 2024-05-20 15:34:38
 (epstopdf)                    size: 114129 bytes
@@ -518,88 +518,42 @@ Package epstopdf Info: Source file: <images/UML.eps>
 (epstopdf)             Command: <miktex-epstopdf --outfile=images/UML-eps-converted-to.pdf images/UML.eps>
 (epstopdf)             \includegraphics on input line 68.
 Package epstopdf Info: Output file is already uptodate.
-<images/UML-eps-converted-to.pdf, id=12, 587.19376pt x 423.5825pt>
+<images/UML-eps-converted-to.pdf, id=151, 587.19376pt x 423.5825pt>
 File: images/UML-eps-converted-to.pdf Graphic file (type pdf)
 <use images/UML-eps-converted-to.pdf>
 Package pdftex.def Info: images/UML-eps-converted-to.pdf  used on input line 68.
 (pdftex.def)             Requested size: 483.69687pt x 348.92342pt.
- [2 <./images/UML-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 80--83
+ [3 <./images/UML-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--86
-
+Overfull \hbox (34.13037pt too wide) detected at line 88
+\OMS/cmsy/m/n/12 8\OML/cmm/m/it/12 d[]; d[]; r; p dataNascita\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 d[]; p\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^ \OML/cmm/m/it/12 DataInizio\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 d[]; r\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^ \OML/cmm/m/it/12 Paziente\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^ \OML/cmm/m/it/12 Ricovero\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 r\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ) \OML/cmm/m/it/12 d[] < d[]
  []
 
 
-Overfull \hbox (39.47508pt too wide) in paragraph at lines 86--88
-\OMS/cmsy/m/n/12 8\OML/cmm/m/it/12 p; r; dr; dn\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 Paziente\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^ \OML/cmm/m/it/12 pazienteRicoverato\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p; r\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^ \OML/cmm/m/it/12 DataRicovero\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 r; dr\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^ \OML/cmm/m/it/12 DataNacita\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p; dn\OT1/cmr/m/n/12 )] \OMS/cmsy/m/n/12 !
+Overfull \hbox (27.5849pt too wide) detected at line 91
+\OMS/cmsy/m/n/12 8\OML/cmm/m/it/12 d[]; d[]; pr; p dataNascita\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 d[]; p\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^ \OML/cmm/m/it/12 data\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 d[]; pr\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^ \OML/cmm/m/it/12 Paziente\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^ \OML/cmm/m/it/12 Prestazione\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ) \OML/cmm/m/it/12 d[] < d[]
  []
 
 
-c:/Users/aless/OneDrive/Desktop/University/Secondo Semestre/Basi di Dati 2/Progetti/QuickHospital/QuickHospital.tex:90: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.90 \acc
-         
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 90--91
-
+Overfull \hbox (167.83649pt too wide) detected at line 94
+\OMS/cmsy/m/n/12 6 9\OML/cmm/m/it/12 p; r[]; r[] Paziente\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^ \OML/cmm/m/it/12 paz[]ric\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p; r[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^ \OML/cmm/m/it/12 paz[]ric\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p; r[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^ \OML/cmm/m/it/12 r[] \OMS/cmsy/m/n/12 6\OT1/cmr/m/n/12 = \OML/cmm/m/it/12 r[] \OMS/cmsy/m/n/12 ^ :\OML/cmm/m/it/12 RicoveroTerminato\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 r[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^ :\OML/cmm/m/it/12 RicoveroTerminato\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 r[]\OT1/cmr/m/n/12 )
  []
 
 
-Overfull \hbox (51.19307pt too wide) in paragraph at lines 91--93
-[]\OT1/cmr/m/n/12 Un paziente Non pu^^Ro fare richi-esta di preno-tazione prima della sua nascita $\OMS/cmsy/m/n/12 8\OML/cmm/m/it/12 p; r; dp; dn\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 Paziente\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^
+Overfull \hbox (31.81294pt too wide) in paragraph at lines 102--105
+\OT1/cmr/m/n/12 Sia $\OML/cmm/m/it/12 this; p $ $postiLetto\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 this; p\OT1/cmr/m/n/12 )$, $\OML/cmm/m/it/12 Stanza\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 this\OT1/cmr/m/n/12 )$ e $\OML/cmm/m/it/12 R \OT1/cmr/m/n/12 := \OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 r\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 ric[]st\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 r; this\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^ \OML/cmm/m/it/12 Ricovero\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 r\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^
  []
 
 
-c:/Users/aless/OneDrive/Desktop/University/Secondo Semestre/Basi di Dati 2/Progetti/QuickHospital/QuickHospital.tex:94: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.94     \acc
-             
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 94--95
+Underfull \hbox (badness 10000) in paragraph at lines 102--105
 
  []
 
-c:/Users/aless/OneDrive/Desktop/University/Secondo Semestre/Basi di Dati 2/Progetti/QuickHospital/QuickHospital.tex:95: Missing $ inserted.
-<inserted text> 
-                $
-l.95 ...nza): ric\_stanza rispetto a Stanza.posti_
-                                                  letto \acc
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-c:/Users/aless/OneDrive/Desktop/University/Secondo Semestre/Basi di Dati 2/Progetti/QuickHospital/QuickHospital.tex:96: Missing $ inserted.
-<inserted text> 
-                $
-l.96     $\forall
-                  s,r,rs,p Stanza(s) \and PostiLettoStanza(s,p)\land Ricover...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 106--109
-
- []
-
+[4]
 Package epstopdf Info: Source file: <images/UseCase.eps>
 (epstopdf)                    date: 2024-05-20 15:34:46
 (epstopdf)                    size: 17872 bytes
@@ -607,157 +561,187 @@ Package epstopdf Info: Source file: <images/UseCase.eps>
 (epstopdf)                    date: 2024-05-20 15:35:17
 (epstopdf)                    size: 7362 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=images/UseCase-eps-converted-to.pdf images/UseCase.eps>
-(epstopdf)             \includegraphics on input line 112.
+(epstopdf)             \includegraphics on input line 111.
 Package epstopdf Info: Output file is already uptodate.
-<images/UseCase-eps-converted-to.pdf, id=37, 277.035pt x 238.8925pt>
+<images/UseCase-eps-converted-to.pdf, id=173, 277.035pt x 238.8925pt>
 File: images/UseCase-eps-converted-to.pdf Graphic file (type pdf)
 <use images/UseCase-eps-converted-to.pdf>
-Package pdftex.def Info: images/UseCase-eps-converted-to.pdf  used on input line 112.
+Package pdftex.def Info: images/UseCase-eps-converted-to.pdf  used on input line 111.
 (pdftex.def)             Requested size: 483.69687pt x 417.10214pt.
-[4 <./images/UseCase-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
+ [5 <./images/UseCase-eps-converted-to.pdf>]
+Overfull \hbox (57.16661pt too wide) in paragraph at lines 123--124
+[]$\OML/cmm/m/it/12 est \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 true \OMS/cmsy/m/n/12 ) \OML/cmm/m/it/12 PazienteEsterno\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^Z\OT1/cmr/m/n/12 )$ , al-tri-menti $\OML/cmm/m/it/12 Paziente\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^Z\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ) :\OML/cmm/m/it/12 PazienteEsterno\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^Z\OT1/cmr/m/n/12 )$ 
+ []
+
+
+Overfull \hbox (5.4494pt too wide) in paragraph at lines 156--162
+\OT1/cmr/m/n/12 Sia $\OMS/cmsy/m/n/12 M \OT1/cmr/m/n/12 := \OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 m \OMS/cmsy/m/n/12 j9\OML/cmm/m/it/12 s Medico\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 m\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^ \OML/cmm/m/it/12 Specializzazione\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 s\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^ \OML/cmm/m/it/12 prest[]spec\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^Y; s\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^ \OML/cmm/m/it/12 primaria\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 s; m\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 g$\OT1/cmr/m/n/12 . 
+ []
+
+
+Overfull \hbox (18.88046pt too wide) in paragraph at lines 156--162
+\OT1/cmr/m/n/12 Sia $\OMS/cmsy/m/n/12 M[] \OT1/cmr/m/n/12 := \OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 m \OMS/cmsy/m/n/12 j9\OML/cmm/m/it/12 s Medico\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 m\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^ \OML/cmm/m/it/12 Specializzazione\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 s\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^ \OML/cmm/m/it/12 prest[]spec\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^Y; s\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^ \OML/cmm/m/it/12 secondaria\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 s; m\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 g$\OT1/cmr/m/n/12 . 
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 167--168
 
  []
 
-[5]
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 164.
+[7]
+<images/Ristrutturato.jpg, id=193, 908.39375pt x 589.20125pt>
+File: images/Ristrutturato.jpg Graphic file (type jpg)
+<use images/Ristrutturato.jpg>
+Package pdftex.def Info: images/Ristrutturato.jpg  used on input line 213.
+(pdftex.def)             Requested size: 483.69687pt x 313.73163pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 222--224
+
+ []
+
+[8 <./images/Ristrutturato.jpg>]
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 232.
  (C:\Users\aless\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
 File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 164.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 232.
 
-c:/Users/aless/OneDrive/Desktop/University/Secondo Semestre/Basi di Dati 2/Progetti/QuickHospital/QuickHospital.tex:165: Missing $ inserted.
-<inserted text> 
-                $
-l.165             Result\ = \sum
-                                _{(s,posti)\in P}posti
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-c:/Users/aless/OneDrive/Desktop/University/Secondo Semestre/Basi di Dati 2/Progetti/QuickHospital/QuickHospital.tex:166: Missing $ inserted.
-<inserted text> 
-                $
-l.166 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-c:/Users/aless/OneDrive/Desktop/University/Secondo Semestre/Basi di Dati 2/Progetti/QuickHospital/QuickHospital.tex:166: Missing } inserted.
-<inserted text> 
-                }
-l.166 
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-c:/Users/aless/OneDrive/Desktop/University/Secondo Semestre/Basi di Dati 2/Progetti/QuickHospital/QuickHospital.tex:166: Extra }, or forgotten \endgroup.
-\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.166 
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-[6]
-<images/Ristrutturato.jpg, id=70, 908.39375pt x 589.20125pt>
-File: images/Ristrutturato.jpg Graphic file (type jpg)
-<use images/Ristrutturato.jpg>
-Package pdftex.def Info: images/Ristrutturato.jpg  used on input line 174.
-(pdftex.def)             Requested size: 483.69687pt x 313.73163pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 183--185
-
- []
-
-[7 <./images/Ristrutturato.jpg>] [8]
-Overfull \hbox (1.82082pt too wide) in paragraph at lines 215--215
-[]\OT1/cmr/bx/n/14.4 Traduzione di-retta del di-a-gramma UML delle classi ristrut-turato 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 220--223
+Underfull \hbox (badness 10000) in paragraph at lines 245--247
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 225--228
+Underfull \hbox (badness 10000) in paragraph at lines 248--250
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 231--234
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 235--238
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 241--244
+Underfull \hbox (badness 10000) in paragraph at lines 250--250
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 247--250
-
+Overfull \hbox (1.82082pt too wide) in paragraph at lines 255--255
+[]\OT1/cmr/bx/n/14.4 Traduzione di-retta del di-a-gramma UML delle classi ristrut-turato 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 251--254
+Overfull \hbox (2.95378pt too wide) in paragraph at lines 281--282
+[]\OT1/cmr/m/n/12 PazienteEsterno($[]$: in-te-ger, posta: In-d-i-rizzo, email: Email, num-Tel, preno-tazione: Preno-
+ []
 
+[10] [11]
+Overfull \hbox (65.8784pt too wide) in paragraph at lines 334--334
+[]        \OT1/cmtt/m/n/12 Sia new l'ennupla che si sta inserendo oppure l'ennupla risultato della modifica;[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 258--261
-
+Overfull \hbox (28.82838pt too wide) in paragraph at lines 334--334
+[]                            \OT1/cmtt/m/n/12 and m.spec_prim=s.Specializzazione and s.Medico=new.id)[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 261--264
-
+Overfull \hbox (53.5284pt too wide) in paragraph at lines 334--334
+[]                            \OT1/cmtt/m/n/12 and m.spec_prim=s.Specializzazione and s.Medico=new.Medico)[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 264--267
-
+Overfull \hbox (65.8784pt too wide) in paragraph at lines 350--350
+[]        \OT1/cmtt/m/n/12 Sia new l'ennupla che si sta inserendo oppure l'ennupla risultato della modifica;[] 
  []
 
-[10] (c:\Users\aless\OneDrive\Desktop\University\Secondo Semestre\Basi di Dati 2\Progetti\QuickHospital\outLatex\QuickHospital.aux)
+[12]
+Overfull \hbox (65.8784pt too wide) in paragraph at lines 364--364
+[]        \OT1/cmtt/m/n/12 Sia new l'ennupla che si sta inserendo oppure l'ennupla risultato della modifica;[] 
+ []
+
+
+Overfull \hbox (28.82838pt too wide) in paragraph at lines 364--364
+[]                        \OT1/cmtt/m/n/12 where s.id=new.id and r.stanza= s.id and r.terminato=false)[] 
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 365.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 365.
+
+
+Overfull \hbox (65.8784pt too wide) in paragraph at lines 378--378
+[]        \OT1/cmtt/m/n/12 Sia new l'ennupla che si sta inserendo oppure l'ennupla risultato della modifica;[] 
+ []
+
+
+Overfull \hbox (96.75342pt too wide) in paragraph at lines 378--378
+[]                        \OT1/cmtt/m/n/12 where r.id=new.id and r.paziente=p.id and p.nascita<new.data_ricovero)[] 
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 379.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 379.
+
+
+Overfull \hbox (28.82838pt too wide) in paragraph at lines 392--392
+[]\OT1/cmtt/m/n/12 Trigger per il vincolo V.PazienteEsterno.nascita$<$PrenotazioneRichiesta.richiesta:[] 
+ []
+
+
+Overfull \hbox (16.47838pt too wide) in paragraph at lines 392--392
+[]    \OT1/cmtt/m/n/12 Operazioni: inserimento o modifica in PazienteEsterno e PrenotazioneRichiesta[] 
+ []
+
+
+Overfull \hbox (65.8784pt too wide) in paragraph at lines 392--392
+[]        \OT1/cmtt/m/n/12 Sia new l'ennupla che si sta inserendo oppure l'ennupla risultato della modifica;[] 
+ []
+
+
+Overfull \hbox (96.75342pt too wide) in paragraph at lines 392--392
+[]                        \OT1/cmtt/m/n/12 where p.id=new.id and p.prenotazione=pr.id and p.nascita<pr.richiesta)[] 
+ []
+
+[13]
+Overfull \hbox (65.8784pt too wide) in paragraph at lines 407--407
+[]        \OT1/cmtt/m/n/12 Sia new l'ennupla che si sta inserendo oppure l'ennupla risultato della modifica;[] 
+ []
+
+
+Overfull \hbox (28.82838pt too wide) in paragraph at lines 407--407
+[]                        \OT1/cmtt/m/n/12 where p.id=new.id and r1.paziente=p.id and r2.paziente=p.id[] 
+ []
+
+
+Overfull \hbox (53.5284pt too wide) in paragraph at lines 407--407
+[]                        \OT1/cmtt/m/n/12 and r1.id!=r2.id and r1.terminato=false and r2.terminato=false)[] 
+ []
+
+[14] (c:\Users\aless\OneDrive\Desktop\University\Secondo Semestre\Basi di Dati 2\Progetti\QuickHospital\outLatex\QuickHospital.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
  ***********
-
-
-Package rerunfilecheck Warning: File `QuickHospital.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `QuickHospital.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  23D6763127F95CC580D57C8AD5283AC4;3672.
+Package rerunfilecheck Info: File `QuickHospital.out' has not changed.
+(rerunfilecheck)             Checksum: 7D75609787167D51BE12CE58DA6511BE;4393.
  ) 
 Here is how much of TeX's memory you used:
- 14527 strings out of 474424
- 235943 string characters out of 5741739
- 1935496 words of memory out of 5000000
- 36647 multiletter control sequences out of 15000+600000
- 567476 words of font info for 72 fonts, out of 8000000 for 9000
+ 14578 strings out of 474424
+ 237696 string characters out of 5741739
+ 1942496 words of memory out of 5000000
+ 36683 multiletter control sequences out of 15000+600000
+ 567645 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 86i,6n,99p,360b,580s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\aless\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on "c:\Users\aless\OneDrive\Desktop\University\Secondo Semestre\Basi di Dati 2\Progetti\QuickHospital\outLatex\QuickHospital.pdf" (10 pages, 292667 bytes).
+ 86i,8n,99p,547b,594s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\aless\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on "c:\Users\aless\OneDrive\Desktop\University\Secondo Semestre\Basi di Dati 2\Progetti\QuickHospital\outLatex\QuickHospital.pdf" (14 pages, 332247 bytes).
 PDF statistics:
- 145 PDF objects out of 1000 (max. 8388607)
- 37 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 279 PDF objects out of 1000 (max. 8388607)
+ 43 named destinations out of 1000 (max. 500000)
+ 232 words of extra memory for PDF output out of 10000 (max. 10000000)
 

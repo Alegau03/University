@@ -160,6 +160,9 @@ INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\tex\generic\iftex\ifvtex.sty
 INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
 INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
 INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
+INPUT c:\Users\aless\OneDrive\Desktop\University\Secondo Semestre\Basi di Dati 2\Progetti\QuickHospital\outLatex\QuickHospital.aux
+INPUT c:\Users\aless\OneDrive\Desktop\University\Secondo Semestre\Basi di Dati 2\Progetti\QuickHospital\outLatex\QuickHospital.aux
+INPUT c:\Users\aless\OneDrive\Desktop\University\Secondo Semestre\Basi di Dati 2\Progetti\QuickHospital\outLatex\QuickHospital.aux
 OUTPUT c:\Users\aless\OneDrive\Desktop\University\Secondo Semestre\Basi di Dati 2\Progetti\QuickHospital\outLatex\QuickHospital.aux
 INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -169,8 +172,14 @@ INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstop
 INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
-OUTPUT c:\Users\aless\OneDrive\Desktop\University\Secondo Semestre\Basi di Dati 2\Progetti\QuickHospital\outLatex\QuickHospital.out
+INPUT c:\Users\aless\OneDrive\Desktop\University\Secondo Semestre\Basi di Dati 2\Progetti\QuickHospital\outLatex\QuickHospital.out
+INPUT c:\Users\aless\OneDrive\Desktop\University\Secondo Semestre\Basi di Dati 2\Progetti\QuickHospital\outLatex\QuickHospital.out
+INPUT c:\Users\aless\OneDrive\Desktop\University\Secondo Semestre\Basi di Dati 2\Progetti\QuickHospital\outLatex\QuickHospital.out
+INPUT c:\Users\aless\OneDrive\Desktop\University\Secondo Semestre\Basi di Dati 2\Progetti\QuickHospital\outLatex\QuickHospital.out
 OUTPUT c:\Users\aless\OneDrive\Desktop\University\Secondo Semestre\Basi di Dati 2\Progetti\QuickHospital\outLatex\QuickHospital.pdf
+INPUT c:\Users\aless\OneDrive\Desktop\University\Secondo Semestre\Basi di Dati 2\Progetti\QuickHospital\outLatex\QuickHospital.out
+INPUT c:\Users\aless\OneDrive\Desktop\University\Secondo Semestre\Basi di Dati 2\Progetti\QuickHospital\outLatex\QuickHospital.out
+OUTPUT c:\Users\aless\OneDrive\Desktop\University\Secondo Semestre\Basi di Dati 2\Progetti\QuickHospital\outLatex\QuickHospital.out
 INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr17.tfm
 INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
@@ -192,21 +201,10 @@ INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\sym
 INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr17.tfm
 INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
-OUTPUT c:\Users\aless\OneDrive\Desktop\University\Secondo Semestre\Basi di Dati 2\Progetti\QuickHospital\outLatex\QuickHospital.toc
-INPUT C:\Users\aless\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
-INPUT .\images\UML.eps
-INPUT .\images\UML.eps
-INPUT .\images\UML.eps
-INPUT .\images\UML.eps
-INPUT .\images\UML.eps
-INPUT .\images\UML-eps-converted-to.pdf
-INPUT .\images\UML-eps-converted-to.pdf
-INPUT .\images\UML.eps
-INPUT .\images\UML-eps-converted-to.pdf
-INPUT .\images\UML-eps-converted-to.pdf
-INPUT .\images\UML-eps-converted-to.pdf
-INPUT .\images\UML-eps-converted-to.pdf
-INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
+INPUT c:\Users\aless\OneDrive\Desktop\University\Secondo Semestre\Basi di Dati 2\Progetti\QuickHospital\outLatex\QuickHospital.toc
+INPUT c:\Users\aless\OneDrive\Desktop\University\Secondo Semestre\Basi di Dati 2\Progetti\QuickHospital\outLatex\QuickHospital.toc
+INPUT c:\Users\aless\OneDrive\Desktop\University\Secondo Semestre\Basi di Dati 2\Progetti\QuickHospital\outLatex\QuickHospital.toc
+INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
 INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
 INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
@@ -224,8 +222,22 @@ INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\sym
 INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
+OUTPUT c:\Users\aless\OneDrive\Desktop\University\Secondo Semestre\Basi di Dati 2\Progetti\QuickHospital\outLatex\QuickHospital.toc
+INPUT C:\Users\aless\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT .\images\UML.eps
+INPUT .\images\UML.eps
+INPUT .\images\UML.eps
+INPUT .\images\UML.eps
+INPUT .\images\UML.eps
+INPUT .\images\UML-eps-converted-to.pdf
+INPUT .\images\UML-eps-converted-to.pdf
+INPUT .\images\UML.eps
+INPUT .\images\UML-eps-converted-to.pdf
+INPUT .\images\UML-eps-converted-to.pdf
+INPUT .\images\UML-eps-converted-to.pdf
+INPUT .\images\UML-eps-converted-to.pdf
+INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
 INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
-INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT .\images\UseCase.eps
 INPUT .\images\UseCase.eps
 INPUT .\images\UseCase.eps
@@ -238,16 +250,17 @@ INPUT .\images\UseCase-eps-converted-to.pdf
 INPUT .\images\UseCase-eps-converted-to.pdf
 INPUT .\images\UseCase-eps-converted-to.pdf
 INPUT .\images\UseCase-eps-converted-to.pdf
+INPUT .\images\Ristrutturato.jpg
+INPUT .\images\Ristrutturato.jpg
+INPUT .\images\Ristrutturato.jpg
+INPUT .\images\Ristrutturato.jpg
+INPUT .\images\Ristrutturato.jpg
+INPUT .\images\Ristrutturato.jpg
+INPUT .\images\Ristrutturato.jpg
 INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\tex\latex\base\omscmr.fd
 INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\tex\latex\base\omscmr.fd
 INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\tex\latex\base\omscmr.fd
-INPUT .\images\Ristrutturato.jpg
-INPUT .\images\Ristrutturato.jpg
-INPUT .\images\Ristrutturato.jpg
-INPUT .\images\Ristrutturato.jpg
-INPUT .\images\Ristrutturato.jpg
-INPUT .\images\Ristrutturato.jpg
-INPUT .\images\Ristrutturato.jpg
+INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt12.tfm
 INPUT c:\Users\aless\OneDrive\Desktop\University\Secondo Semestre\Basi di Dati 2\Progetti\QuickHospital\outLatex\QuickHospital.aux
 INPUT c:\Users\aless\OneDrive\Desktop\University\Secondo Semestre\Basi di Dati 2\Progetti\QuickHospital\outLatex\QuickHospital.out
 INPUT c:\Users\aless\OneDrive\Desktop\University\Secondo Semestre\Basi di Dati 2\Progetti\QuickHospital\outLatex\QuickHospital.out
@@ -269,3 +282,5 @@ INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\c
 INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
 INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
+INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt12.pfb
+INPUT C:\Users\aless\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt12.pfb
