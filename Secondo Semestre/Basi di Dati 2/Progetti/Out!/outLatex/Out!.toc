@@ -30,6 +30,6 @@
 \contentsline {subsection}{\numberline {7.7}Progettazione Funzionalità}{16}{subsection.7.7}%
 \contentsline {subsubsection}{\numberline {7.7.1}calcola\_posti\_disponibili}{16}{subsubsection.7.7.1}%
 \contentsline {subsubsection}{\numberline {7.7.2}iscrizione}{16}{subsubsection.7.7.2}%
-\contentsline {subsubsection}{\numberline {7.7.3}prenotazione}{16}{subsubsection.7.7.3}%
+\contentsline {subsubsection}{\numberline {7.7.3}prenotazione}{17}{subsubsection.7.7.3}%
 \contentsline {subsubsection}{\numberline {7.7.4}consulta\_lista}{17}{subsubsection.7.7.4}%
-\contentsline {subsubsection}{\numberline {7.7.5}proponi\_suggerimento}{17}{subsubsection.7.7.5}%
+\contentsline {subsubsection}{\numberline {7.7.5}proponi\_suggerimento}{18}{subsubsection.7.7.5}%

@@ -209,12 +209,14 @@ Non è stato necessario eseguire nessuna modifica sulle generalizzazioni.
 \subsubsection{Tipi}
 \begin{itemize}
     \item create type Tipologia as enum= $\{"Film", "Rappresentazione Teatrale", "Concerto"\}$
-    \item create type Indirizzo= $\{via: varchar, civico: Intero \ge 0\}$
+    \item create type Indirizzo= $\{via: string\_not\_null, civico: Intero \ge 0\}$
 \end{itemize}
 \subsubsection{Domini}
 \begin{itemize}
-    \item create domanin $intero>0$ as Integer check($value \ge 0$)
+    \item create domain $intero>0$ as Integer check($value \ge 0$)
     \item create domain CF as varchar check($value \text{rispetta la regex} [A-Z]\{6\}[0-9]\{2\}[A-Z][0-9]\{2\}[A-Z][0-9]\{3\}[A-Z]$)
+    \item create domain $string\_not\_null$ as varchar check($value \neq NULL$)
+    
 \end{itemize}
 \subsection{Vincoli Esterni}
 Non sono stati inseriti nuovi vincoli esterni.
@@ -373,9 +375,23 @@ Le Funzionalità da implementare nella base di dati sono:
 \begin{verbatim}
     calcola_posti_disponibili(s: Intero): Intero
     1. Memorizza in Q il risultato della seguente query SQL:
-        select count(*)
-        from Sala sl, Posto p
-        where sl.id=s.id and p.Sala=sl.id
+        SELECT 
+            (s.PostiTotali - prenotati.NumeroPrenotati) AS PostiDisponibili
+        FROM 
+            Sala sl
+        LEFT JOIN (
+            SELECT 
+                p.Sala,
+                COUNT(pp.Posto) AS NumeroPrenotati
+            FROM 
+                Posto p
+            JOIN 
+                pren_posto pp ON p.id = pp.Posto
+            GROUP BY 
+                p.Sala
+        )  prenotati ON sL.id = prenotati.Sala 
+        WHERE s.id = sl.id;
+
     2. Se Q è vuoto generare l'errore 'La Sala non esiste'
     3. Altrimenti restituisci il valore di Q
 \end{verbatim}
@@ -421,7 +437,7 @@ Le Funzionalità da implementare nella base di dati sono:
     2. Se Q è vuoto generare l'errore:
          'Nessuna Rappresentazione per i criteri inseriti'
     3. Altrimenti restituisci il valore di Q
-\end{verbatim}
+\end{verbatim}\newpage
 \subsubsection{proponi\_suggerimento}
 \begin{verbatim}
     proponi_suggerimento(u: CF)

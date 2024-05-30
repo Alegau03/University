@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.4.10)  29 MAY 2024 11:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.4.10)  30 MAY 2024 10:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -574,36 +574,36 @@ File: Images/UMLRistrutturato.jpg Graphic file (type jpg)
 Package pdftex.def Info: Images/UMLRistrutturato.jpg  used on input line 202.
 (pdftex.def)             Requested size: 483.69687pt x 262.28294pt.
  [10 <./Images/UMLRistrutturato.jpg>] [11]
-Overfull \hbox (1.82082pt too wide) in paragraph at lines 224--224
+Overfull \hbox (1.82082pt too wide) in paragraph at lines 226--226
 []\OT1/cmr/bx/n/14.4 Traduzione di-retta del di-a-gramma UML delle classi ristrut-turato 
  []
 
 
-Overfull \hbox (16.47838pt too wide) in paragraph at lines 269--269
+Overfull \hbox (16.47838pt too wide) in paragraph at lines 271--271
 []\OT1/cmtt/m/n/12 -Spettacolo(_id_: Serial, Titolo: varchar, Tipologia: Tipologia, Genere: varchar)[] 
  []
 
 [12] [13] [14] [15]
-Overfull \hbox (4.12837pt too wide) in paragraph at lines 392--392
-[]    \OT1/cmtt/m/n/12 2. Se il comando precedente restituisce errore di vincolo di chiave violato[] 
- []
-
-
-Overfull \hbox (4.12837pt too wide) in paragraph at lines 413--413
+Overfull \hbox (4.12837pt too wide) in paragraph at lines 408--408
 []    \OT1/cmtt/m/n/12 2. Se il comando precedente restituisce errore di vincolo di chiave violato[] 
  []
 
 [16]
-Overfull \hbox (10.30338pt too wide) in paragraph at lines 424--424
+Overfull \hbox (4.12837pt too wide) in paragraph at lines 429--429
+[]    \OT1/cmtt/m/n/12 2. Se il comando precedente restituisce errore di vincolo di chiave violato[] 
+ []
+
+
+Overfull \hbox (10.30338pt too wide) in paragraph at lines 440--440
 []        \OT1/cmtt/m/n/12 where r.Spettacolo=s.id and s.Tipologia=t and s.Genere=g and r.DataOra=d[] 
  []
 
-
-Overfull \hbox (16.47838pt too wide) in paragraph at lines 446--446
+[17]
+Overfull \hbox (16.47838pt too wide) in paragraph at lines 462--462
 []        \OT1/cmtt/m/n/12 from Spettacolo s, Utente u, Rappresentazione r, Prenotazione p, Genere g[] 
  []
 
-[17] (c:\Users\aless\OneDrive\Desktop\University\Secondo Semestre\Basi di Dati 2\Progetti\Out!\outLatex\Out!.aux)
+[18] (c:\Users\aless\OneDrive\Desktop\University\Secondo Semestre\Basi di Dati 2\Progetti\Out!\outLatex\Out!.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
@@ -612,17 +612,17 @@ Package rerunfilecheck Info: File `Out!.out' has not changed.
 (rerunfilecheck)             Checksum: 1AF2B4D8DE51C7A2662F1E6A3093B531;4968.
  ) 
 Here is how much of TeX's memory you used:
- 14593 strings out of 474424
- 237422 string characters out of 5741739
+ 14594 strings out of 474424
+ 237429 string characters out of 5741739
  1944496 words of memory out of 5000000
  36688 multiletter control sequences out of 15000+600000
  567645 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  86i,6n,99p,529b,611s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\aless\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on "c:\Users\aless\OneDrive\Desktop\University\Secondo Semestre\Basi di Dati 2\Progetti\Out!\outLatex\Out!.pdf" (17 pages, 435753 bytes).
+Output written on "c:\Users\aless\OneDrive\Desktop\University\Secondo Semestre\Basi di Dati 2\Progetti\Out!\outLatex\Out!.pdf" (18 pages, 438033 bytes).
 PDF statistics:
- 299 PDF objects out of 1000 (max. 8388607)
- 53 named destinations out of 1000 (max. 500000)
+ 303 PDF objects out of 1000 (max. 8388607)
+ 54 named destinations out of 1000 (max. 500000)
  288 words of extra memory for PDF output out of 10000 (max. 10000000)
 
