@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.4.10)  30 MAY 2024 10:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.4.10)  30 MAY 2024 11:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -589,17 +589,17 @@ Overfull \hbox (4.12837pt too wide) in paragraph at lines 408--408
  []
 
 [16]
-Overfull \hbox (4.12837pt too wide) in paragraph at lines 429--429
+Overfull \hbox (4.12837pt too wide) in paragraph at lines 430--430
 []    \OT1/cmtt/m/n/12 2. Se il comando precedente restituisce errore di vincolo di chiave violato[] 
  []
 
 
-Overfull \hbox (10.30338pt too wide) in paragraph at lines 440--440
+Overfull \hbox (10.30338pt too wide) in paragraph at lines 441--441
 []        \OT1/cmtt/m/n/12 where r.Spettacolo=s.id and s.Tipologia=t and s.Genere=g and r.DataOra=d[] 
  []
 
 [17]
-Overfull \hbox (16.47838pt too wide) in paragraph at lines 462--462
+Overfull \hbox (16.47838pt too wide) in paragraph at lines 463--463
 []        \OT1/cmtt/m/n/12 from Spettacolo s, Utente u, Rappresentazione r, Prenotazione p, Genere g[] 
  []
 
@@ -620,7 +620,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  86i,6n,99p,529b,611s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\aless\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/aless/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on "c:\Users\aless\OneDrive\Desktop\University\Secondo Semestre\Basi di Dati 2\Progetti\Out!\outLatex\Out!.pdf" (18 pages, 438033 bytes).
+Output written on "c:\Users\aless\OneDrive\Desktop\University\Secondo Semestre\Basi di Dati 2\Progetti\Out!\outLatex\Out!.pdf" (18 pages, 438077 bytes).
 PDF statistics:
  303 PDF objects out of 1000 (max. 8388607)
  54 named destinations out of 1000 (max. 500000)

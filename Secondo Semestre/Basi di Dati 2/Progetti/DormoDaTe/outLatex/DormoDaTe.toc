@@ -1,0 +1,23 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Requisiti}{2}{section.1}%
+\contentsline {section}{\numberline {2}UML}{3}{section.2}%
+\contentsline {section}{\numberline {3}Tipi di Dato}{4}{section.3}%
+\contentsline {section}{\numberline {4}Vincoli Esterni}{4}{section.4}%
+\contentsline {subsection}{\numberline {4.1}V.Prenotazione.PrenotazioniPosto}{4}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}V.Feedback.HostObbligatorio}{4}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}V.Feedback.TerminePrenotazione}{4}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}V.Prenotazione.Indisponibilità}{4}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Specifica Classi}{5}{section.5}%
+\contentsline {section}{\numberline {6}Use-Case}{5}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Diagramma}{5}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Specifica Use-Case}{6}{subsection.6.2}%
+\contentsline {section}{\numberline {7}Ristrutturazione}{7}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Diagramma UML ristrutturato}{7}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Tipi e Domini}{8}{subsection.7.2}%
+\contentsline {subsubsection}{\numberline {7.2.1}Tipi}{8}{subsubsection.7.2.1}%
+\contentsline {subsubsection}{\numberline {7.2.2}Domini}{8}{subsubsection.7.2.2}%
+\contentsline {subsection}{\numberline {7.3}Vincoli Esterni}{8}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Use Case}{8}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Traduzione diretta del diagramma UML delle classi ristrutturato}{9}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}Trigger}{10}{subsection.7.6}%
+\contentsline {subsection}{\numberline {7.7}Progettazione Funzionalità}{11}{subsection.7.7}%

@@ -412,14 +412,15 @@ Le Funzionalità da implementare nella base di dati sono:
     1. Esegui il seguente comando SQL:
         begin transiction 
         insert into Prenotazione(id, d, u, r)
-        values(sereal, now(), PAR_1, PAR_2)
+        values(Serial, now(), PAR_1, PAR_2)
         dopo aver rimpiazzato PAR_1, PAR_2 
         con i valori dei parametri attuali rispettivamente u, r
-        salvando il valore di sereal in una variabile chiamata p
+        salvando il valore di Serial in una variabile chiamata p
 
         n volte 
-        insert into pren_posto(p)
-        values(p)
+        insert into pren_posto(Prenotazione, Posto)
+        values(p,PAR_3) 
+        Dopo aver scelto un posto casuale libero per PAR_3
         end transticion 
         commit
 
@@ -451,8 +452,8 @@ Le Funzionalità da implementare nella base di dati sono:
         order by p.DataOra desc
     2. Memorizza in G il risultato della seguente query SQL:
         select *
-        from Rappresentazione r, Spettacolo s, 
-        where s.genere=q and r.spettacolo= s.id and r.DataOra>now()+7
+        from Rappresentazione r, Spettacolo s, q
+        where s.genere=q and r.spettacolo= s.id and r.DataOra<now()+7
 
     end transticion
     commit
