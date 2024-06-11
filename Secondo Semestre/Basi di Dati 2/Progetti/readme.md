@@ -1,5 +1,5 @@
 # Progetti Basi Di Dati 2
-I progetti sono stati durante le lezioni e durante la preparazione dell'esame.
+I progetti sono stati durante le lezioni e durante la preparazione dell'esame.  
 Nella cartella sono presenti sia progetti assegnati del professore sia esami passati.
 
 | PROGETTO | STATO       |
