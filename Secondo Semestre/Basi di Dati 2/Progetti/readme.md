@@ -4,7 +4,7 @@ Nella cartella sono presenti sia progetti assegnati del professore sia esami pas
 
 | PROGETTO | STATO       |
 |----------|-------------|
-| [CoLab](./CoLab/CoLab.pdf) | UML + Vincoli|
+| [CoLab](./CoLab/CoLab.pdf) | COMPLETO|
 | [CozyRooms](./CozyRooms/CozyRooms.pdf) | COMPLETO |
 | [DKL](./DKL/DKL.pdf) | COMPLETO |
 | [Deli](./Deli/Deli.pdf) | COMPLETO |
