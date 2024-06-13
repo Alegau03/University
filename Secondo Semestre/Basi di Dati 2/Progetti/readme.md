@@ -4,6 +4,7 @@ Nella cartella sono presenti sia progetti assegnati del professore sia esami pas
 
 | PROGETTO | STATO       |
 |----------|-------------|
+| [AllenaMondo](./AllenaMondo/AllenaMondo.pdf) | COMPLETO|
 | [CoLab](./CoLab/CoLab.pdf) | COMPLETO|
 | [CozyRooms](./CozyRooms/CozyRooms.pdf) | COMPLETO |
 | [DKL](./DKL/DKL.pdf) | COMPLETO |
