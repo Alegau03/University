@@ -1,0 +1,29 @@
+Esercizio 3 (15.4-5:6, [?]). 
+Fornire in pseudo-codice un algoritmo che data una sequenza finita di numeri interi X restituisce la lunghezza della più lunga sotto-sequenza strettamente crescente Y . 
+Se, ad esempio, abbiamo che la sequenza X `e data da (1, 3, 8, 5, 4, 2, 6, 0, 1, 2, 8, 9, 5) 
+allora si ottiene Y = (1, 3, 4, 6, 8, 9). 
+
+
+
+Esercizio3(S):
+    n = length(S)
+    if n == 0:
+        return 0
+
+    # Crea un array LIS di lunghezza n, dove LIS[i] rappresenta la lunghezza
+    # della più lunga sotto-sequenza strettamente crescente che termina con X[i]
+    LIS = [1,..,1]
+
+    # Costruisci l'array LIS
+    for i from 1 to n-1:
+        for j from 0 to i-1:
+            if X[i] > X[j] and LIS[i] < LIS[j] + 1:
+                LIS[i] = LIS[j] + 1
+
+    # Trova il massimo valore in LIS
+    maxLength = 0
+    for i from 0 to n-1:
+        if maxLength < LIS[i]:
+            maxLength = LIS[i]
+
+    return maxLength

@@ -1,0 +1,34 @@
+Def Elemento_Maggioritario(A):
+
+    if (A.lenght=0):
+        return null
+    if A.lenght==1:
+        return A[0]
+    if A.lenght==2:
+        if(A[0]==A[1]):
+            return A[0]
+        else:
+            return null
+    
+    m=A.lenght/2
+    c1= Elemento_Maggioritario(A[0:m])
+    c2= Elemento_Maggioritario(A[m+1:a.Lenght()-1])
+
+    count =0
+
+    for i in range(A.lenght()):
+        if(A[i]==c1):
+            count+=1
+    
+    if (count > A.lenght()/2):
+        return c1
+    
+    count=0
+    for i in range(A.lenght()):
+        if(A[i]==c2):
+            count+=1
+    
+    if (count > A.lenght()/2):
+        return c2
+
+    return null

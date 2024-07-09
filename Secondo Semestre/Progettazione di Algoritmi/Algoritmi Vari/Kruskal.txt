@@ -1,0 +1,28 @@
+Def Kruskal(G pesato):
+
+    G.OrdinaPerPesoCrescente()
+
+    Sol=0
+
+    for i in range(len(G)):
+        if ((Sol unito ei).findCycle=0):
+            Sol.add(ei)
+
+    return Sol
+
+
+Def KruskalNeg(G pesato):
+    Sol=0
+
+    for e in E(G):
+        if w(e)<0:
+            Sol.add(e)
+
+    G.OrdinaPerPesoCrescente()
+    G.remove((e for e in E(G) if w(e)< 0 ))
+
+    for i in range(len(G)):
+        if ((Sol unito ei).findCycle=0):
+            Sol.add(ei)
+
+    return Sol

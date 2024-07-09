@@ -1,0 +1,37 @@
+Esercizio 4. 
+Nel gioco degli scacchi il cavallo si muove nella seguente maniera: 
+due caselle in orizzontale e una in verticale, o viceversa. 
+Fornire un algoritmo in pseudo-codice che, data una scacchiera MxN, la posizione di partenza e quella di arrivo, 
+calcola il numero minimo di turni necessari ad un cavallo di passare da una posizione all'altra in maniera che il tempo di esecuzione sia pari a O(M + N).
+
+
+function minKnightMoves(M, N, start, end):
+    # Possibili movimenti del cavallo
+    mosse = [(2, 1), (1, 2), (-1, 2), (-2, 1), (-2, -1), (-1, -2), (1, -2), (2, -1)]
+    
+    # Inizializza la coda per la BFS
+    Coda Q = [(start, 0)]  # (posizione, numero di mosse)
+    
+    # Inizializza l'insieme dei visitati
+    Vis = {}
+    Vis.add(start)
+    
+    # Esegui BFS
+    while Q!=0:
+        (current_pos, num_mosse) = queue.pop(0)
+        
+        # Se raggiungiamo la posizione finale, restituiamo il numero di mosse
+        if current_pos == end:
+            return num_mosse
+        
+        # Esplora tutti i possibili movimenti del cavallo
+        for mossa in mosse:
+            next_pos = (current_pos[0] + mossa[0], current_pos[1] + mossa[1])
+            
+            # Verifica se la prossima posizione è all'interno della scacchiera e non è stata visitata
+            if 0 <= next_pos[0] < M and 0 <= next_pos[1] < N and next_pos not in Vis:
+                Vis.add(next_pos)
+                Q.enqueue((next_pos, num_mosse + 1))
+    
+    # Se la posizione finale non è raggiungibile, restituisci -1 (ma in una scacchiera classica dovrebbe sempre essere raggiungibile)
+    return -1

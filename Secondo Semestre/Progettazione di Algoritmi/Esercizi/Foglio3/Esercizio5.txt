@@ -1,0 +1,33 @@
+Esercizio 5 (I. Salvo).
+Sia G = (V;E) un grafo diretto, un vertice u 2 V è detto principale se per ogni vertice v in V esiste un cammino diretto da
+u a v. Fornire un algoritmo in pseudo-codice che, dato un grafo diretto G,
+determina tutti i vertici principali di G.
+
+
+Def Esercizio5(G)
+    principali = []
+
+    for u in V(G):
+        raggiunti = VisitaDFS(G, u)
+        if len(raggiunti) == len(V(G)):
+            principali.append(u)
+    
+    return principali
+
+Def VisitaDFS(G, start):
+    visitati = Set()
+    Stack S = [start]
+
+    while S!=0:
+        u = S.pop()
+        if u not in  visitati:
+            visitati.add(u)
+            for v in u.adiacenti():
+                if v not in  visitati:
+                    pila.append(v)
+    
+    return visitati
+
+
+
+

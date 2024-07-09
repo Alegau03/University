@@ -1,0 +1,32 @@
+Esercizio 2 (I. Salvo). 
+Fornire un algoritmo in pseudo-codice che, dato un grafo non diretto G = (V;E) e due nodi u e v, 
+restituisce tutti i nodi che hanno la stessa distanza da u e v in tempo O(n+m)
+
+
+Def Esercizio2(G,u,v):
+
+    equidistanti=[]
+
+    Dist1= BFSDist(G,u)
+    Dist2= BFSDist(G,v)
+
+    for x in V(G):
+        if Dis1[x]==Dist2[x]:
+            equidistanti.append(x)
+
+
+
+Def BFSDist(G,n):
+
+    Dist=[-1,..,-1]
+    Dist[n]=0
+    Coda Q=[n]
+
+    While Q!=0:
+        current=Q.pop(0)
+        for v in current.adiancenti():
+            if Dist[v]==-1:
+                Dist[v]=Dist[current]+1
+    
+    Return Dist
+

@@ -1,0 +1,39 @@
+Esercizio 1 (22.2-8, [1]). 
+Sia G = (V;E) un grafo non diretto, allora si defnisce il diametro di G, diam(G) = max d(u; v), il massimo della distanza tra due qualsiasi vertici di G. 
+Fornire un algoritmo in pseudo-codice che restituisca il diametro di un grafo G, nel caso in cui G sia un albero.
+
+
+Def Esercizio1(G)
+
+    partenza = 0
+
+    nodo_lontano, _ = BFS(G, partenza)
+
+    più_lontano, diametro = BFS(G, nodo_lontano)
+
+    return diametro
+
+
+Def BFS(G, n):
+    Coda Q=[n]
+    Dist[-1,..,-1] |V(G)| volte -1
+    Dist[n]=0
+
+    nodo_lontano=neighbor
+    max_dist=0
+
+    while Q!=0:
+        current= Q.pop(0)
+
+        for v in current.adiancenti():
+            if Dist[v]==-1:
+                Dist[v]=Dist[current] +1
+                Q.enqueue(v)
+
+            if Dist[v]> max_dist:
+                max_dist=Dist[v]
+                nodo_lontano=v
+                
+    return nodo_lontano,max_dist
+
+

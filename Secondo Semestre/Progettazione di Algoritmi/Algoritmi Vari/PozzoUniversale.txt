@@ -1,0 +1,16 @@
+Def PozzoUniversale(M):
+
+    candidato=1
+
+    for i in range(len(M)):
+        if(M[candidato,i]==1):
+            candidato=if
+    
+    for i in range(len(M)):
+        if(M[candidato,i]==1):
+            return false
+
+    for i in range(len(M)):
+        if(M[i,candidato]==0 and i!=candidato):
+            return false
+    return candidato

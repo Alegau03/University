@@ -1,0 +1,24 @@
+Esercizio 2 (24.3-6, [?]). 
+Sia G = (V,E) un grafo non diretto che rappresenta un network di comunicazioni. 
+Ad ogni arco (u, v) viene associato un valore r(u, v), che `e un numero reale con 0 ≤ r(u, v) ≤ 1 che rappresenta
+l’affidabilit`a dell’arco nel eseguire una comunicazione tra i vertici u e v. 
+Interpretiamo r(u, v) come la probabilit`a che la trasmissione tra u e v non fallisce e supponiamo che tali probabilit`a sono indipendenti tra loro. 
+Fornire uno pseudo-codice che dato G e un vertice s restituisce l’albero dei cammini più sicuri da s.
+
+
+Esercizio2(G,s)
+
+    Padri=[-1,..,-1]
+    A=[0,..,0]
+    A[s]=1
+    Coda Q=[V(G)]
+
+    While Q!=0:
+        v = Q.ExtractMax()
+
+        for u in v.adiacenti():
+            if A[v]<A[u]+r(u,v):
+                A[v]=A[u]+r(u,v)
+                Padri[u]=u
+    
+    return A

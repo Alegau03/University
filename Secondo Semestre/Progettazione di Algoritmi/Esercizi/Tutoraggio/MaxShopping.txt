@@ -1,0 +1,21 @@
+Esercizio 2.3 (Shopping di lusso). 
+Siria ha recentemente fatto shopping sfrenato per articoli di lusso in una boutique esclusiva, 
+all’interno della quale vi erano n articoli da cui scegliere. 
+Siria, essendo nota per la sua ampia ricchezza, ha utilizzato una ”parsimoniosa” strategia di acquisto: ispezionando ogni
+articolo dal primo all’ultimo, ha acquistato l’articolo attualmente ispezionato solo se il suo prezzo era inferiore ai fondi ancora disponibili, ignorandolo e
+passando al successivo se tali fondi fossero insufficienti per acquistarlo.
+Sapendo che Siria ha comprato m ≤ n articoli, suo padre vuole determinare quale sia la massima quantit`a di soldi che Siria abbia speso. 
+Progettare un algoritmo che dati in input i prezzi p1, . . . , pn degli articoli e la quantit`a m di articoli comprati risolva il problema. 
+Per la soluzione proposta, se ne dimostri la correttezza.
+
+
+Def Max_Shopping(p1,..,pn, m):
+    P= [p1,..,pn]
+    P.sort()
+    Sol=0
+    for i in range(1,m):
+        Sol.add(p1)
+    c=0
+    for x in Sol:
+        c+=Sol[x]
+    return c

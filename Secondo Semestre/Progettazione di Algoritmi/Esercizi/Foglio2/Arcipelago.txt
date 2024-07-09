@@ -1,0 +1,42 @@
+Def IsoleTot(A)
+    c=0
+    for i in range(n):
+        for j in range(m):
+            if A[i,j]=1:
+                DFS_Island(A,i,j)
+                c+=1
+    return c
+
+
+Def DFS_island(A,i,j):
+    
+    if A[i,j]==1 and 1<i<j<n
+        A[i,j]=0
+        DFS_Island(A,i-1,j)
+        DFS_Island(A,i+1,j)
+        DFS_Island(A,i,j-1)
+        DFS_Island(A,i,j+1)
+
+# Per trovare l'isola più grande
+
+Def IsolaGrande(M)
+    m=0
+    for i in range(n):
+        for j in range(m):
+            if M[i,j]==1:
+                m=max(m,DFS_Grande(M,i,j))
+
+    return M
+
+
+Def DFS_Grande(M,i,j):
+    m=0
+    if M[i,j]==1 and 1<i j<n
+        M[i,j]=0
+        m+=1
+        m+=DFS_Island(A,i-1,j)
+        m+=DFS_Island(A,i+1,j)
+        m+=DFS_Island(A,i,j-1)
+        m+=DFS_Island(A,i,j+1)
+    
+    return m

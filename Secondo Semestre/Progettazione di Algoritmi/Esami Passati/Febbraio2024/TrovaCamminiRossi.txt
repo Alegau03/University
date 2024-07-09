@@ -1,0 +1,27 @@
+funzione conta_cammini_rossi(n, color):
+    // Creiamo una tabella dp di dimensione (n+1) x (n+1) inizializzata a 0
+    dp = matrice di dimensione (n+1) x (n+1) inizializzata a 0
+    
+    // La posizione di partenza (1,1) deve essere rossa per iniziare il cammino
+    se color[1][1] == 'R':
+        dp[1][1] = 1
+    
+    // Popoliamo la tabella dp
+    per i da 1 a n:
+        per j da 1 a n:
+            se color[i][j] == 'R':
+                // Controlliamo la mossa dal basso a sinistra (i-1, j-1) -> (i, j)
+                se i > 1 e j > 1:
+                    dp[i][j] += dp[i-1][j-1]
+                
+                // Controlliamo la mossa dall'alto (i, j-1) -> (i, j)
+                se j > 1:
+                    dp[i][j] += dp[i][j-1]
+                
+                // Controlliamo la mossa da sinistra (i-1, j) -> (i, j)
+                se i > 1:
+                    dp[i][j] += dp[i-1][j]
+    
+    // Il risultato è il numero di modi per raggiungere la casella (n,n)
+    ritorna dp[n][n]
+

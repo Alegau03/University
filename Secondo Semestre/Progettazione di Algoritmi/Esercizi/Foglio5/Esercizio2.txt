@@ -1,0 +1,17 @@
+Esercizio 2 (16.1-4, [1]). 
+Sia A un insieme, una partizione di A `e una
+collezione {Ai} di sottoinsiemi di A tali che Ai ∩ Aj = ∅ per ogni i ̸= j e Unione Ai = A. 
+Fornire un algoritmo in pseudo-codice che, data una collezione di intervalli A = {ai = [si, fi]}, determina il numero minimo di sottoinsiemi
+che formano una partizione di A tali che in ogni sottoinsieme Ai gli intervalli sono due a due disgiunti.
+
+Def Esercizio2(A):
+
+    A.SortForBAsc()  //ordino ongi intervallo [a,b] per b in ordine crescente
+
+    Sol=0
+
+    For i in range(len(A)):
+        if (Ai intersect X for X in Sol = 0):
+            Sol.add(Ai)
+
+    return Sol

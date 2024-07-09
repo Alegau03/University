@@ -1,0 +1,11 @@
+Def IntervalliDisg(I):
+
+    I.SortForBAsc()  //ordino ongi intervallo [a,b] per b in ordine crescente
+
+    Sol=0
+
+    For i in range(len(I)):
+        if (Ii intersect X for X in Sol = 0):
+            Sol.add(Ii)
+
+    return Sol

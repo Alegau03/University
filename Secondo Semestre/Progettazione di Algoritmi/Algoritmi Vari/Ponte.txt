@@ -1,0 +1,37 @@
+Def ponte(G)
+    v = v in V(G)
+    c=0
+    t=[0,..,0]
+    Back=[0,..,0]
+    Padri=[-1,..,-1]
+    Padri[v]=v 
+    DFS_rec_ponte(G,v,c,t,Back,Padri)
+    Ponti=[]
+
+    for x in V(G):
+        if Back[x]==t[x] and Padri[x]!=x:
+            Ponti.append(x)
+    
+    return Ponti
+
+
+
+
+Def DFS_rec_ponte(G,x,c,t,Back,Padri)
+    c+=1
+    t[x]=c
+    Back[x]=t[x]
+
+    for y in x.uscenti:
+        if t[y]==0:
+            Padri[y]=x
+            DFS_rec_ponte(G,y,c,t,Back,Padri)
+
+            if Back[y]<Back[x]:
+                Back[x]=Back[y]
+
+        else if y!=Padri[x]:
+            if t[y]<Back[x]:
+                Back[x]=t[y]
+
+    

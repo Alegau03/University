@@ -1,0 +1,48 @@
+Esercizio 1 (22.2-9, [1]).
+Fornire una algoritmo in pseudo-codice che, dato
+un grafo non diretto e connesso G = (V;E), trova una passeggiata in G che
+attraversa tutti gli archi una e una sola volta in ognuna della due direzioni
+in tempo O(n + m).
+
+
+
+Algoritmo: TraversataEulerianaDoppia
+Input: Un grafo non diretto connesso G = (V, E)
+Output: Una passeggiata in G che attraversa ogni arco esattamente una volta in ciascuna direzione
+
+ Funzione TraversataEulerianaDoppia(G):
+     
+    G' = TrasformaInGrafoDiretto(G)
+     
+    passeggiata = TrovaPasseggiataEuleriana(G')
+     
+    ritorna passeggiata
+    
+
+ Funzione TrasformaInGrafoDiretto(G):
+    G' = GrafoVuoto()
+    per ogni arco (u, v) in G:
+        AggiungiArcoDiretto(G', u, v)
+        AggiungiArcoDiretto(G', v, u)
+    ritorna G'
+
+
+ Funzione TrovaPasseggiataEuleriana(G'):
+    // Algoritmo di Hierholzer
+    Passeggiata = []
+    Stack S = []     
+    Vis=[] // archi visitati
+    corrente = un qualsiasi vertice in G'
+   
+
+    While S != 0 and Exits (x,y) in E(G') not in Vis:
+        if exists (corrente,y) in E(G') not in Vis:
+            S.push(corrente)
+            prossimo = y
+            Vis.add((corrente,prossimo))
+            corrente = prossimo
+        else:
+            Passeggiata.append(corrente)
+            corrente = S.pop()
+        Passeggiata.append(corrente)
+    ritorna Passeggiata

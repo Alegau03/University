@@ -1,0 +1,22 @@
+Def DFSOpt(G,x):
+    Vis={x}
+    Stack S= 0
+    S.push(x)
+
+    while S!=0:
+        y= S.top()
+
+        while y.uscenti != 0:
+
+            z= y.uscenti[0]
+            y.uscenti.remove(0)
+
+            if z not in Vis:
+                Vis.add(z)
+                S.push(z)
+                break
+
+        if y==S.top():
+            S.pop()
+
+    return Vis

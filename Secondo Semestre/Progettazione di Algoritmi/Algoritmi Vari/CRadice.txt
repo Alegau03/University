@@ -1,0 +1,32 @@
+Scc(G : graph){ // chiamata globale
+    C : stack // vertici visitati ma ancora senza componente
+    Output : list
+    for each (v∈V(G)| v non ancora visitato){
+        DFS Scc(G,v,C,Output)
+     }
+    return Output
+}
+
+
+DFS Scc ottimizzato(G,u,CC,C,cont nodi,cont comp){ // funzione ricorsiva
+    cont nodi++
+    CC[u]= -cont nodi
+    C.push(u)
+    back = cont nodi
+    for each(v adiacente a u){
+        if(CC[v]==0){
+            b=DFS Scc ottimizzato(G,v,CC,C,cont nodi,cont comp)
+            back=min(back,b)}
+
+        else if(CC[v]<0){
+            back=min(back,-CC[v])}
+    }
+    if(back==-CC[u]){
+        cont comp++
+        do{
+            w=C.pop()
+            CC[w]=cont comp
+            }while(w̸=u)
+        }
+    return back
+}
