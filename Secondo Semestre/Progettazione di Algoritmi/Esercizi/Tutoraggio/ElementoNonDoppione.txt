@@ -1,0 +1,32 @@
+Esercizio 3.5 (Elemento non doppione). 
+Sia A un array ordinato di n interi con n dispari dove ogni valore in A occorre esattamente due volte tranne uno.
+Progettare un algoritmo che in O(log n) trovi il valore presente una sola volta in A.
+
+
+
+Def ElementoNonDoppione(A):
+    n=A.lenght()
+    if A.lenght()==0:
+        return Null
+    if A.lenght()==1:
+        return A[0]
+    if A.lenght()==2:
+        if A[0]==A[1]:
+            return Null
+    if A.lenght()==3:
+        if A[0]==A[1]:
+            return A[2]
+        else if A[0]==A[2]:
+            return A[1]
+        else:
+            return A[0]
+    
+    m= A.lenght()/2
+
+    if A[m]==A[m-1]:
+        m-=1
+    
+    if A[0:m].lenght()%2==1:
+        ElementoNonDoppione(A[0:m])
+    else:
+        ElementoNonDoppione(A[m:n])

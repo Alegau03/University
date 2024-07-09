@@ -1,0 +1,26 @@
+Esercizio 2.4 (Ciclo di peso minimo). 
+Dato un grafo con pesi positivi G, il peso di un ciclo all’interno di G è la somma dei pesi degli archi del ciclo.
+Progettare un algoritmo che dato in input il grafo G restituisca l’insieme di archi che compone il ciclo di peso minimo presente in G 
+(restituire ∅ se G è aciclico). 
+
+Def CicloMinimo(G)
+    C = 0
+    peso = inf
+    for (u, v) in E(G):
+        G′ = G − {(u, v)}
+        Padri = dijkstra(G′, v)
+        C′ = {(u, v)}
+        pesoC' = w(u, v)
+        if Padri[u] != -1:
+            x = u
+            While x!=v:
+
+                C′ = C′ ∪ {(Padri[x], x)}
+                pesoC' += w((Padri[x], x))
+                x = Padri[x]
+    
+            if pesoC' < peso then
+                C = C′
+                peso = pesoC'
+    
+    return C

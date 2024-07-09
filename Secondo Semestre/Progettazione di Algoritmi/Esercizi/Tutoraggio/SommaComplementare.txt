@@ -1,0 +1,24 @@
+Esercizio 3.3 (Somma complementare). 
+Siano X e Y due array di n interi ordinati in senso crescente. 
+Dato un intero z e i due array X, Y , progettare un algoritmo di complessità O(n log n) che trovi, se esiste, una coppia di indici (i, j) tali che X[i] + Y [j] = z.
+
+Def SommaComplementare(X,Y,z):
+
+    n = X.lenght()
+
+    for i in range(1,n):
+        j= TrovaIndice(Y, z- X[i])
+
+        if j !=Null:
+            return (i,j)
+    
+    return Null
+
+
+Def TrovaIndice(A, val)
+
+    For x in A:
+        if A[x]==val:
+            return val
+    
+    return Null
