@@ -22,3 +22,7 @@ Esercizio2(G,s)
                 Padri[u]=u
     
     return A
+
+
+
+    LETTERALMENTE BFS 

@@ -1,0 +1,29 @@
+Esercizio 1:
+
+Dato un grafo G diretto e aciclico e un nodo x in V(G) progettare un algoritmo che ritorna il numero dei nodi raggiungibili da x a diastanza massima
+
+
+
+Def DistMax(G,x):
+	Dist=[-1,...,-1]
+	Dist[x]=0
+	Stack S=[]
+	S.push(x)
+	count = 0
+	
+	while S != 0:
+		v = S.top()
+
+		For u in v.adiacenti():
+			if Dist[u]==-1:
+				Dist[u]=Dist[v]+1
+				S.push(u)
+		S.pop()
+
+	max = Max(Dist)
+
+	For x in Dist:
+		if Dist[x]==max:
+			count+=1
+
+	return count
