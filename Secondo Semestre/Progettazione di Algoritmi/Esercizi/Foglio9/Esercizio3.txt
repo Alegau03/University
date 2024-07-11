@@ -1,0 +1,29 @@
+Esercizio 3 (25.2-8, [1]). 
+Dato un grafo diretto G = (V,E), la chiusura transitiva di G è un grafo G∗ = (V,E∗) tale che (u, v) ∈ E∗ 
+se e solo se esiste un cammino da u a v in G. 
+Fornire un algoritmo per calcolare la chiusura transitiva di un grafo diretto G = (V,E) in maniera che il tempo di esecuzione sia O(|V | · |E|).
+
+
+
+Def Esercizio3(G):
+    # Numero di nodi nel grafo
+    
+    
+    # Matrice di chiusura transitiva, inizializzata con 0
+    Chiusura = [[0] * V for v in V(G)]
+    
+    # Funzione di DFS per aggiornare la chiusura transitiva
+
+    
+    # Esegui DFS per ogni nodo del grafo
+    for v in V(G)
+        DfsChiusura(v, v,Chiusura)
+    
+    return Chiusura
+
+def DfsChiusura(start, vert,Chiusura):
+        for v in vert.adiacenti():
+            if Chiusura[start][v] == 0:
+                closure[start][v] = 1
+                DfsChiusura(start, v)
+    

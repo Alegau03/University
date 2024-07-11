@@ -1,0 +1,34 @@
+
+
+Def Esercizio1(P,x,y,z)
+
+    x_y= MinimoAntenato(P,x,y)
+    tot = MinimoAntenato(P,x_y,z)
+
+    return tot
+
+
+MinimoAntenato(P,x,y):
+    path_x= Path(P,x)
+    path_y= Path(P,y)
+
+    i= path_x.lenght()
+    j= path_y.lenght()
+    antenato_comune=-1
+    while i>=0 and j>=0 and path_x[i]==path_y[j]:
+        antenato_comune=path_x[i]
+        i-=1
+        j-=1
+
+    return antenato_comune
+    
+Path(P,x):
+    path=[]
+    path.append(P[x])
+    padre= P[x]
+
+    while padre!=None:
+        path.append(P[padre])
+        padre= P[padre]
+    
+    return path

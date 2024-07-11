@@ -1,0 +1,45 @@
+Esercizio 4 (M. Lauria). 
+Si considera una griglia n × n con n > 0. 
+Un cammino su questa griglia deve partire dalla cella di coordinate (0, 0) in alto a sinistra e deve arrivare alla posizione di coordinate (n − 1, n − 1) in basso a destra. 
+E’ possibile muoversi solo su celle adiacenti, andando di un passo verso il basso o di un passo verso destra. 
+Inoltre, sono vietati i cammini che toccano le celle di coordinate (i, j) con i > j, cioè non è permesso andare sotto la diagonale che va da (0, 0) a (n−1, n−1). 
+Fornire in pseudo-codice un algoritmo che calcoli il numero di cammini validi con un tempo di esecuzione O(n2).
+
+
+
+Def Esercizio4(n):
+
+    for i in range(0,n):
+        for j in range(i,n):
+            
+            if i==0:
+                M[i,j]=1
+            
+            else if i==j and i>=1:
+                M[i,j]= M[i-1,j]
+            
+            else if: i>j:
+                M[i,j]=(0,0)
+
+            else:
+                M[i,j]= M[i-1,j]+M[i,j-1]
+    
+    return M[n-1,n-1]
+
+
+Si costruisce una matrice M di dimensioni n × n tale che alla
+fine dell’algoritmo, il valore di M[i, j] indica il numero di cammini validi
+dalla cella di coordinate (0, 0) alla cella di coordinate (i, j), sfruttando la
+ricorsione. 
+Iniziamo con i casi base; se la cella di coordinate (i, j) si trova
+    - sulla prima riga, cio`e i = 0, allora M[i, j] = 1 perchè la si può raggiungere
+      solo facendo passi verso destra e quindi in un unico modo;
+
+    - sulla diagonale e non è la cella di partenza, cioè 0 < i = j, allora
+      M[i, j] = M[i−1, j] perchè la si può solo raggiungere solo dalla casella consecutiva in alto;
+
+    - sotto la diagonale, cio`e se i > j, alloraM[i, j] = 0 perchè non è possibile
+      raggiungere tale cella con cammini validi.
+
+Supponiamo infine che la cella in esame non soddisfa nessuna delle condizioni precedenti, allora M[i, j] = M[i−1, j]+M[i, j−1] perchè è possibile raggiungere
+questa cella sia da quella consecutiva in alto che da quella consecutiva a sinistra.
