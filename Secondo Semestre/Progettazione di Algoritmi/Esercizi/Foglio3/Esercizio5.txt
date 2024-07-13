@@ -25,7 +25,8 @@ Def VisitaDFS(G, start):
             for v in u.adiacenti():
                 if v not in  visitati:
                     pila.append(v)
-    
+        if u==S.top():
+            S.pop(0)
     return visitati
 
 

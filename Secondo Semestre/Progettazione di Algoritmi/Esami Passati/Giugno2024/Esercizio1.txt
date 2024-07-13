@@ -1,0 +1,19 @@
+
+Def Esercizio1(G,P):
+	
+	num_figli=[0,..,0]
+
+	for v in V(G):
+		padre=P[v]:
+
+		if padre !=None:
+			num_figli[padre]+=1
+
+
+	not_foglie=[]
+
+	for x in range(len(num_figli)):
+		if num_figli[x]>0:
+			not_foglie.append(x)
+
+	return not_foglie

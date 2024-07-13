@@ -1,0 +1,16 @@
+
+Def Esercizio4(A):
+	Minimo= inf
+	Max = -inf
+	diff_max=0
+
+	for x in A:
+		if A[x]>Max:
+			Max=A[x]
+		elif A[x]<Minimo:
+			Minimo= A[x]
+
+		diff_max = abs(Max,Minimo)
+
+
+	return diff_max

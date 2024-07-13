@@ -1,0 +1,17 @@
+Dato un Array A di interi positivi ordinato con A[i]!=A[j] per i!=j
+trovare il minimo x con x >0 tale che x non è in A:
+
+
+
+Def Esercizio4(A):
+    if A[0]!=1:
+        return 1
+    n= len(A):
+    
+    while i<n:
+        if A[m]==m+1:
+            i = m+1
+        else:
+            n=m
+
+    return i+1

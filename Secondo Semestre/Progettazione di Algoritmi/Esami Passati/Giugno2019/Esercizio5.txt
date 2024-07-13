@@ -1,0 +1,24 @@
+Dare lo pseudocodice di un algoritmo che prenda in input un grafo diretto G, due vertici u,v, e un intero k e restituisca il numero di passeggiate distinte di lunghezza al massimo k da u a v.
+L'algoritmo dovrebbe avere complessità O(n+m)
+
+
+Def Esercizio5(G,u,v,k):
+	n= |V(G)|
+	M=Matrice di dimensioni k+1*n //M[i][j] rappresenta il numero di passeggiate di lunghezza i dal vertice u al vertice j
+ 
+	M[0][u]
+
+	for i in range(1,k):
+		for w in V(G):
+			M[i][w]=0
+
+			for (x,w) in E(G):
+				M[i][w]= M[i][w]+M[i-1][x]
+
+
+	count=0
+
+	for i in range(0,k):
+		cout += M[i][v]
+
+	return count

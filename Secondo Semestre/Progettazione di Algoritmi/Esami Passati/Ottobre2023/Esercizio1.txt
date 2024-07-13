@@ -1,0 +1,22 @@
+BFS set(X,Y insiemi di nodi, G graph){
+    int Dist[n] inizializzato a -1
+    Coda Q=[]
+    for  x in X{
+        Q.push(x)
+        Dist[x]=0
+    }
+    while(Q.lenght!=0){
+        v = Q.pop(0)
+        for w in v.adiacenti(){
+            if (Dist[w]==-1){
+                Dist[w]=Dist[v]+1
+                Q.push(w)
+            }
+        }
+    }
+    minimo=inf
+    for  y in Y{
+        minimo = min(Dist[y],minimo)
+    }
+    return minimo
+}

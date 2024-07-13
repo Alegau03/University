@@ -1,0 +1,40 @@
+def CiloPesoMin(Grafo G):
+    // Inizializza l'array di visitati e il genitore di ciascun nodo
+    Vis = array di dimensione |V(G)| inizializzato a False
+    Padri = array di dimensione |V(G)| inizializzato a -1
+    min=infinito
+    // Esegui DFS per ogni vertice
+    for i in range(|V(G)|):
+        if not Vis[i]:
+            ciclo=DFSCiclo(i, Vis, Padri)
+            if ciclo!=None:
+                peso=Peso(ciclo)
+                if peso<min:
+                    min=peso
+    return min
+
+ // Funzione di utilità per eseguire DFS
+def DFSCiclo(u, visitato, genitore):
+    // Marca l'attuale nodo come visitato
+    visitato[u] = True
+    C={}
+    // Esamina tutti i vertici adiacenti a u
+    for v in G.adiacenti(u):
+        if visitato[v]==false:  // Se v non è stato visitato
+            genitore[v] = u  // Imposta il genitore di v come u
+            Ci= DFS(v, visitato, genitore)
+            if Ci!=None:
+                C.append(visitato)
+        else v != genitore[u]:  // Se v è stato visitato e non è il genitore di u
+            C.append(visitato)
+
+    if C.lenght()==0:
+        return None
+    return C
+
+def Peso(G) // G è un sottografo che contiene solo un ciclo:
+    p=0
+    for (v,u) in E(G):
+        p+=w((v,u))
+    return p
+    

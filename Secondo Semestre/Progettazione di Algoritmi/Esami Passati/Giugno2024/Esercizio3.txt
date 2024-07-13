@@ -1,0 +1,23 @@
+Esercizio3(G)
+
+
+	S={}
+
+	for v in V(G):
+		for u in v.adiacenti():
+			if v.colore()==u.colore():
+				S.append((v,u))
+
+
+	R= E(G)-S
+	Sol={}
+	For (u,v) in S:
+		if (Sol + (u,v)).findCycle()==Null:
+			Sol.append((u,v))
+
+
+	For (u,v) in R:
+		if (Sol + (u,v)).findCycle()==Null:
+			Sol.append((u,v))
+
+	return Sol
