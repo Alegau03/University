@@ -1,0 +1,45 @@
+
+
+
+Def LivelloNodiPari(p):
+funzione count_even_node_levels(P):
+    n = lunghezza(P)
+    
+    root = FindRoot(P)
+
+
+    Coda Q=0
+    Q.enqueue(root)
+    level_count=Dict
+    level_count[0] = 1
+    livello = 0
+    
+    while Q!=0:
+        livello += 1
+        dimensione = len(Q)
+        
+        for i in range(0,dimensione-1)
+            nodo = Q.dequeue()
+            figli= Figli(nodo,P)
+            for figlio in figli:
+                Q.enqueue(figlio)
+                if livello not in level_count:
+                    level_count[livello] = 0
+                level_count[livello] += 1
+
+
+    res = 0
+    for livello in level_count:
+        if level_count[livello] % 2 == 0:
+            res += 1
+    
+    return res
+
+
+Def Figli(nodo,P):
+    figli=[]
+    for x in P:
+        if P[x]==nodo:
+            figli.append(x)
+    return figli
+

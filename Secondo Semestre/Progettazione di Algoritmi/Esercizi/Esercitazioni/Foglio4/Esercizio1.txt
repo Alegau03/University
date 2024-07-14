@@ -1,0 +1,13 @@
+
+
+Def StringeBin(A):
+
+    Sol=0
+    fine=0
+
+    for i in range(len(A)):
+        if A[i]==0:
+            fine+=1
+        else:
+            Sol+=fine
+    return Sol
