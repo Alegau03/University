@@ -1,0 +1,20 @@
+
+
+Def AntenatiComuni(A,x,y):
+    Ax=[]
+    Ay=[]
+
+    while x!=P[x]:
+        Ax[P[x]]=1
+        x=P[x]
+    
+    while y!=P[y]:
+        Ay[P[y]]=1
+        x=P[y]
+    
+    A=[0,..,0]
+
+    for i in range(len(A)):
+        A[i]= Ax[i] LAND Ay[y]
+    
+    return A

@@ -1,0 +1,24 @@
+
+
+
+Def DistanzaDaRadice(G,P):
+    Vis=[0,..,0]
+    Dist=[-1,..,-1]
+    for x in V(G):
+        if Vis[x]==0:
+            DFSRAD(G,P,x,Dist,Vis)
+
+    return Dist
+
+Def DFSRAD(G,P,x,Dist,Vis):
+    if P[x]==x: //radice 
+        Dist[x]=0
+        Vis[x]=1
+    
+    if Dist[P[x]]>0:
+        Dist[x]=Dist[P[x]]+1
+        Vis[x]=1
+    
+    else:
+        DFSRAD(G,P,P[x],Dist,Vis)
+    

@@ -1,0 +1,10 @@
+
+
+Def Esercizio3(A):
+    Sol={A[0],A[0]+1}
+
+    for i in range(1,len(A)-1):
+        if A[i]>Sol.last()-1:
+            Sol.append(A[i],A[i]+1)
+
+    return SOl

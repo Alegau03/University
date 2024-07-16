@@ -20,11 +20,11 @@ Def VisitaDFS(G, start):
 
     while S!=0:
         u = S.pop()
-        if u not in  visitati:
+        if u not in visitati:
             visitati.add(u)
             for v in u.adiacenti():
                 if v not in  visitati:
-                    pila.append(v)
+                    S.append(v)
         if u==S.top():
             S.pop(0)
     return visitati

@@ -4,7 +4,7 @@ Def PozzoUniversale(M):
 
     for i in range(len(M)):
         if(M[candidato,i]==1):
-            candidato=if
+            candidato=i 
     
     for i in range(len(M)):
         if(M[candidato,i]==1):

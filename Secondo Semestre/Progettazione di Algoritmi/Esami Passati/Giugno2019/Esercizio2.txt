@@ -1,0 +1,20 @@
+
+
+Def AntenatoA3(G,x,y,z,P)
+
+    AntenatoXY= AntenatoA2(G,x,y,P)
+    AntenatoXYZ= AntenatoA2(G,AntenatoXY,z,P)
+
+    retrun AntenatoXYZ
+
+
+Def AntenatoA2(G,x,y,P):
+
+    while x!=y:
+        x=P[x]
+        y= P[y]
+    return x
+
+
+
+

@@ -1,0 +1,20 @@
+Funzione CapacitaMassimaFile(n, s, C):
+    // n: numero di file
+    // s: array delle dimensioni dei file s[1], s[2], ..., s[n]
+    // C: capacità massima del disco
+    
+    // Inizializza una matrice dp di dimensioni (n+1) x (C+1)
+    dp = Matrice di dimensioni (n+1) x (C+1), inizializzata a 0
+    
+    // Ciclo principale per calcolare la capacità massima
+    per ogni i da 1 a n:
+        per ogni c da 0 a C:
+            se c >= s[i]:
+                // Se la capacità c è sufficiente a includere il file i
+                dp[i][c] = max(dp[i-1][c], s[i] + dp[i-1][c - s[i]])
+            altrimenti:
+                // Se la capacità c non è sufficiente per includere il file i
+                dp[i][c] = dp[i-1][c]
+    
+    // La capacità massima occupabile è contenuta in dp[n][C]
+    ritorna dp[n][C]
