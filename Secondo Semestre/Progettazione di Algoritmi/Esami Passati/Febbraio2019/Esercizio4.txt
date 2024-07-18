@@ -1,0 +1,24 @@
+Scacchiera con cavallo
+
+
+BFS_modificata(G,x1,y1,x2,y2):
+	moves = [(1,2),(1,-2),...] //mosse valide
+	D = Matrice n x n [-1,...,-1]
+	Coda Q=[]
+	Padri=[]
+	D[x1,y1] = 0
+	P[x1,y1] = (x1,y1)
+	Q.enqueue((x1,y1))
+	while Q!=0:
+		(u,v) = Q.dequeue()
+		for (i,j) in moves:
+			if (0,0)<=(u+i,v+j)<=(n,n) and D[u+i,v+j] == -1:  //Se non esco fuori dalla scacchiera e ancora non sono passato per la casella
+				D[u+i,v+i] = D[u,v] + 1
+				P[u+i,v+i] = (u,v)
+	sol = 0
+	while (P[x2,y2]!=(x2,y2)):
+		sol.add(x2,y2)
+		(x2,y2) = P[x2,y2]
+
+
+	return sol

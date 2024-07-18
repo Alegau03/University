@@ -1,0 +1,35 @@
+La distanza tra due nodi è la somma delle distanze dal primo antenato comune
+
+
+Def DistanzaTraDueNodi(P,x,y):
+	
+	antenato= AntenatoComune(P,x,y)
+	if antenato!=NONE:
+		G= CalcolaG(P)
+		Dist= BFS(G,antenato)
+		dist_a_x = Dist[x]
+		dist_a_y= Dist[y]
+		tot= dist_a_x + dist_a_y
+		return tot
+	else:
+		print("NO ANTENATI IN COMUNE")
+
+Def AntenatoComune(P,x,y):
+	path_x= Path(P,x)
+	path_y= Path(P,y)
+
+	antenati=[]
+	antenato= NONE
+
+	i= len(path_x)
+	j = len(path_y)
+
+	while i>0 and j>0 and path_x[i]==path_y[j]:
+		antenati.append(patx_x[i])
+		i-=1
+		j-=1
+
+	antenati.Sort()
+	antenato=antenati[-1]
+
+	return antenato

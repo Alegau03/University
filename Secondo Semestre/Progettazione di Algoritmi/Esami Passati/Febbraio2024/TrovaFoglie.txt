@@ -3,8 +3,18 @@ Def TrovaFoglie(A):
     Foglie=[]
     conta_figli=[0,..,0] array lungo n
     for i in range(n):
-        conta_figli[A[i]]+=1
+        conta_figli= Figli(A,i)
 
     for i in range(n):
         if conta_figli[i]==0:
             Foglie.add(A[i])
+
+
+Figli(A,n):
+
+    c=0
+    for v in A:
+        if A[v]==i:
+            c+=1
+
+    return c

@@ -1,0 +1,18 @@
+Cammini Rosso-Verdi solo su caselle rosse
+
+
+Def Esercizio3(n,M):
+    dp= MAtrice (n+1)*(n+1) inizializzata a 0
+
+    dp[1][1]=1
+
+    for i in range(n):
+        for j in range(n):
+            if M[i][j]==R: //passo solo su caselle rosse
+                if i > 1 and M[i-1][j]==R: //guardo verso l'alto
+                    dp[i][j]+=dp[i-1][j]
+            
+                if j>1 and M[i][j-1]==R: // Guarda a sinistra solo se non siamo sulla prima colonna
+                    dp[i][j]+=dp[i][j-1]
+    
+    return dp[n][n]

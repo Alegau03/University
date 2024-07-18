@@ -19,7 +19,7 @@ Def BFS(G, n):
     Dist[-1,..,-1] |V(G)| volte -1
     Dist[n]=0
 
-    nodo_lontano=neighbor
+    nodo_lontano= un vicino di n
     max_dist=0
 
     while Q!=0:

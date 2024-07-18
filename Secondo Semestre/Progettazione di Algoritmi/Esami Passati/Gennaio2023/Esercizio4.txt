@@ -4,11 +4,11 @@
 Def CamminimoColoriMinimi(G,x)
 
     Sol=[]
-    VIS={x}
+    R={x}
 
-    while VIS!=V(G):
+    while R!=V(G):
         for(x,y) in E(G) 
-            if x in Vis and y in V(G)-R and x.colore()!=y.colore():
+            if x in R and y in V(G)-R and x.colore()!=y.colore():
                 Sol.append((x,y))
                 R.add(y)
                 break

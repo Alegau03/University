@@ -1,5 +1,4 @@
 
-
 Def StringeBin(A):
 
     Sol=0
@@ -11,3 +10,7 @@ Def StringeBin(A):
         else:
             Sol+=fine
     return Sol
+
+
+
+

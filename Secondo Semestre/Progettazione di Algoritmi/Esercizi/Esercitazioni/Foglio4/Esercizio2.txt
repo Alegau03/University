@@ -2,7 +2,7 @@
 
 
 Def LivelloNodiPari(p):
-funzione count_even_node_levels(P):
+
     n = lunghezza(P)
     
     root = FindRoot(P)

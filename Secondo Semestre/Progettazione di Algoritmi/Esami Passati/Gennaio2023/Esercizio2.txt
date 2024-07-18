@@ -5,13 +5,6 @@ Def ElementoNonDoppione(A):
 
     if n==1:
         return A[0]
-    if n==3:
-        if A[0]==A[1]:
-            return A[2]
-        else if A[0]==A[2]:
-            return A[1]
-        else: 
-            return A[0]
     
     m= n/2
 

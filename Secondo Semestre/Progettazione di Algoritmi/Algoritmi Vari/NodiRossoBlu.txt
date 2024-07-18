@@ -1,0 +1,25 @@
+funzione percorso_con_colori_diversi(Grafo G, Vertice x, Vertice y)
+    // Inizializza una tabella DP per tracciare i percorsi con colori diversi
+    // DP[u][Rosso] = vero se esiste un cammino verso u con ultimo nodo Rosso
+    // DP[u][Blu] = vero se esiste un cammino verso u con ultimo nodo Blu
+    Crea una tabella DP per ogni nodo u in G con valore (falso, falso)
+    
+    // Inizializza il punto di partenza
+    colore_x = Colore(x)
+    DP[x][colore_x] = vero
+
+    // Ottieni un ordinamento topologico del grafo
+    ordine_topologico = topological_sort(G)
+
+    // Itera attraverso i nodi in ordine topologico
+    for u in ordine_topologico
+        for v in u.adiacenti():
+            if DP[u][Rosso] == vero and Colore(v) == Blu
+                DP[v][Blu] = vero
+            if DP[u][Blu] == vero and Colore(v) == Rosso
+                DP[v][Rosso] = vero
+
+    // Controlla se c'è un cammino verso y che usa entrambi i colori
+    return DP[y][Rosso] == vero or DP[y][Blu] == vero
+
+
