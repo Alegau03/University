@@ -1,0 +1,20 @@
+Disrtanza Massima
+
+
+
+Def Esercizio1(G, x) //NODI CPON DISTANZA MASSIMA DA x
+
+    Dist=[]
+    
+    Coda Q={}
+    Q.push(x)
+
+    BFS(G,Dist,Q,x)
+
+    m= max(Dist)
+    massimi=[]
+    for x in V(G):
+        if Dist[x]==m:
+            massimi.append(x)
+
+    return len(massimi)

@@ -14,7 +14,7 @@ Figli(A,n):
 
     c=0
     for v in A:
-        if A[v]==i:
+        if A[v]==n:
             c+=1
 
     return c

@@ -3,7 +3,7 @@ L'algoritmo dovrebbe avere complessità O(n+m)
 
 
 Def Esercizio5(G,u,v,k):
-	n= |V(G)|
+	n= |V(G)| 
 	M=Matrice di dimensioni k+1*n //M[i][j] rappresenta il numero di passeggiate di lunghezza i dal vertice u al vertice j
  
 	M[0][u]
