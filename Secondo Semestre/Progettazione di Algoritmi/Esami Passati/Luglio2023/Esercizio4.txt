@@ -1,0 +1,35 @@
+Albero di copertura che non contiene arco (x,y)
+
+
+
+Def Esercizio4(G,(x,y)):
+
+    T= Kruskal(G)
+
+    if (x,y) not in E(G):
+        return YES
+    
+    else:
+        G'= Escludi(G,(x,y))
+        T'= Kruskal(G')
+        if Peso(T')<=Peso(T):  /(x,y) non è arco obbligatorio
+                return YES
+    return NO
+
+
+Def Escludi(G,(x,y)):
+    G'={}
+
+    for (u,v) in E(G):
+        if (u,v)!=(x,y):
+            G'.append((u,v))
+    return G'
+
+
+Def Peso(G):
+    c=0
+
+    for (u,v) in E(G):
+        c+= w((u,v))
+    
+    return c

@@ -1,0 +1,21 @@
+Trova vertici non foglie
+
+
+
+Def Esercizio2(P):
+    
+    not_foglie=[]
+
+    for u in V(G):
+        num_figli= ContaFigli(P,u):
+        if num_figli>0:
+            not_foglie.append(u)
+    return not_foglie
+
+
+Def ContaFigli(P,n):
+    c=0
+    for i in P:
+        if P[i]==n:
+            c+=1
+    return c

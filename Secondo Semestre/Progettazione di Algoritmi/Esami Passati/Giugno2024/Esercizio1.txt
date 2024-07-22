@@ -1,19 +1,21 @@
-
-Def Esercizio1(G,P):
-	
-	num_figli=[0,..,0]
-
-	for v in V(G):
-		padre=P[v]:
-
-		if padre !=None:
-			num_figli[padre]+=1
-
-
-	not_foglie=[]
-
-	for x in range(len(num_figli)):
-		if num_figli[x]>0:
-			not_foglie.append(x)
-
-	return not_foglie
+Def Esercizio1(A)
+ 
+ 
+ n = lunghezza(A)
+    
+    // Crea un array LIS per tenere traccia delle lunghezze delle sottosequenze crescenti
+    LIS = array di dimensione n inizializzato a 1
+    
+    // Calcola la lunghezza della LIS per ogni elemento di A
+    for i in range (1, n-1):
+        for j in range (0,i-1):
+            if A[j] < A[i] and LIS[i] < LIS[j] + 1:
+                LIS[i] = LIS[j] + 1
+    
+    // Trova il massimo valore in LIS, che rappresenta la lunghezza della LIS
+    lunghezza_massima = 0
+    for i in range(0,n-1)
+        if LIS[i] > lunghezza_massima:
+            lunghezza_massima = LIS[i]
+    
+    return lunghezza_massima

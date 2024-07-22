@@ -1,23 +1,45 @@
-Esercizio3(G)
+Dare lo pseudocodice di un algoritmo che prende in input un grafo non-diretto e connesso con ogni vertice colorato o rosso o blu 
+e restituisce in output un albero di copertura con un numero massimo di archi con termine dello stesso colore 
+(quindi il numero massimo di archi colorati rosso-rosso oppure blu-blu).
 
 
-	S={}
-
-	for v in V(G):
-		for u in v.adiacenti():
-			if v.colore()==u.colore():
-				S.append((v,u))
 
 
-	R= E(G)-S
+Def Esercizio3(G):
+	x= Vertice in V(G)
+
+	R={x}
 	Sol={}
-	For (u,v) in S:
-		if (Sol + (u,v)).findCycle()==Null:
-			Sol.append((u,v))
-
-
-	For (u,v) in R:
-		if (Sol + (u,v)).findCycle()==Null:
-			Sol.append((u,v))
-
+	while R!=V(G):
+		
+		for (x,y) in E(G):
+			if x in R and y in V(G)/R and Colore(x)==Colore(y):
+				if (Sol UNITO (x,y)).findCycle==None:
+					Sol.append((x,y))
+					R.append(y)
+					break
+		
+		for (x,y) in E(G):
+			if x in R and y in V(G)/R and Colore(x)!=Colore(y):
+				if (Sol UNITO (x,y)).findCycle==None:
+					Sol.append((x,y))
+					R.append(y)
+					break
 	return Sol
+
+Def findCycle(G,x):
+
+	Vis=[-1,...,-1]
+	Padri[0,..,0]
+	Padri[x]=x
+	Vis[x]=1
+
+	for v in x.adiacenti():
+		if Vis[v]==-1:
+			Padri[v]=x
+			if findCycle(G,v)!=None:
+				return True
+		
+		else if v!=Padri[x]:
+			return True
+	return None

@@ -1,0 +1,35 @@
+
+
+
+Def Esercizio1(G,(x,y)): //Esiste arco all indietro se partendo da y con un DFS arrivo ad x
+
+    Vis=[]
+    Padri=[]
+
+    DFS(G,y,Vis,Padri)
+
+    if Vis[x]==1:
+        return YES
+    return NO
+
+
+Def DFS(G,n,Vis,Padri):
+    Vis[n]=1
+    Padri[n]= n 
+    Stack S={n} 
+
+    while S!=0:
+        y= S.top()
+
+        while y.adiacenti()!=0:
+            z=y.adiacenti[0]
+            y.adiacenti.remove(0)
+
+            if Vis[z]==-1:
+                Vis[z]=1
+                S.push(z)
+                Padri[z]=y 
+                break
+        if y==S.top():
+            S.pop(0)
+        

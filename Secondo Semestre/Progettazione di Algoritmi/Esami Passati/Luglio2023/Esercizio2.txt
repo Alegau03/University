@@ -1,0 +1,54 @@
+
+Super Majority element è tale che se appare 2n/3 volte in A dove n è la lunghezza di A // è come l'esercizio dell' elemento maggioratio :D 
+
+
+Def Esercizio2(A):
+    n= len(A)
+
+    if n==1:
+        return A[0]
+
+    c1= Esercizio2(A[0:n/3])
+    c2= Esercizio2(A[n/3:2n/3])
+    c3= Esercizio2(A[2n/3:n])
+
+
+    count =0               
+    for x in A:
+        if A[x]==c1:
+            count+=1
+    if count>2n/3:
+        return c1
+    
+    count =0
+
+    for x in A:
+        if A[x]==c2:
+            count+=1
+    if count>2n/3:
+        return c2
+    
+    count =0
+
+    for x in A:
+        if A[x]==c3:
+            count+=1
+    if count>2n/3:
+        return c3
+
+
+
+COSTO COMPUTAZIONALE
+
+3T(n/3) + O(n)
+
+Teorema Principale
+
+
+a=3
+b=3
+fn= n
+
+log_b A= log_3 3 = 1
+
+quindi Caso2 -> nlogn

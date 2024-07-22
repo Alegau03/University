@@ -1,0 +1,33 @@
+
+Cammino da x->y che passa per tutti e 3 i colori
+
+
+Def Esercizio3(G,x,y):
+
+    Vis=[-1,...,-1]
+    Stack S={}
+    S.push(x)
+    Colori={} //insieme 
+    while S!=0:
+
+        y= S.top()
+
+        while y.uscenti != 0:
+
+            z= y.uscenti[0]
+            y.uscenti.remove(0)
+
+            if z not in Vis:
+                Vis.add(z)
+                S.push(z)
+                col= Colore(z)
+                Colori.append(col)
+                break
+
+        if y==S.top():
+            S.pop()
+
+    if Vis[y]==1:
+        if len(Colori)>2
+            return YES
+    return NO
