@@ -8,3 +8,5 @@ Def Esercizio3(A):
             Sol.append(A[i],A[i]+1)
 
     return SOl
+
+  

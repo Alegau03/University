@@ -20,6 +20,6 @@ funzione percorso_con_colori_diversi(Grafo G, Vertice x, Vertice y)
                 DP[v][Rosso] = vero
 
     // Controlla se c'è un cammino verso y che usa entrambi i colori
-    return DP[y][Rosso] == vero or DP[y][Blu] == vero
+    return DP[y][Rosso] == vero AND DP[y][Blu] == vero
 
 

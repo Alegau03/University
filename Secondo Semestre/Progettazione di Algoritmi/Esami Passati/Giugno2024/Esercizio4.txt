@@ -5,10 +5,10 @@ Def Esercizio4(A):
 	diff_max=0
 
 	for x in A:
-		if A[x]>Max:
-			Max=A[x]
-		elif A[x]<Minimo:
-			Minimo= A[x]
+		if x>Max:
+			Max=x
+		elif x<Minimo:
+			Minimo= x
 
 		diff_max = abs(Max,Minimo)
 

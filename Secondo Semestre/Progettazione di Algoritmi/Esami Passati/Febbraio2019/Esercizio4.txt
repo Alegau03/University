@@ -19,6 +19,6 @@ BFS_modificata(G,x1,y1,x2,y2):
 	while (P[x2,y2]!=(x2,y2)):
 		sol.add(x2,y2)
 		(x2,y2) = P[x2,y2]
-
+ 
 
 	return sol

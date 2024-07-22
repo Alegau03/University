@@ -13,7 +13,7 @@ Def CamminimoColoriMinimi(G,x)
                 R.add(y)
                 break
             
-         for(x,y) in E(G) 
+        for(x,y) in E(G) 
             if x in Vis and y in V(G)-R and x.colore()==y.colore():
                 Sol.append((x,y))
                 R.add(y)

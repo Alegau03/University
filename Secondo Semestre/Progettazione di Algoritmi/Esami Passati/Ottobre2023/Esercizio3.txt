@@ -22,9 +22,9 @@ def DFSCiclo(u, visitato, genitore):
     for v in G.adiacenti(u):
         if visitato[v]==false:  // Se v non è stato visitato
             genitore[v] = u  // Imposta il genitore di v come u
-            Ci= DFS(v, visitato, genitore)
+            Ci= DFSCiclo(v, visitato, genitore)
             if Ci!=None:
-                C.append(visitato)
+                C.append(Ci)
         else v != genitore[u]:  // Se v è stato visitato e non è il genitore di u
             C.append(visitato)
 

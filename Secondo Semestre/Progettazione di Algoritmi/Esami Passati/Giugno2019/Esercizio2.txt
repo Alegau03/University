@@ -10,11 +10,27 @@ Def AntenatoA3(G,x,y,z,P)
 
 Def AntenatoA2(G,x,y,P):
 
-    while x!=y:
-        x=P[x]
-        y= P[y]
-    return x
+    path_x=Path(x)
+    path_y=Path(y)
 
+    i= len(path_x)
+    j=len(path_y)
+    comune=-1
+    while i>0 and j>0 and path_x[i]==path_y[j]:
 
+        comune=path_x[i]
+        i--
+        j--
 
+    return comune
 
+Def Path(P,G,x):
+    path=[]
+    path.append(P[x])
+    padre= P[x]
+
+    while padre!=P[padre]:
+        path.append(P[padre])
+        padre= P[padre]
+    
+    return path

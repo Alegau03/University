@@ -1,32 +1,22 @@
-Def DijkstraOpt(G pesato, x):
+funzione Dijkstra(Grafo, Sorgente):
+    Coda Q
+    Padri=[]
+    Distanza=[]
+    for v in V(G)
+        distanza[nodo]=infinito
+        Padri[nodo]= -1
+        Q.push(v)
+    distanza[Sorgente]= 0
     
-    P=[0,..,0]
-    H= dict[]
-    Dist[0,..,0]
-    H.insert(x, key= 0)
-    P[x]=x
-    R={}
-    R.add(x)
 
-    for v in V(G):
-        if v!=x:
-            H.insert(v, key= inf)
-        
-    while R!=V(G):
-        v = H.extractMin()
-        Dist[v]= H.key(v)
+    While Q!=0:
+        nodo=extractMin(distanza) //nodo con distanza minima
+        Q.pop(nodo)
 
-        for u in v.uscenti():
-            if( Dist[u]==inf):
+        for v in nodo.adiacenti():
+            temp = distanza[nodo] + w(nodo, v)
+            if alt < distanza[vicino]:
+                distanza[vicino] = alt
+                Padri[vicino] =nodo
 
-                Dist[u]=Dist[v] + w(v,u)
-                H.update(u, Dist[u])
-                P[u]=v 
-            
-            else if (u not in R):
-                 R.add(u)
-                 if( Dist[u] > Dist[v] + w(v,u)):
-                    Dist[u]=Dist[v] + w(v,u)
-                    H.update(u, Dist[u])
-
-    return Dist
+    return distanza, predecessore
