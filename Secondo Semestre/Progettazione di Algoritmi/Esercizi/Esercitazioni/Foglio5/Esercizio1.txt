@@ -40,4 +40,4 @@ Def BFSColore(x,colore,T):
         for u in v.adiacenti():
             if colore[u]==-1:
                 colore[u]=1-colore[v]
-    
+                Q.push(u)

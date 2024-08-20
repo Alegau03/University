@@ -15,8 +15,8 @@ funzione Dijkstra(Grafo, Sorgente):
 
         for v in nodo.adiacenti():
             temp = distanza[nodo] + w(nodo, v)
-            if temp < distanza[vicino]:
-                distanza[vicino] = temp
-                Padri[vicino] =nodo
+            if temp < distanza[v]:
+                distanza[v] = temp
+                Padri[v] =nodo
 
-    return distanza, predecessore
+    return distanza
