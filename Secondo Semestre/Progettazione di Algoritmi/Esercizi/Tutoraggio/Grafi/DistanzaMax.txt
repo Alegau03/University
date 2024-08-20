@@ -6,24 +6,24 @@ Dato un grafo G diretto e aciclico e un nodo x in V(G) progettare un algoritmo c
 
 Def DistMax(G,x):
 	Dist=[-1,...,-1]
-	Dist[x]=0
-	Stack S=[]
-	S.push(x)
-	count = 0
-	
-	while S != 0:
-		v = S.top()
+	Dist[x]=1
+	Coda Q
+	Q.push(x)
 
-		For u in v.adiacenti():
-			if Dist[u]==-1:
-				Dist[u]=Dist[v]+1
-				S.push(u)
-		S.pop()
+	while Q!=0:
+		v=Q.pop()
 
-	max = Max(Dist)
+		for z in v.adiacenti():
+			if Dist[z]==-1
+				Dist[z]=Dist[v]+1
 
-	For x in Dist:
-		if Dist[x]==max:
-			count+=1
+			else if Dist[z]<Dist[v]+1:
+				Dist[z]=Dist[v]+1
 
-	return count
+		
+		m= max(Dist)
+		count=0
+		for i in Dist:
+			if Dist[i]==m:
+				count++
+		return count

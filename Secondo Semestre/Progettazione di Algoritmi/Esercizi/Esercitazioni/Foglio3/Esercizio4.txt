@@ -1,0 +1,25 @@
+(Quote in borsa). 
+Le quotazioni in borsa di un’azienda nell’arco di n giorni sono immagazzinate in un array A di interi. 
+Supponiamo che le quotazioni tra il primo e l’ultimo giorno siano salite, dunque che A[1] < A[n].
+1. 
+    Dimostrare che esiste almeno un indice 1 ≤ i ≤ n tale che A[i] < A[i + 1].
+2. 
+Progettare un algoritmo di complessit`a O(log n) che preso in input l’array A tale che A[1] < A[n] restituisca un indice tale che A[i] < A[i + 1]
+
+
+
+2)
+
+
+Def es4(A):
+    n= len(A) -1
+    i=0
+    while i<n:
+        m= (i+n)/2
+
+        if A[m]<A[m+1]:
+            return m 
+        
+        if A[m]>A[m+1]:
+            i= m+1
+    return -1

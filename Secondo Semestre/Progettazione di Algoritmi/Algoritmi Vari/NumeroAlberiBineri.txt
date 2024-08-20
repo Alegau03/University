@@ -1,0 +1,20 @@
+Esercizio 2 (Numero di alberi binari). 
+Progettare un algoritmo di complessitò O(n^2) che dato in input un intero positivo n restituisca il numero di
+diversi alberi binari aventi n nodi (indipendentemente dagli indici assegnati ad ogni nodo).
+Ad esempio, per n = 1 la risposta deve essere 1 in quanto esiste solo l’albero
+formato da una radice, mentre per n = 3 la risposta deve essere 5
+
+
+def numero_alberi_binari(n):
+    # Inizializziamo un array di dimensione n+1 con tutti i valori a 0
+    C = [0] * (n + 1)
+    
+    # Base case
+    C[0] = 1
+    
+    # Calcolo dei numeri di Catalan fino a n
+    for i in range(1, n + 1):
+        for j in range(i):
+            C[i] += C[j] * C[i - 1 - j]
+    
+    return C[n]

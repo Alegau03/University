@@ -1,0 +1,43 @@
+Esercizio 1 (Insieme indipendente massimale). 
+Dato un grafo non diretto, un sottoinsieme dei suoi nodi è detto ”indipendente” se non contiene vertici adiacenti. 
+Progettare un algoritmo che dato in input un albero T restituisce un suo sottoinsieme indipendente di dimensione massima. 
+Discutere la complessità della soluzione proposta e dimostrarne la correttezza.
+
+
+
+
+Posso riadattare il grafo bipartito, prendendo solo i nodi di un certo colore
+
+
+
+def Esercizio1(T):
+
+
+    colore = [-1,...,-1]
+
+    for u in V(T):
+        if colore[u]==-1:
+            BFSColore(u,colore,T)
+
+    
+    out=[]
+    for u in V(T):
+        if colore[u]==1:
+            out.append(u)
+    
+    return out
+
+
+Def BFSColore(x,colore,T):
+    colore[x]=0
+    Coda Q
+    Q.push(x)
+
+    while Q!=0:
+
+        v = Q.pop()
+
+        for u in v.adiacenti():
+            if colore[u]==-1:
+                colore[u]=1-colore[v]
+    

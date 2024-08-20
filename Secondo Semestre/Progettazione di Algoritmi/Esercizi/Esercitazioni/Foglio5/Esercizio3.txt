@@ -1,5 +1,32 @@
 Elemento Maggioritario
 
 
+def Elemento_maggioritario(A):
 
-FATTO PIù E PIù VOLTE
+    n= len(A)
+    if n==1:
+        return A[0]
+
+    
+    m= n/2
+
+    m1 = Elemento_maggioritario(A[0:m])
+    m2= Elemento_maggioritario(A[m+1]:n)
+
+    count=0
+
+    for i in range(A):
+        if A[i]==m1:
+            count++
+
+    if count > len(A)/2:
+        return m1
+
+    count=0
+
+    for i in range(A):
+        if A[i]==m2:
+            count++
+
+    if count > len(A)/2:
+        return m2

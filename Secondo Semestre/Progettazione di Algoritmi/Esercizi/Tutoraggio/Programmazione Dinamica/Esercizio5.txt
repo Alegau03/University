@@ -1,8 +1,7 @@
 Esercizio 4.5 (Sequenze di somma n con tre interi). 
 Dati in input i tre
 numeri interi positivi x1, x2, x3 e un numero n, progettare un algoritmo di
-costo O(n) che trovi il numero di sequenze composte da x1, x2, x3 (anche
-ripetuti) la cui somma degli elementi `e n.
+costo O(n) che trovi il numero di sequenze composte da x1, x2, x3 (anche ripetuti) la cui somma degli elementi è n.
 
 
 Def Esercizio5(x1,x2,x3,n):

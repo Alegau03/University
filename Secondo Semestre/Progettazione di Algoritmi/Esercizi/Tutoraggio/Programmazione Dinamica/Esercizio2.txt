@@ -1,7 +1,7 @@
 Esercizio 4.2 (Numero di passeggiate). 
 Progettare un algoritmo che dato in input un grafo diretto G, due vertici x, y ∈ V (G) e un valore k ∈ N
-restituisca il numero di passeggiate da x a y distinte di lunghezza al massimo
-k. La complessit`a dell’algoritmo deve essere O(nmk)
+restituisca il numero di passeggiate da x a y distinte di lunghezza al massimo k. 
+La complessità dell’algoritmo deve essere O(nmk)
 
 
 
@@ -19,3 +19,6 @@ Def Esercizio2(G,x,y,k):
                 T[v][i]+=T[u][i-1]
     
     return sum(T[y][i] for i in range k)
+
+
+    

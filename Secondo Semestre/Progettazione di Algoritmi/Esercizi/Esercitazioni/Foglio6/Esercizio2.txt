@@ -1,0 +1,36 @@
+
+
+Def MSTsenzaArco(G,(x,y)):
+    
+    T= Kruskal(G)
+
+    if (x,y) not in E(T):
+        return True
+
+    else:
+
+        T'= Kruskal(Escludi(T,(x,y)))
+        if Peso(T)<Peso(T'):
+            return True  //Significa che (x,y) non è critico quindi può essere tolto
+        else:
+            return False //Significa che (x,y) è critico quindi non può essere tolto
+
+
+Def Escludi(G,(x,y)):
+    
+    G'=[]
+
+    for (v,u) in E(G):
+        if (v,u)!=(x,y):
+            G'.append((v,u))
+
+    return G'
+
+
+Def Peso(G):
+    peso=0
+
+    for (v,u) in E(G):
+        peso+= w((v,u))
+
+    return peso

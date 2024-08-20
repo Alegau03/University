@@ -5,7 +5,7 @@ Def ViaggioMatto(t, Dist[]):
     Sol={1}
     Fuel=t
     
-    for i in(Dist):
+    for i in Dist:
         fuel-=Dist[i]
 
         if (Dist[i+1]>Fuel):
