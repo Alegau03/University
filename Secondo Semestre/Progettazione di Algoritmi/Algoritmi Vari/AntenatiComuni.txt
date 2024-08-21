@@ -3,9 +3,9 @@ Def AntenatoComune(P,x,y):
 	path_y= Path(P,y)
 
 	antenati=[]
-	antenato= NONE
+	
 
-	i= len(path_x)
+	i = len(path_x)
 	j = len(path_y)
 
 	while i>0 and j>0 and path_x[i]==path_y[j]:
@@ -15,4 +15,4 @@ Def AntenatoComune(P,x,y):
 
 	
 
-	return len(antenato)
+	return len(antenati)

@@ -13,8 +13,8 @@ Def Esercizio1(G, x) //NODI CPON DISTANZA MASSIMA DA x
 
     m= max(Dist)
     massimi=[]
-    for x in V(G):
-        if Dist[x]==m:
-            massimi.append(x)
+    for t in V(G):
+        if Dist[t]==m:
+            massimi.append(t)
 
     return len(massimi)

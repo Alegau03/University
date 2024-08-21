@@ -5,7 +5,7 @@ Def Esercizio4(A):
     Sol={A[0],A[0]+1}
 
     for i in range(len(A)):
-        if A[i]> Sol.last():
+        if A[i]> Sol[-1]:
             Sol.append(A[i],A[i]+1)
     
     return Sol

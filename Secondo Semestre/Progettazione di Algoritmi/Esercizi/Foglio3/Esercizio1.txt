@@ -1,8 +1,7 @@
 Esercizio 1 (22.2-9, [1]).
 Fornire una algoritmo in pseudo-codice che, dato
 un grafo non diretto e connesso G = (V;E), trova una passeggiata in G che
-attraversa tutti gli archi una e una sola volta in ognuna della due direzioni
-in tempo O(n + m).
+attraversa tutti gli archi una e una sola volta in ognuna della due direzioni in tempo O(n + m).
 
 
 

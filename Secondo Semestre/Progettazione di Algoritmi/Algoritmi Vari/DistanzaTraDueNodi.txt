@@ -29,7 +29,7 @@ Def AntenatoComune(P,x,y):
 		i-=1
 		j-=1
 
-	antenati.Sort()
-	antenato=antenati[-1]
+	
+	antenato=antenati[0]  //Metto i nodi a partire dalla fine quindi il primo nodo comune trovato sarà l'antenato comune più "recente"
 
 	return antenato
