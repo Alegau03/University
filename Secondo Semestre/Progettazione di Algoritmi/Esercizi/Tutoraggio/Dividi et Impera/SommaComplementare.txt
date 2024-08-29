@@ -19,6 +19,6 @@ Def TrovaIndice(A, val)
 
     For x in A:
         if A[x]==val:
-            return val
+            return x
     
     return Null

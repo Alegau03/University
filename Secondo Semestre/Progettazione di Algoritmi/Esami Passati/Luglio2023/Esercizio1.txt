@@ -1,25 +1,29 @@
 
+Esiste arco all indietro avendo x,y e (x,y)
+
+Facendo il DFS partendo da y, se riesco ad arrivare a x allora c'è arco all'indietro
 
 
-Def Esercizio1(G,(x,y)): //Esiste arco all indietro se partendo da y con un DFS arrivo ad x
+Def RicercaArcoIndietro(G,(x,y)):
 
-    Vis=[]
-    Padri=[]
-
-    DFS(G,y,Vis,Padri)
+    Vis=[-1,....,-1]
+    
+    DFS(G,Vis,y)
 
     if Vis[x]==1:
         return YES
+    
     return NO
 
 
-Def DFS(G,n,Vis,Padri):
-    Vis[n]=1
-    Padri[n]= n 
-    Stack S={n} 
+Def DFS(G,Vis,y):
+    Vis[y]=1
+    Stack S;
+    S.push(y)
 
-    while S!=0:
-        y= S.top()
+
+    While S!=0:
+        y=S.top()
 
         while y.adiacenti()!=0:
             z=y.adiacenti[0]
@@ -28,8 +32,10 @@ Def DFS(G,n,Vis,Padri):
             if Vis[z]==-1:
                 Vis[z]=1
                 S.push(z)
-                Padri[z]=y 
-                break
+
+
         if y==S.top():
-            S.pop(0)
+            S.pop()
+            break
+
         

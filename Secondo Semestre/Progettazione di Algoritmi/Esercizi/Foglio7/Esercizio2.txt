@@ -6,23 +6,23 @@ Interpretiamo r(u, v) come la probabilit`a che la trasmissione tra u e v non fal
 Fornire uno pseudo-codice che dato G e un vertice s restituisce l’albero dei cammini più sicuri da s.
 
 
-Esercizio2(G,s)
+// Adatto il BFS prendendo però le "Distanze" massime
 
-    Padri=[-1,..,-1]
-    A=[0,..,0]
-    A[s]=1
-    Coda Q=[V(G)]
+Esercizio2(G,r)
 
-    While Q!=0:
-        v = Q.ExtractMax()
+    out=[0,...,0]
+    Coda Q;
+    partenza= V(G)[0]
+    Q.push(partenza)
 
-        for u in v.adiacenti():
-            if A[v]<A[u]+r(u,v):
-                A[v]=A[u]+r(u,v)
-                Padri[u]=u
+    while Q!=0:
+        z=Q.pop()
+        for v in z.adiacenti()
+            if out[v]<out[z]+r(z,v)
+                out[v]=out[z]+r(z,v)
+
     
-    return A
+    return out
+   
 
-
-
-    LETTERALMENTE BFS 
+    

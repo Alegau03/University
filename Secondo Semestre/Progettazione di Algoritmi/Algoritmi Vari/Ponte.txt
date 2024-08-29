@@ -1,4 +1,4 @@
-Def ponte(G)
+    Def ponte(G)
     v = v in V(G)
     c=0
     t=[0,..,0]

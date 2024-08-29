@@ -39,4 +39,4 @@ def Peso(G) // G è un sottografo che contiene solo un ciclo:
     return p
 
 
-
+            

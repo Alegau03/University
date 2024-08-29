@@ -6,7 +6,7 @@ Def Esercizio4(G,(x,y)):
 
     T= Kruskal(G)
 
-    if (x,y) not in E(G):
+    if (x,y) not in E(T):
         return YES
     
     else:

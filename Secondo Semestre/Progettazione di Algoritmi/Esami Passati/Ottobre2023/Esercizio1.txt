@@ -19,4 +19,7 @@ BFS set(X,Y insiemi di nodi, G graph){
         minimo = min(Dist[y],minimo)
     }
     return minimo
-}
+
+
+
+

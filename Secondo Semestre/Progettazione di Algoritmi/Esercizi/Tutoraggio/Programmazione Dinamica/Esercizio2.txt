@@ -6,6 +6,7 @@ La complessità dell’algoritmo deve essere O(nmk)
 
 
 Def Esercizio2(G,x,y,k):
+    n=len(V(G))
     T=Matrice n*k 
     //T[v][i] sarà il numero di passeggiate da x a v con i archi
 

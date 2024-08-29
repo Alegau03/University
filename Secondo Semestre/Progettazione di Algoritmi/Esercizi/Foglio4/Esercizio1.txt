@@ -9,7 +9,7 @@ Def Esercizio1(G)
 
     nodo_lontano, _ = BFS(G, partenza)
 
-    più_lontano, diametro = BFS(G, nodo_lontano)
+    _, diametro = BFS(G, nodo_lontano)
 
     return diametro
 

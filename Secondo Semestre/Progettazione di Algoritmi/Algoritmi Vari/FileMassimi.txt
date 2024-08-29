@@ -1,4 +1,4 @@
-Funzione CapacitaMassimaFile(n, s, C):
+    Funzione CapacitaMassimaFile(n, s, C):
     // n: numero di file
     // s: array delle dimensioni dei file s[1], s[2], ..., s[n]
     // C: capacità massima del disco

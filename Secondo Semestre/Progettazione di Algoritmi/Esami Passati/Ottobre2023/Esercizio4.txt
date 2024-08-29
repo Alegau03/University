@@ -4,16 +4,9 @@ trovare il minimo x con x >0 tale che x non è in A:
 
 
 Def Esercizio4(A):
-    if A[0]!=1:
-        return 1
-    n= len(A):
-    
-    while i<n:
-        if A[m]==m+1:
-            i = m+1
-        else:
-            n=m
-
-    return i+1
-
+    n=len(A)
+    for i in range(n):
+        if A[i]!=i+1:
+            return i+1
+    return n+1
 

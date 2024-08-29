@@ -1,0 +1,37 @@
+Sia G = (V;E) un grafo non diretto, allora si defnisce il diametro di G, diam(G) = max d(u; v), il massimo della distanza tra due qualsiasi vertici di G. 
+Fornire un algoritmo in pseudo-codice che restituisca il diametro di un grafo G, nel caso in cui G sia un albero.
+
+
+
+Def Diametro(G):
+
+    Dist=[-1,...,-1]
+    partenza=V(G)[0]     //Un nodo casuale
+
+    nodo_lontano,_= DFSDiametro(Dist,G,partenza)
+
+
+    _,diametro= DFSDiametro(Dist,G,nodo_lontano)
+
+    return diametro
+
+
+Def DFSDiametro(Dist,G,n):
+
+    Dist=[n]=0
+    Coda Q=[n]
+    nodo_lontano= n.adiancenti(0)
+    diametro=0
+
+    while Q!=0:
+        z=Q.pop()
+        for v in z.adiancenti():
+            if Dist[v]==-1:
+                Dist[v]=Dist[z]+1
+                Q.push(v)
+            
+            if Dist[v]>diametro:
+                diametro=Dist[v]
+                nodo_lontano=v 
+
+    return nodo_lontano,diametro
