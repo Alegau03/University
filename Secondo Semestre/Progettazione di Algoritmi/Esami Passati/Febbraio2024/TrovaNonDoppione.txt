@@ -16,4 +16,3 @@ Def TrovaNonDoppione(A)
 
     else:
         TrovaNonDoppione(A[m:n])
-

@@ -10,7 +10,7 @@ Fornire uno pseudo-codice che dato G e un vertice s restituisce l’albero dei c
 
 Esercizio2(G,r)
 
-    out=[0,...,0]
+    out=[-1,...,-1]
     Coda Q;
     partenza= V(G)[0]
     Q.push(partenza)
@@ -18,6 +18,10 @@ Esercizio2(G,r)
     while Q!=0:
         z=Q.pop()
         for v in z.adiacenti()
+
+            if out[v]==-1:
+                out[v]=out[z]+r(z,v)
+
             if out[v]<out[z]+r(z,v)
                 out[v]=out[z]+r(z,v)
 

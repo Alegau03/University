@@ -6,24 +6,23 @@ Fornire un algoritmo per calcolare la chiusura transitiva di un grafo diretto G 
 
 
 Def Esercizio3(G):
-    # Numero di nodi nel grafo
+  
+  G'=0
+  
+  for u in V(G):
+    Vis=[-1,...,-1]
+    Vis[u]=1
+    Coda Q;
+    Q.enqueue(u)
+    while Q!=0:
+      z=Q.dequeue()
+      for v in z.adiacenti():
+        if Vis[v]==-1:
+          Vis[v]=1
+          Q.enqueue(v)
     
-    
-    # Matrice di chiusura transitiva, inizializzata con 0
-    Chiusura = [[0] * V for v in V(G)]
-    
-    # Funzione di DFS per aggiornare la chiusura transitiva
-
-    
-    # Esegui DFS per ogni nodo del grafo
-    for v in V(G)
-        DfsChiusura(v, v,Chiusura)
-    
-    return Chiusura
-
-def DfsChiusura(start, vert,Chiusura):
-        for v in vert.adiacenti():
-            if Chiusura[start][v] == 0:
-                closure[start][v] = 1
-                DfsChiusura(start, v)
-    
+    for v in V(G):
+      if Vis[v]==1:
+        G'=G' U {(u,v)}
+  return G'
+          

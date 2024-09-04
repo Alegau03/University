@@ -42,3 +42,4 @@ funzione conta_occorrenze(A, x):
 
     ultima_occorrenza = cerca_ultima_occorrenza(A, x)
     return ultima_occorrenza - prima_occorrenza + 1
+    

@@ -20,7 +20,7 @@ Def BFS(G, n):
     Dist[n]=0
 
     nodo_lontano= un vicino di n
-    max_dist=0
+    max_dist=1
 
     while Q!=0:
         current= Q.pop(0)

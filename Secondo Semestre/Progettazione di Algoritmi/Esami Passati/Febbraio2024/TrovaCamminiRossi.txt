@@ -25,3 +25,4 @@ funzione conta_cammini_rossi(n, color):
     // Il risultato è il numero di modi per raggiungere la casella (n,n)
     ritorna dp[n][n]
 
+

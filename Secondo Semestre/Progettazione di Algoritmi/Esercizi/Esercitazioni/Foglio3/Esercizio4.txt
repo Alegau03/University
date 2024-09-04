@@ -22,4 +22,4 @@ Def es4(A):
         
         if A[m]>A[m+1]:
             i= m+1
-    return -1
+    return -1 

@@ -5,7 +5,7 @@ Utilizzo un DFS modificato e un insieme dei colori
 Def Esercizio3(G,x,y):
 
     Vis=[-1,...,-1]
-    Colori={}
+    Colori=[{},..,{}]
 
     Stack S;
     S.push(x)
@@ -20,7 +20,7 @@ Def Esercizio3(G,x,y):
             if Vis[z]==-1:
                 Vis[z]=1
                 col=Colore(z)
-                Colori.append(col)
+                Colori[z].append(col)
                 S.push(z)
                 break
             
@@ -28,6 +28,6 @@ Def Esercizio3(G,x,y):
                 S.pop()
     
     if Vis[y]==1:
-        if len(Colori)>2:
+        if len(Colori[y])>2:
             return True
     return False

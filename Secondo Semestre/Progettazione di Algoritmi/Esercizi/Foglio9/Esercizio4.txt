@@ -5,8 +5,6 @@ E’ possibile muoversi solo su celle adiacenti, andando di un passo verso il ba
 Inoltre, sono vietati i cammini che toccano le celle di coordinate (i, j) con i > j, cioè non è permesso andare sotto la diagonale che va da (0, 0) a (n−1, n−1). 
 Fornire in pseudo-codice un algoritmo che calcoli il numero di cammini validi con un tempo di esecuzione O(n2).
 
-
-
 Def Esercizio4(n):
 
     for i in range(0,n):
