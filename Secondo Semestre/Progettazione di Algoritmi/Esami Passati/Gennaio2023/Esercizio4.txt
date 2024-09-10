@@ -9,14 +9,31 @@ Def CamminimoColoriMinimi(G,x)
     while R!=V(G):
         for(x,y) in E(G) 
             if x in R and y in V(G)-R and x.colore()!=y.colore():
-                Sol.append((x,y))
-                R.add(y)
-                break
+                if CercaCiclo(Sol UNITO (x,y))==None:
+                    Sol.append((x,y))
+                    R.add(y)
+                    break
             
         for(x,y) in E(G) 
             if x in Vis and y in V(G)-R and x.colore()==y.colore():
-                Sol.append((x,y))
-                R.add(y)
-                break
+                if CercaCiclo(Sol UNITO (x,y))==None:
+                    Sol.append((x,y))
+                    R.add(y)
+                    break
     
     return Sol
+
+Def CercaCiclo(G):
+    Vis=[-1,...,-1]
+    Padri=[0,...0]
+    Padri[x]=x
+    Vis[x]=1
+
+    for v in x.adiacenti():
+        if Vis[v]==-1:
+            Padri[v]=x
+            if CercaCiclo(G,v)!=None:
+                return True
+        else if v!=Padri[x]:
+            return (v,x)
+    return None

@@ -5,7 +5,7 @@ Def Kruskal(G pesato):
     Sol=0
 
     for i in range(len(G)):
-        if ((Sol unito ei).findCycle=0):
+        if (TrovaCiclo(Sol UNITO ei)==False):
             Sol.add(ei)
 
     return Sol
@@ -26,3 +26,25 @@ Def KruskalNeg(G pesato):
             Sol.add(ei)
 
     return Sol
+
+Def TrovaCiclo(G):
+    Vis=[-1,..,-1]
+    Padri=[0,..,0]
+    
+    for i in range(len(V(G))):
+        if Vis[i]==-1:
+            if DFS(G,i,Vis,Padri)==True:
+                return True
+    return False
+
+def DFS(G,i,Vis,Padri):
+    Vis[i]=1
+    for u in i.adiacenti():
+        if Vis[u]==-1:
+            Padri[u]=i
+            if DFS(G,u,Vis,Padri)==True:
+                return True
+        
+        else if u!=Padri[i]:
+            return True
+    return False

@@ -7,7 +7,7 @@ funzione Dijkstra(Grafo, Sorgente):
         Padri[nodo]= -1
         Q.push(v)
     distanza[Sorgente]= 0
-    
+    Padri[Sorgente]= Sorgente
 
     While Q!=0:
         nodo=extractMin(distanza) //nodo con distanza minima

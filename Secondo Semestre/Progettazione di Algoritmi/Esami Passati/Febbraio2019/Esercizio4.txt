@@ -3,22 +3,21 @@ Scacchiera con cavallo
 
 BFS_modificata(G,x1,y1,x2,y2):
 	moves = [(1,2),(1,-2),...] //mosse valide
-	D = Matrice n x n [-1,...,-1]
-	Coda Q=[]
-	Padri=[]
-	D[x1,y1] = 0
-	P[x1,y1] = (x1,y1)
-	Q.enqueue((x1,y1))
-	while Q!=0:
-		(u,v) = Q.dequeue()
-		for (i,j) in moves:
-			if (0,0)<=(u+i,v+j)<=(n,n) and D[u+i,v+j] == -1:  //Se non esco fuori dalla scacchiera e ancora non sono passato per la casella
-				D[u+i,v+i] = D[u,v] + 1
-				P[u+i,v+i] = (u,v)
-	sol = 0
-	while (P[x2,y2]!=(x2,y2)):
-		sol.add(x2,y2)
-		(x2,y2) = P[x2,y2]
- 
+	if Colore(x1,y1) != Rosso:
+		return -1
+	
+	DP= Matrice n+1*n+1
+	DP[x1,y1] = 1
 
-	return sol
+	for i in range n:
+		for j in range n:
+			if Colore(i,j) == Rosso:
+				if i>1 and Colore(i-1,j) == Rosso:
+					DP[i,j] = DP[i-1,j] + 1
+				if j>1 and Colore(i,j-1) == Rosso:
+					DP[i,j] = DP[i,j-1] + 1
+				
+				if i>1 and j>1 and Colore(i-1,j-1) == Rosso:
+					DP[i,j] = DP[i-1,j-1] + 1
+	
+	return DP[x2,y2]

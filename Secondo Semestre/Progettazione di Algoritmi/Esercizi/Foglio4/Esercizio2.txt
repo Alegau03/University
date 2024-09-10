@@ -11,7 +11,7 @@ Def Esercizio2(G,u,v):
     Dist2= BFSDist(G,v)
 
     for x in V(G):
-        if Dis1[x]==Dist2[x]:
+        if Dis1[x]==Dist2[x] and x!=u and x!=v:  // Ovviamente Dist1[u] = Dist2[v]=1 però non devo contarli
             equidistanti.append(x)
 
 
@@ -27,6 +27,6 @@ Def BFSDist(G,n):
         for v in current.adiancenti():
             if Dist[v]==-1:
                 Dist[v]=Dist[current]+1
-    
-    Return Dist
+                Q.enqueue(v)    
+    Return Dist  // O(n+m)  
 

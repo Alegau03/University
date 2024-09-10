@@ -1,4 +1,4 @@
-funzione percorso_con_colori_diversi(Grafo G, Vertice x, Vertice y)
+Def percorso_con_colori_diversi(Grafo G, Vertice x, Vertice y)
     // Inizializza una tabella DP per tracciare i percorsi con colori diversi
     // DP[u][Rosso] = vero se esiste un cammino verso u con ultimo nodo Rosso
     // DP[u][Blu] = vero se esiste un cammino verso u con ultimo nodo Blu

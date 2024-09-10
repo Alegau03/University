@@ -3,6 +3,7 @@ Def ClassificazioneArchi(G,x)
     Vis={x}
     Stack S= 0
     S.push(x)
+    archiVis=[]
     t=[0,..,0]
     T=[0,..,0]
     while S!=0:
@@ -23,9 +24,10 @@ Def ClassificazioneArchi(G,x)
         if y==S.top():
             S.pop()
             T[y]=c
+            archiVis.append((x,y))
 
     Back,Av,Att=[]
-    A= G-G(DFS(G))
+    A= G-archiVis
     
     for (x,y) in A:
         if [t(x),T[x]] in [t(y),T[y]]:

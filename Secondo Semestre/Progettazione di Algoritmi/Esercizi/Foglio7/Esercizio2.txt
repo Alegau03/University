@@ -21,7 +21,7 @@ Esercizio2(G,r)
 
             if out[v]==-1:
                 out[v]=out[z]+r(z,v)
-
+                Q.enqueue(v)
             if out[v]<out[z]+r(z,v)
                 out[v]=out[z]+r(z,v)
 
@@ -29,4 +29,4 @@ Esercizio2(G,r)
     return out
    
 
-    
+

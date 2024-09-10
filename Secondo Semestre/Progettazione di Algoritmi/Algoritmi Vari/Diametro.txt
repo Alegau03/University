@@ -21,7 +21,7 @@ Def DFSDiametro(Dist,G,n):
     Dist=[n]=0
     Coda Q=[n]
     nodo_lontano= n.adiancenti(0)
-    diametro=0
+    diametro=1
 
     while Q!=0:
         z=Q.pop()

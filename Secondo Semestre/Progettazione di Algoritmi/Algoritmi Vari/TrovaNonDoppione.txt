@@ -1,16 +1,26 @@
 Def TrovaNonDoppione(A)
-    n= A.lenght()
-    
-    if A.lenght =1:
+    n = len(A) 
+   
+    # Caso base: se l'array ha un solo elemento, quello è l'elemento singolo
+    if n == 1:
         return A[0]
     
-    m= A.lenght/2
+    m = n // 2  # Prendi il valore centrale
 
-    if A[m]==A[m-1]:
-        m-=1
-    
-    if A[1:m].lenght()%2 ==1:
-        TrovaNonDoppione(A[1:m])
-
+    # Controlla se A[m] è uguale a A[m-1] o A[m+1]
+    if A[m] == A[m-1]:
+        # Se A[m] è uguale a A[m-1], il singolo è nella parte sinistra se il numero di elementi a sinistra è dispari
+        if (m - 1) % 2 == 1:
+            return ElementoNonDoppione(A[:m-1])
+        else:
+            return ElementoNonDoppione(A[m+1:])
+    elif A[m] == A[m+1]:
+        # Se A[m] è uguale a A[m+1], il singolo è nella parte destra se il numero di elementi a destra è dispari
+        if (n - m - 2) % 2 == 1:
+            return ElementoNonDoppione(A[m+2:])
+        else:
+            return ElementoNonDoppione(A[:m])
     else:
-        TrovaNonDoppione(A[m:n])
+        # Se A[m] non è uguale né a A[m-1] né a A[m+1], A[m] è il singolo
+        return A[m]
+

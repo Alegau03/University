@@ -4,11 +4,7 @@ Def Elemento_Maggioritario(A):
         return null
     if A.lenght==1:
         return A[0]
-    if A.lenght==2:
-        if(A[0]==A[1]):
-            return A[0]
-        else:
-            return null
+
     
     m=A.lenght/2
     c1= Elemento_Maggioritario(A[0:m])

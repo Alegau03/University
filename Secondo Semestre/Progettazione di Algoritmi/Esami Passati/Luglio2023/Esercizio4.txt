@@ -12,7 +12,7 @@ Def Esercizio4(G,(x,y)):
     else:
         G'= Escludi(G,(x,y))
         T'= Kruskal(G')
-        if Peso(T')<=Peso(T):  /(x,y) non è arco obbligatorio
+        if Peso(T')<=Peso(T) and not Exists x in V(T) and x not in V(T'):  /(x,y) non è arco obbligatorio
                 return YES
     return NO
 

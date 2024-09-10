@@ -19,16 +19,17 @@ Def VisitaDFS(G, start):
     Stack S = [start]
 
     while S!=0:
-        u = S.pop()
-        if u not in visitati:
-            visitati.add(u)
-            for v in u.adiacenti():
-                if v not in  visitati:
-                    S.append(v)
-        if u==S.top():
-            S.pop(0)
-    return visitati
+        u= S.top()
+        While u.adiacenti!=0:
+            z=u.adiacenti[0]
+            u.adiacenti.remove(0)
 
+            if u not in visitati:
+                visitati.add(u)
+                S.append(u)
+        if u==S.top():
+            S.pop()
+    return visitati
 
 
 
