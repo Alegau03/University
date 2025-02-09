@@ -1,2 +1,0 @@
-set grid
-plot "p.x.csv" with steps title "p.x" , "p.y.csv" with steps title "p.y" , "K.x.csv" with steps title "K.x" , "K.y.csv" with steps title "K.y" 
