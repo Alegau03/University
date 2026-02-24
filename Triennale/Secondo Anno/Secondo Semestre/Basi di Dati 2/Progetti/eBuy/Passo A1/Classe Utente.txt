@@ -1,0 +1,47 @@
+Classe UtenteRegistrato
+
+Specifica
+	1. Utenti Registrati
+		1.1 Nome: Stringa
+		1.2 Data Registrazione: Data
+
+Operazioni:
+	
+	1 CreaNuovoPost(an: Intero):  
+
+		pre: this.DataRegistrazione<now
+		post: 
+			Viene Creato un nuovo oggetto di tipo Post, 
+			Viene Creata un nuovo oggetto di tipo Oggetto ed il link (Post,Oggetto): post_ogg
+
+
+
+	2 ProponiBid(p:PostAsta):
+
+		pre: nessuna
+		post:
+			Sia p un PostAsta con p.IstanteScadenza>now
+
+				viene creato un link (this, p): AstaInCorso
+				viene impostato AstaInCorso.OffertaAttuale come p.UltimaOfferta+p.AmmontareRialzi
+				
+
+
+
+	3 CompraOggetto(p:PostCompraSubito)
+		pre: nessuna
+		post:
+			Sia p un PostCompraSubito con p.Attivo = True
+			Viene impostato p.Attivo= False e chiamato p.ChiudiVendita()
+
+
+
+Vincoli Esterni:
+	
+	[V.UtenteRegistrato.DataRegistrazione]
+		UtenteRegistrato.DataRegistrazione<=now.
+
+	[V.UtenteRegistrato.CreaNuovoPost()]
+		Se UtenteRegistrato usa la funzione UtenteRegistrato.CreaNuovoPost(), 
+			non può usare l'operazione UtenteRegistrato.ProponiBid() sull'oggetto creato con UtenteRegistrato.CreaNuovoPost()
+			non può usare l'operazione UtenteRegistrato.ComoraOggetto() sull'oggetto creato con UtenteRegistrato.CreaNuovoPost()

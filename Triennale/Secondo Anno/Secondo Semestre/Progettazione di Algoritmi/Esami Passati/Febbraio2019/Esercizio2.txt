@@ -1,0 +1,18 @@
+Trova Non doppione
+
+
+
+Def Esercizio2(A):
+    n=len(A)
+
+    if n==1:
+        return A[0]
+    
+    m=n/2
+    if A[m]==A[m-1]:
+        m-=1
+    
+    if len(A[0:m])%2 ==1:
+        Esercizio2(A[0:m])
+    else:
+        Esercizio2(A[m:n])

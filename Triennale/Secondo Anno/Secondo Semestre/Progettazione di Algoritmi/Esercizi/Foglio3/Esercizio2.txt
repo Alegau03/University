@@ -1,0 +1,39 @@
+Esercizio 2 (22.4-2, [1]). 
+Fornire un algoritmo in pseudo-codice che dato un
+grafo diretto e aciclico G = (V;E) e due vertici s e t, restituisce il numero di
+tutti i cammini da s a t in G.
+
+
+Def Esercizio2(G,s,t)
+    n=G.lenght()
+    ordinato= OrdinamentoTopologico(G)
+    num_cammini= Array lungo n inizializzato a 0
+    num_cammini[s]=1
+
+    for u in ordinato:
+        for v in u.uscenti:
+            num_cammini[v]+=num_cammini[u]
+    
+    return num_cammini(t)
+
+Funzione OrdinamentoTopologico(G):
+   // Algoritmo di ordinamento topologico
+   visita = Array di dimensione |V| inizializzato a -1
+   pila = Stack vuoto
+   
+   per ogni vertice u in V:
+       se visita[u]==-1:
+           DFS(u, visita, pila, G)
+   
+   ordinamento = []
+   while pila != 0:
+       ordinamento.append(pila.pop())
+   
+   ritorna ordinamento
+
+Funzione DFS(u, visita, pila, G):
+   visita[u] = 1
+   for v in u.uscenti:
+       se visita[v]==-1:
+           DFS(v, visita, pila, G)
+   pila.push(u)

@@ -1,0 +1,22 @@
+Esercizio 3.4 (Array con pozzo). 
+Dato un array A di n elementi, un indice i al suo interno è detto ”pozzo” se si verifica che A[1] > . . . > A[i] < . . . < A[n]. 
+Progettare un algoritmo di complessità O(log n) che, assumendo la sua esistenza, trovi il pozzo di un array.
+
+
+
+Def ArrayPozzo(A, a , b):
+
+   inizio=0
+   fine=n
+
+   while inizio<fine:
+    m=(inizio+fine)/2
+    if A[m-1]>A[m]:
+        if A[m]<A[m+1]:
+            return m
+        else:
+            inizio=m+1
+    else:
+        fine=m-1
+
+    return -1

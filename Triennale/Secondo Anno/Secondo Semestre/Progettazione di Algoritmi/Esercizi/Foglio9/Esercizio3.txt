@@ -1,0 +1,28 @@
+Esercizio 3 (25.2-8, [1]). 
+Dato un grafo diretto G = (V,E), la chiusura transitiva di G è un grafo G∗ = (V,E∗) tale che (u, v) ∈ E∗ 
+se e solo se esiste un cammino da u a v in G. 
+Fornire un algoritmo per calcolare la chiusura transitiva di un grafo diretto G = (V,E) in maniera che il tempo di esecuzione sia O(|V | · |E|).
+
+
+
+Def Esercizio3(G):
+  
+  G'=0
+  
+  for u in V(G):
+    Vis=[-1,...,-1]
+    Vis[u]=1
+    Coda Q;
+    Q.enqueue(u)
+    while Q!=0:
+      z=Q.dequeue()
+      for v in z.adiacenti():
+        if Vis[v]==-1:
+          Vis[v]=1
+          Q.enqueue(v)
+    
+    for v in V(G):
+      if Vis[v]==1:
+        G'=G' U {(u,v)}
+  return G'
+          

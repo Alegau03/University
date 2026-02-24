@@ -1,0 +1,29 @@
+Def DistanzaTraInsiemi(G,X,Y)  //X e Y sono insiemi di nodi
+
+    Vis[-1,...-1]
+    Dist[-1,...,-1]
+    Coda Q:{}
+    for x in X:
+        Dist[x]=0
+        Q.enqueue(x)
+    
+    While Q!=0:
+        v=Q.dequeue()
+
+        for u in v.adiacenti():
+           
+            if Vis[u]==-1:
+                Dist[u]=Dist[v]+1
+                Vis[y]=1
+                Q.enquue(u)
+            else:
+                 Dist[u]=Dist[v]+1
+
+    
+    min=inf
+
+    for y in Y:
+        if Dist[y]<min and Vis[y]==1:
+            min=Dist[y]
+    
+    return min

@@ -1,0 +1,39 @@
+
+
+Def CamminoRossoBlu(P,x,y,p,out,vb,vr):
+    
+    p = p+ x
+    if x.colore()==R:
+        vr+=1
+    else:
+        vb+=1
+    
+    for v in x.adiacenti():
+        if v==y:
+            if v.colore()==r:
+                vr+=1
+            else:
+                vb+=1
+            p.append(v)
+
+            if vr==vb:
+                return out.append(p)
+    
+        else:
+            out= CamminoRossoBlu(P,v,y,p+v,out,vb,vr)
+
+
+    return out
+
+
+Def Esercizio(P,x,y)
+    out=[]
+    p=[]
+    vr=0
+    vb=0
+    CamminoRossoBlu(P,x,y,p,out,vb,vr)
+
+    if out.lenght()>0:
+        return TRUE
+    else:
+        return FALSE

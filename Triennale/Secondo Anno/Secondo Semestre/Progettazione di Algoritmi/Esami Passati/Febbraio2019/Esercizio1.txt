@@ -1,0 +1,48 @@
+Dato un grafo G restituire l'albero di copertura T di peso max
+
+// Uso Kruskal
+
+
+Def Esercizio1(G):
+    G.SortByWeightAsc()
+
+    T={}
+
+    for (x,y) in E(G):
+        if (T UNIONE (x,y)).findCycle==False:
+            T.append((x,y))
+    
+    return T
+
+
+Def findCycle(G):
+
+    // Inizializza l'array di visitati e il genitore di ciascun nodo
+    Vis = array di dimensione |V(G)| inizializzato a False
+    Padri = array di dimensione |V(G)| inizializzato a -1
+
+    // Esegui DFS per ogni vertice
+    for i in range(|V(G)|):
+        if not Vis[i]:
+            if DFS(i, Vis, Padri):
+                return True
+
+    return False
+
+ // Funzione di utilità per eseguire DFS
+def DFS(u, visitato, genitore):
+    // Marca l'attuale nodo come visitato
+    visitato[u] = True
+
+    // Esamina tutti i vertici adiacenti a u
+    for v in G.adiacenti(u):
+        if visitato[v]==false:  // Se v non è stato visitato
+            genitore[v] = u  // Imposta il genitore di v come u
+            if DFS(v, visitato, genitore):
+                return True
+        else v != genitore[u]:  // Se v è stato visitato e non è il genitore di u
+            return True
+
+    return False
+
+

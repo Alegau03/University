@@ -1,0 +1,23 @@
+Dato un grafo G e un vertice x in V (G), per ogni vertice y in V (G) vogliamo trovare il numero di camini di lunghezza minima tale che x -> y
+
+
+Def Esercizio(G,u)
+
+    Dist = [-1, ..., -1]
+    Count = [0, ..., 0]
+    Queue Q = 0
+    Q.enqueue(u)
+    Dist[u] = 0
+    Count[u] = 1
+
+    while Q !=0:
+        v = Q.dequeue()
+        for x in v.uscenti:
+            if Dist[x] = −1:
+                Dist[x] = Dist[v] + 1
+                Count[x] = Count[v]
+                Q.enqueue(x)
+            else if Dist[v] = Dist[x] - 1:
+                Count[x] += Count[v]
+
+return Count

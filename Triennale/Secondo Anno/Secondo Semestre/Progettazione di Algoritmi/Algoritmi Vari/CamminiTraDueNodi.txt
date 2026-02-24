@@ -1,0 +1,23 @@
+Esercizio 5: Trova tutti i Cammini tra Due Nodi
+Dato un grafo orientato e due nodi, scrivi un algoritmo per trovare tutti i possibili cammini tra questi due nodi utilizzando DFS.
+
+Def TrovaTuttiICammini(Grafo G, nodo inizio x, nodo fine y):
+
+    cammini = []  // Lista per memorizzare tutti i cammini trovati
+    cammino_corrente = []  // Lista per il cammino corrente
+
+    funzione DFSCam(corrente, cammino_corrente):
+        cammino_corrente.append(corrente)  // Aggiungi il nodo corrente al cammino
+
+        if corrente == y:  // Se abbiamo raggiunto il nodo finale
+            cammini.append(cammino_corrente.copy())  // Aggiungi una copia del cammino corrente ai cammini trovati
+        else:
+            for v in corrente.adiacenti():
+                if v not in cammino_corrente:  // Evita cicli
+                    DFSCam(v, cammino_corrente)  // Ricorsivamente visita il nodo adiacente
+
+        cammino_corrente.pop()  // Rimuovi il nodo corrente dal cammino prima di tornare indietro
+
+    DFSCam(x, cammino_corrente)  // Inizia la DFS dal nodo iniziale
+
+    ritorna cammini  // Ritorna tutti i cammini trovati

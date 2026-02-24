@@ -1,0 +1,44 @@
+Dare lo pseudocodice di un algoritmo in O(log n) che dato un Array ordinato A e un valore x trova il numero di occorrenze di x in A
+
+
+funzione cerca_prima_occorrenza(A, x):
+    inizio = 0
+    fine = len(A) - 1
+    risultato = -1
+
+    while inizio <= fine:
+        metà = (inizio + fine) / 2
+        if A[metà] == x:
+            risultato = metà
+            fine = metà - 1
+        else if A[metà] > x:
+            fine = metà - 1
+        else:
+            inizio = metà + 1
+
+    return risultato
+
+funzione cerca_ultima_occorrenza(A, x):
+    inizio = 0
+    fine = lunghezza(A) - 1
+    risultato = -1
+
+    while inizio <= fine:
+        metà = (inizio + fine) / 2
+        if A[metà] == x:
+            risultato = metà
+            inizio = metà + 1
+        else if A[metà] > x:
+            fine = metà - 1
+        else:
+            inizio = metà + 1
+
+    return risultato
+
+funzione conta_occorrenze(A, x):
+    prima_occorrenza = cerca_prima_occorrenza(A, x)
+    if prima_occorrenza == -1:
+        return 0
+
+    ultima_occorrenza = cerca_ultima_occorrenza(A, x)
+    return ultima_occorrenza - prima_occorrenza + 1

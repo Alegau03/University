@@ -1,0 +1,1 @@
+// Metodo per calcolare l'integrale

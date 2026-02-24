@@ -1,0 +1,15 @@
+Esercizio 2.1 (Massima quantit`a di file). 
+Dato un disco di capacit`a C e un insieme di file f1, . . . , fn, i quali hanno pesi rispettivi s1, . . . , sn, 
+vogliamo memorizzare all’interno del disco il maggior numero di file, senza che la somma totale dei pesi dei file scelti ecceda la capacit`a del disco. 
+Progettare un algoritmo che risolva il problema in O(n log n). Per la soluzione proposta, se ne dimostri la correttezza.
+
+
+Def File(C,F,S):
+    S.sort()
+    Sol= 0
+    c =0
+    for i in range(len(F)):
+        if c+si<C:
+            Sol.add(Fi)
+            c+=si
+    return Sol

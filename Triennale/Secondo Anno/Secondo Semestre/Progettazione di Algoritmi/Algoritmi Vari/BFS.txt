@@ -1,0 +1,17 @@
+Def BFS(G,x):
+
+    Padri[-1,..,-1]
+    Padri[x]=x
+    Coda Q=0
+    Q.enqueue(x)
+    Dist[0,..,0]
+    While(Q!=0):
+        y=Q.dequeue()
+
+        for z in y.adiancenti():
+            if Padri[z]==-1:
+                Padri[z]=y
+                Dist[z]=Dist[y]+1
+                Q.enqueue(z)
+    
+    return Dist

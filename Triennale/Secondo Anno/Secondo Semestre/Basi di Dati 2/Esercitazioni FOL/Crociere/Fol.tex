@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage[paper=a4paper,left=20mm,right=20mm,bottom=25mm,top=25mm]{geometry}
+\usepackage{amsmath}
+\begin{document}
+
+\title{Fol, Crociere}
+\maketitle
+
+\section {Simboli di predicato e funzione}
+\begin{itemize}
+    \item F := {nome/1}
+    \item P := {Crociera/1, Nave/1, Itinerario/1, crocNav/2, crocItin/2, crocLunMiel/1, crocFam/1}
+    \item V := {X,Y,Z}
+\end{itemize}
+
+
+\section{Vincoli}
+\begin{itemize}
+    \item $\forall X, \exists Y \text{ Crociera}(X) \land \text{Nave}(Y) \rightarrow \text{crocNav}(X,Y)$
+    \item $\forall X, \exists Y \text{ Crociera}(X) \land \text{Itinerario}(Y) \rightarrow \text{crocItin}(X,Y)$
+    \item $\forall X,Y ((X \neq Y) Itinerario(X) \land Itinerario(Y)) \rightarrow nome(X) \neq nome(Y)$
+    \item $\forall$ X,Y (Crociera(X) $\land$ Initerario(Y)) $\rightarrow \exists$ Z Destinazione(Z) $\in$ Y 
+    \item $\forall$ X \text{Crociera}(X) $\land$ \text{crocLunMiel}(X) $\rightarrow \neg$ \text{crocFam}(X)
+
+\end{itemize}
+\end{document}

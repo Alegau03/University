@@ -1,0 +1,31 @@
+Esercizio 3.5 (Elemento non doppione). 
+Sia A un array ordinato di n interi con n dispari dove ogni valore in A occorre esattamente due volte tranne uno.
+Progettare un algoritmo che in O(log n) trovi il valore presente una sola volta in A.
+
+
+
+def ElementoNonDoppione(A):
+    n = len(A) 
+   
+    # Caso base: se l'array ha un solo elemento, quello è l'elemento singolo
+    if n == 1:
+        return A[0]
+    
+    m = n // 2  # Prendi il valore centrale
+
+    # Controlla se A[m] è uguale a A[m-1] o A[m+1]
+    if A[m] == A[m-1]:
+        # Se A[m] è uguale a A[m-1], il singolo è nella parte sinistra se il numero di elementi a sinistra è dispari
+        if (m - 1) % 2 == 1:
+            return ElementoNonDoppione(A[:m-1])
+        else:
+            return ElementoNonDoppione(A[m+1:])
+    elif A[m] == A[m+1]:
+        # Se A[m] è uguale a A[m+1], il singolo è nella parte destra se il numero di elementi a destra è dispari
+        if (n - m - 2) % 2 == 1:
+            return ElementoNonDoppione(A[m+2:])
+        else:
+            return ElementoNonDoppione(A[:m])
+    else:
+        # Se A[m] non è uguale né a A[m-1] né a A[m+1], A[m] è il singolo
+        return A[m]

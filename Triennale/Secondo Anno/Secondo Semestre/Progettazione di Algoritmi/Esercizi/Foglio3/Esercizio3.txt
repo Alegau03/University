@@ -1,0 +1,48 @@
+Esercizio 3. 
+Sia un grafo diretto G = (V;E) ed s e t due vertici di G. G
+si dice s-t-connesso se ogni vertice di G è in almeno un cammino da s a t.
+Fornire un algoritmo in pseudo-codice che dato un grafo diretto e aciclico
+G = (V;E) ed s e t due vertici di G, restituisce un sottografo G0 di G
+massimale s-t-connesso.
+
+
+Def Esercizio3(G,s,t)
+
+   raggiungibili_da_s = VisitaDFS(G, s)
+   
+   G_trasposto = TrasponiGrafo(G)
+
+   raggiungibili_a_t = VisitaDFS(G_trasposto, t)
+   
+   vertici_s_t_connessi = raggiungibili_da_s ∩ raggiungibili_a_t
+   
+
+   G_prime = GrafoVuoto()
+   for v in vertici_s_t_connessi:
+       AggiungiVertice(G_prime, v)
+       for (v, u) in E(G):
+            if u in vertici_s_t_connessi:
+               AggiungiArco(G_prime, v, u)
+   
+   ritorna G_prime
+
+Funzione VisitaDFS(G, start):
+   visita = Array di dimensione |V| inizializzato a -1
+   raggiungibili = Set vuoto
+   DFS(start, visita, raggiungibili, G)
+   ritorna raggiungibili
+
+Funzione DFS(u, visita, raggiungibili, G):
+   visita[u] = 1
+   raggiungibili.add(u)
+   for v in u.uscenti():
+       if visita[v]== -1:
+           DFS(v, visita, raggiungibili, G)
+
+Funzione TrasponiGrafo(G):
+   G_trasposto = GrafoVuoto()
+   for u in G:
+       AggiungiVertice(G_trasposto, u)
+   for (u, v) in E(G):
+       AggiungiArco(G_trasposto, v, u)
+   ritorna G_trasposto

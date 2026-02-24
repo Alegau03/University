@@ -1,0 +1,23 @@
+def dfs(u, grafo, visitato, componente):
+    visitato[u] = True  # Marca il nodo u come visitato
+    componente.append(u)  # Aggiungi il nodo u alla componente attuale
+    
+    # Visita tutti i vicini di u
+    for v in u.adiacenti():
+        if not visitato[v]:
+            dfs(v, grafo, visitato, componente)
+
+def componenti_connesse(grafo):
+    visitato = [False] * len(grafo)  # Array per tracciare i nodi visitati
+    componenti = []  # Lista che conterrà le componenti connesse
+    n=len(V(G))
+    # Visita ogni nodo del grafo
+    for u in range(n):
+        if not visitato[u]:
+            componente = []  # Nuova lista per la componente corrente
+            dfs(u, grafo, visitato, componente)
+            componenti.append(componente)
+    
+    return componenti
+
+            DFSComp(y,componente,g)

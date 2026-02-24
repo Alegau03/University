@@ -1,0 +1,37 @@
+Esercizio 2. 
+Un grafo G = (G,E) non diretto dice bipartito se l’insieme dei vertici V può essere partizionato in due insiemi disgiunti U e W tali che: 
+(1) U ∩W = ∅, 
+(2) U ∪W = V  
+(3) ogni arco di G `e incidente ad un vertice di U e ad vertice di W. 
+E’ noto che un grafo G `e bipartito se e solo se G non ha cicli di lunghezza dispari. 
+Modificare l’algoritmo della ricerca in profondità in maniera da poter controllare se un grafo non diretto è bipartito o no, e in caso fornire una bipartizione;
+
+
+
+def BipartiteCheck(Grafo G):
+
+    colore = array di dimensione V(G) inizializzato a -1  // -1 indica che il nodo non è stato colorato
+    
+    for u in V(G):
+        if colore[u] == -1:  // Se il nodo non è stato colorato
+            if BFSColore(u,colore) == False:
+                return False
+
+    return True  // Il grafo è bipartito
+
+def BFSColore(nodo inizio,colore):
+        Coda Q = []  // Coda per BFS
+        Q.append(inizio)
+        colore[inizio] = 0  // Inizia colorando il nodo con 0
+
+        While Q.lenght()>0
+            u = Q.pop(0)
+            
+            for v in u.adiacenti():
+                if colore[v] == -1:  // Se il nodo v non è stato colorato
+                    colore[v] = 1 - colore[u]  // Colora v con il colore opposto a u
+                    Q.append(v)
+                else if colore[v] == colore[u]:  // Se il nodo v ha lo stesso colore di u
+                    return False  // Il grafo non è bipartito
+
+        return True  // Il sottografo esplorato è bipartito

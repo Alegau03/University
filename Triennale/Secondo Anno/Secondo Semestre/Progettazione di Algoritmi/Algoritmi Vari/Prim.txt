@@ -1,0 +1,14 @@
+def Prim(G pesato):
+    x= v in V(G)
+
+    Vis=[0,..,0]
+    Vis[x]=1
+
+    Sol=0
+
+    while(Exists w | Vis[w]=0 and w in V)
+
+        (u,v) = arco di peso minimo | Vis[u]=1 and Vis[v]=0
+        Vis[v]=1
+        Sol.add((u,v))
+        

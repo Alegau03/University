@@ -1,0 +1,43 @@
+1. Docenti Universitari
+	1.1 nome: Stringa
+	1.2 Cognome: Stringa
+	1.3 Data di nascita: data
+	1.4 matricola: int>0
+	1.5 posizione: Posizione (vedi specifica tipi di dato)
+	1.6 progetti a cui partecipa: Progetti di Ricerca (v. spec req. 2)
+	1.7 Attività: Attività (v. spec req. 3)
+
+2. Progetti di Ricerca
+	2.1 Nome: Stringa
+	2.2 Acronimo: Acronimo (vedi specifica tipi di dato)
+	2.3 Data inizio: data
+	2.4 Data fine: data
+	2.5 Docenti che vi partecipano
+	2.6 Work Package: Work Package (v. spec req. 4)
+
+
+3. Attività
+	3.1 Giorno: data
+	3.2 Durata in ore: int>0
+	3.3 Tipologia: Tipologia (v. spec req. 5)
+
+
+4. Work Package
+	4.1 Nome: Stringa
+	4.2 Data inizio: Data
+	4.3 Data fine: Data	
+
+
+5. Tipolgia
+	5.1 Nome: Stringa
+	5.2 Motivazione: Stringa??
+
+
+SPECIFICA TIPI DI DATO
+TipologiaProf={"Professore Ordinario","Professore Associato"}
+
+Acronimo= str(...) Stringa lunga 3
+
+
+
+

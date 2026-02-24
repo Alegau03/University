@@ -1,0 +1,26 @@
+Def Max_Sotto_Array(A):
+    if(A.lenght==0):
+        return 0
+    if(A.lenght==1):
+        return A[0]
+    
+    m=A.lenght()/2
+    m1= Max_Sotto_Array(A[0:m])
+    m2= Max_Sotto_Array(A[m+1:])
+
+    pref_max=0
+    suff_max=0
+    Somma=0
+
+    for i in range(m:0)
+        Somma+=A[i]
+        pref_max = max(pref_max,Somma)
+    
+    Somma=0
+    for i in range(m: A.lenght):
+        Somma+=A[i]
+        suff_max=max(suff_max,Somma)
+    
+    somma_cav= preff_max+suff_max
+
+    return max(somma_cav,m1,m2)

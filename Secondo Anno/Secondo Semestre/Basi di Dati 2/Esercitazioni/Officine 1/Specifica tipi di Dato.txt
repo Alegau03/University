@@ -1,7 +1,0 @@
-Specifica tipi di Dato
-
-1. Indirizzo= {via: Stringa; n° civ. : int>0}
-
-2. Targa = {A..Z[2]1..9[3]A..Z[2]}
-
-3. CF={A..Z[6] 1..9[2] A..Z 1..9[2] A..Z 1..9[3] A..Z}

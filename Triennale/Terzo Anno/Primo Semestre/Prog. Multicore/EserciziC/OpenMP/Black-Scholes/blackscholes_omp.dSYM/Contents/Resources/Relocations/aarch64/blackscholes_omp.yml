@@ -1,0 +1,20 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     blackscholes_omp
+relocations:
+  - { offset: 0x377, size: 0x8, addend: 0x0, symName: _data, symObjAddr: 0x5788, symBinAddr: 0x100008048, symSize: 0x0 }
+  - { offset: 0x393, size: 0x8, addend: 0x0, symName: _prices, symObjAddr: 0x5780, symBinAddr: 0x100008040, symSize: 0x0 }
+  - { offset: 0x3AF, size: 0x8, addend: 0x0, symName: _numOptions, symObjAddr: 0x5778, symBinAddr: 0x100008038, symSize: 0x0 }
+  - { offset: 0x3C5, size: 0x8, addend: 0x0, symName: _otype, symObjAddr: 0x5770, symBinAddr: 0x100008030, symSize: 0x0 }
+  - { offset: 0x3E1, size: 0x8, addend: 0x0, symName: _sptprice, symObjAddr: 0x5768, symBinAddr: 0x100008028, symSize: 0x0 }
+  - { offset: 0x3F7, size: 0x8, addend: 0x0, symName: _strike, symObjAddr: 0x5760, symBinAddr: 0x100008020, symSize: 0x0 }
+  - { offset: 0x40D, size: 0x8, addend: 0x0, symName: _rate, symObjAddr: 0x5758, symBinAddr: 0x100008018, symSize: 0x0 }
+  - { offset: 0x423, size: 0x8, addend: 0x0, symName: _volatility, symObjAddr: 0x5750, symBinAddr: 0x100008010, symSize: 0x0 }
+  - { offset: 0x439, size: 0x8, addend: 0x0, symName: _otime, symObjAddr: 0x5748, symBinAddr: 0x100008008, symSize: 0x0 }
+  - { offset: 0x44F, size: 0x8, addend: 0x0, symName: _numError, symObjAddr: 0x5744, symBinAddr: 0x100008004, symSize: 0x0 }
+  - { offset: 0x465, size: 0x8, addend: 0x0, symName: _nThreads, symObjAddr: 0x5740, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offset: 0x479, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0xA40, symBinAddr: 0x1000035C0, symSize: 0x488 }
+  - { offset: 0x4B0, size: 0x8, addend: 0x0, symName: _main._omp_fn.0, symObjAddr: 0x0, symBinAddr: 0x100002D80, symSize: 0x400 }
+  - { offset: 0xA42, size: 0x8, addend: 0x0, symName: _CNDF, symObjAddr: 0x400, symBinAddr: 0x100003180, symSize: 0x120 }
+  - { offset: 0xAD5, size: 0x8, addend: 0x0, symName: _BlkSchlsEqEuroNoDiv, symObjAddr: 0x520, symBinAddr: 0x1000032A0, symSize: 0x304 }
+...

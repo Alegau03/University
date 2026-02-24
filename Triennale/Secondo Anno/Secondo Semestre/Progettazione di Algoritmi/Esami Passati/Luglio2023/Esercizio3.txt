@@ -1,0 +1,33 @@
+
+Cammino da x->y che passa per tutti e 3 i colori
+
+Utilizzo un DFS modificato e un insieme dei colori
+Def Esercizio3(G,x,y):
+
+    Vis=[-1,...,-1]
+    Colori=[{},..,{}]
+
+    Stack S;
+    S.push(x)
+
+    while S!=0:
+        y=S.top()
+
+        while y.adiacenti!=0:
+            z=y.adiacenti[0]
+            y.adiacenti.remove(0)
+
+            if Vis[z]==-1:
+                Vis[z]=1
+                col=Colore(z)
+                Colori[z].append(col)
+                S.push(z)
+                break
+            
+            if y==S.top():
+                S.pop()
+    
+    if Vis[y]==1:
+        if len(Colori[y])>2:
+            return True
+    return False

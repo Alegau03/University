@@ -1,0 +1,36 @@
+Esercizio 6: Problema del Colore del Grafo
+Dato un grafo non orientato, implementa un algoritmo che determini se è possibile colorare il grafo 
+utilizzando due colori in modo che nessun due nodi adiacenti abbiano lo stesso colore.
+
+
+
+def BipartiteCheck(Grafo G):
+
+    colore = array di dimensione V(G) inizializzato a -1  // -1 indica che il nodo non è stato colorato
+    
+    for u in V(G):
+        if colore[u] == -1:  // Se il nodo non è stato colorato
+            if BFSColore(u,colore) == False:
+                return False
+
+    return True  // Il grafo è bipartito
+
+def BFSColore(nodo inizio,colore):
+        Coda Q = []  // Coda per BFS
+        Q.append(inizio)
+        colore[inizio] = 0  // Inizia colorando il nodo con 0
+
+        While Q.lenght()>0
+            u = Q.pop(0)
+            
+            for v in u.adiacenti():
+                if colore[v] == -1:  // Se il nodo v non è stato colorato
+                    colore[v] = 1 - colore[u]  // Colora v con il colore opposto a u
+                    Q.append(v)
+                else if colore[v] == colore[u]:  // Se il nodo v ha lo stesso colore di u
+                    return False  // Il grafo non è bipartito
+
+        return True  // Il sottografo esplorato è bipartito
+
+
+

@@ -1,0 +1,35 @@
+def CiloPesoMin(G):
+    Vis=[-1,...,-1]
+    Padri=[0,..,0]
+    min = infinito
+
+    for i in range(|V(G)|):
+        if Vis[i]==-1:
+            ciclo= DFSCiclo(i,Vis,Padri)
+                if ciclo!=None
+                    peso=Peso(ciclo)
+                    if peso<min:
+                        min=peso
+    return min
+
+Def DFSCiclo(u,Vis,Padri):
+    Vis[u]=1
+    ciclo={}
+    for v in G.adiacenti(u):
+        if Vis[v]==-1:
+            Padri[v]=u
+            Ciclo=DFSCiclo(v,Vis,Padri)
+            if Ciclo!=None:
+                Ciclo.append(v)
+        else:
+            if v!=Padri[u]:
+                ciclo.append(v)
+    if len(ciclo)==0:
+        return None
+    return ciclo
+
+def Peso(G):
+    p=0
+    for (v,u) in E(G):
+        p+=w((v,u))
+    return p
